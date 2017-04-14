@@ -1,0 +1,52 @@
+ERROR:
+
+Linea 34 colonna 0: errore BC30451 - Nome 'DecodificaCampoAggiuntivo' non dichiarato.
+Linea 34 colonna 0: errore BC30198 - Previsto ')'.
+
+
+CODE:
+
+1         : Imports Microsoft.VisualBasic
+2         : Imports System
+3         : Imports System.Data
+4         : Imports NTSInformatica.CLN__STD
+5         : Imports NTSInformatica
+6         : Imports NTSInformatica.FRMDBDIBA
+7         : 'Imports System.Data.SqlClient
+8         : 
+9         : Public Class BNDBDIBAVBS 
+10        :     Implements INT__SCRIPT
+11        : 
+12        :   Dim frmParent as FRM__CHIL 'FRMDBDIBA
+13        : 
+14        :   Public Function Exec(ByVal strCommand As String, byref oApp as Object, ByRef oIn As Object, ByRef oParam As Object) as Object Implements INT__SCRIPT.Exec
+15        :     Try
+16        : 	    Select Case strCommand
+17        :            'Case "InitControls":         InitControls(oIn, oApp)
+18        :            'Case "edProva_Validated": return edProva_Validated(oIn, oApp)
+19        :           Case "tlbhhaggdb_Click":         tlbhhaggdb_Click(oIn, oApp)
+20        : 
+21        : 	    End Select
+22        : 	    Return Nothing
+23        : 
+24        :     Catch ex As Exception
+25        :        Dim strErr As String = CLN__STD.GestError(ex, nothing, "", oApp.InfoError, oApp.ErrorLogFile, True)
+26        :        Return Nothing
+27        :     End Try
+28        :   End Function
+29        : 
+30        : 
+31        : 
+32        :   Function tlbhhaggdb_Click(ByRef oIn As Object, ByRef oApp As Object) as Object
+33        :   Try
+34        : 	    DecodificaCampoAggiuntivo = (oIn, oApp)
+35        :      oapp.MsgboxInfo("File BNDBDIBA.NTS istanziato")
+36        : 
+37        :     Catch ex As Exception
+38        :        Dim strErr As String = CLN__STD.GestError(ex, nothing, "", oApp.InfoError, oApp.ErrorLogFile, True)
+39        :     End Try
+40        :   End Function
+41        : 
+42        : 
+43        : 
+44        : End Class

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Contabilizza parcelle/notule</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>25/03/2015</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Contabilizza parcelle/notule</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>
+<b>Nome programma: BSPAPNPA.DLL</b>
+<br>
+<b>Moduli richiesti: Parcellazione</b>
+<br>Opzioni programma: <A href="ampers07.htm#BSPAPNPA">vai alle opzioni</A>
+</p>
+<p>Con questo programma si eseguono le registrazioni contabili relative ai documenti inseriti col programma "Gestione parcelle/notule", cioè fatture, corrispettivi e note d'accredito. In questi casi la registrazione rileva anche la ritenuta, se presente; per fatture e corrispettivi può essere rilevato anche l'eventuale incasso o abbuono.</p>
+<p>Se il documento da contabilizzare è una parcella/notula la registrazione eseguita è CLIENTI NOTULE, gestito a partite e scadenze, a CONTO TRANS. NOTULE. Sono contabilizzate solo notule con tipo pagamento RI.BA. 
+<br>Per ulteriori dettagli consultare l'argomento della sezione Argomenti e moduli in cui è trattata l'emissione RIBA in contabilità professionisti.</p>
+<p>I documenti già elaborati sono ritrattati in successive elaborazioni solo spuntando il flag "Contabilizza anche documenti già contabilizzati in precedenza".</p>
+<p>
+<IMG src="../images/help_bspapnpa.gif">
+</p>
+<p>
+<b>
+<A name=Eserciziodicomp>Esercizio di competenza</A>
+</b>Indicare l'esercizio di competenza a cui dovranno appartenere le nuove registrazioni.</p>
+<p>
+<b>
+<A name=Datadiregistraz>Data di registrazione</A>
+</b>Impostare la data di registrazione da assegnare ai documenti da contabilizzare. Se questo campo non è impostato, la data di registrazione sarà uguale alla data d'emissione del documento.</p>
+<p>
+<b>
+<A name=Derogaadatadico>Deroga a data di competenza IVA</A>
+</b>Permette di specificare una data di competenza IVA alternativa a quella memorizzata nel documento.</p>
+<p>
+<b>
+<A name=Tipodocumento>Tipo documento</A>
+</b>Selezionare il tipo di documento da contabilizzare.</p>
+<p>
+<b>
+<A name=Annodocumento>Anno documento</A>
+</b>Indicare l'anno dei documenti da elaborare.</p>
+<p>
+<A name=DaserieAseriedo>
+<b>Solo serie </b>
+</A>Permette di eseguire un'elaborazione dei soli documenti con la serie indicata.</p>
+<p>
+<b>
+<A name=DadataAdatadocu>Da data / A data documento</A>
+</b>Permette di eseguire un'elaborazione dei soli documenti la cui data emissione rientra nell'intervallo specificato.</p>
+<p>
+<b>
+<A name=DanumeroAnumero>Da numero / A numero documento</A>
+</b>Permette di eseguire una elaborazione dei soli documenti il cui documero rientra nell'intervallo specificato.</p>
+<p>
+<b>
+<A name=Tipobollafattur>Tipo bolla/fattura</A>
+</b>Impostare il tipo bolla/fattura con cui filtrare i documenti da elaborare. Se lasciato uguale a 0, l'elaborazione non filtra il Tipo bolla/fattura riportato sui documenti.</p>
+<p>
+<b>
+<A name=Contabilizzaanc>Contabilizza anche documenti già contabilizzati in precedenza</A>
+</b>Esegue la ricontabilizzazione di documenti già elaborati in precedenza; la procedura prima rimuove la registrazione contabile da ritrattare, poi la inserisce di nuovo. Se il documento risulta già saldato o comunque non rielaborabile, ad esempio perché già stampato in definitivo sui registri bollati, è segnalata l'impossibilità di eseguire l'operazione.</p>
+<p>
+<b>
+<A name=Contabilizzaanc>Contabilizza anche incassi e pagamenti associati</A>
+</b>Permette di eseguire anche la registrazione contabile dell'incasso o pagamento o rilevazione di abbuoni, se nel documento sono indicati importi relativi ad incassi / abbuoni.</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

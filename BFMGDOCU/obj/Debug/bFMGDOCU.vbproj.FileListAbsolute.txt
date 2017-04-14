@@ -1,0 +1,7 @@
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BFMGDOCU.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BFMGDOCU.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFMGDOCU\obj\Debug\bFMGDOCU.vbprojResolveAssemblyReference.cache
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFMGDOCU\obj\Debug\NTSInformatica.Resources.resources
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFMGDOCU\obj\Debug\bFMGDOCU.vbproj.GenerateResource.Cache
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFMGDOCU\obj\Debug\BFMGDOCU.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFMGDOCU\obj\Debug\BFMGDOCU.pdb

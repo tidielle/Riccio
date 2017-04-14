@@ -1,0 +1,5 @@
+C:\Bus.Riccio\BIZ2015\BODBDIBA\..test\BODBDIBA.dll
+C:\Bus.Riccio\BIZ2015\BODBDIBA\..test\BODBDIBA.pdb
+C:\Bus.Riccio\BIZ2015\BODBDIBA\obj\x86\Debug\BODBDIBA.vbprojResolveAssemblyReference.cache
+C:\Bus.Riccio\BIZ2015\BODBDIBA\obj\x86\Debug\BODBDIBA.dll
+C:\Bus.Riccio\BIZ2015\BODBDIBA\obj\x86\Debug\BODBDIBA.pdb

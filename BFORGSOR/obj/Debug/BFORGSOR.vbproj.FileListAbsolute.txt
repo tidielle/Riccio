@@ -1,0 +1,14 @@
+C:\BIZ2015SR5\TEST\BFORGSOR.dll
+C:\BIZ2015SR5\TEST\BFORGSOR.pdb
+C:\BIZ2015SR5\BFORGSOR\obj\Debug\BFORGSOR.vbprojResolveAssemblyReference.cache
+C:\BIZ2015SR5\BFORGSOR\obj\Debug\NTSInformatica.Resources.resources
+C:\BIZ2015SR5\BFORGSOR\obj\Debug\BFORGSOR.vbproj.GenerateResource.Cache
+C:\BIZ2015SR5\BFORGSOR\obj\Debug\BFORGSOR.dll
+C:\BIZ2015SR5\BFORGSOR\obj\Debug\BFORGSOR.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BFORGSOR.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BFORGSOR.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFORGSOR\obj\Debug\BFORGSOR.vbprojResolveAssemblyReference.cache
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFORGSOR\obj\Debug\NTSInformatica.Resources.resources
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFORGSOR\obj\Debug\BFORGSOR.vbproj.GenerateResource.Cache
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFORGSOR\obj\Debug\BFORGSOR.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFORGSOR\obj\Debug\BFORGSOR.pdb

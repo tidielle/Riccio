@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAB720A2-06A6-48E8-B55C-2C2372A2F31E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>BHCGDCST</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\test\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ItemGroup>
+    <Reference Include="Bdcgdcst">
+      <HintPath>..\..\..\..\..\..\Bus.Riccio\BIZ2015\TEST\Bdcgdcst.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="BD__BASE">
+      <HintPath>..\..\..\..\..\..\Bus.Riccio\BIZ2015\TEST\Bd__base.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="BE__FRWK">
+      <HintPath>..\..\..\..\..\..\Bus.Riccio\BIZ2015\TEST\Be__frwk.dll</HintPath>
+    </Reference>
+    <Reference Include="BN__STD">
+      <HintPath>..\..\..\..\..\..\Bus.Riccio\BIZ2015\TEST\Bn__std.dll</HintPath>
+    </Reference>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Global.vb" />
+    <Compile Include="NTSInformatica\My\MyApplication.vb" />
+    <Compile Include="NTSInformatica\My\MyComputer.vb" />
+    <Compile Include="NTSInformatica\My\MyProject.vb" />
+    <Compile Include="NTSInformatica\CLHCGDCST.vb" />
+    <Compile Include="NTSInformatica\My\Resources\Resources.vb" />
+    <Compile Include="NTSInformatica\My\MySettings.vb" />
+    <EmbeddedResource Include="NTSInformatica.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Tab1>
+    <ts>AAAAAABC8Ng=</ts>
+    <rp_liv1>OPZIONI</rp_liv1>
+    <rp_liv2>.</rp_liv2>
+    <rp_liv3>.</rp_liv3>
+    <rp_idut xml:space="preserve"> </rp_idut>
+    <rp_idaz xml:space="preserve"> </rp_idaz>
+    <rp_idtdoc xml:space="preserve"> </rp_idtdoc>
+    <rp_nomprop>CHILD_BNDBDIBA.FRMDBDIBA</rp_nomprop>
+    <rp_valprop>BODBDIBA;FRODBDIBA</rp_valprop>
+  </Tab1>
+  <Tab1>
+    <ts>AAAAAABC8Nk=</ts>
+    <rp_liv1>OPZIONI</rp_liv1>
+    <rp_liv2>.</rp_liv2>
+    <rp_liv3>.</rp_liv3>
+    <rp_idut xml:space="preserve"> </rp_idut>
+    <rp_idaz xml:space="preserve"> </rp_idaz>
+    <rp_idtdoc xml:space="preserve"> </rp_idtdoc>
+    <rp_nomprop>CHILD_BNORGSOR</rp_nomprop>
+    <rp_valprop>BOORGSOR;FROORGSOR</rp_valprop>
+  </Tab1>
+  <Tab1>
+    <ts>AAAAAABC8No=</ts>
+    <rp_liv1>OPZIONI</rp_liv1>
+    <rp_liv2>.</rp_liv2>
+    <rp_liv3>.</rp_liv3>
+    <rp_idut xml:space="preserve"> </rp_idut>
+    <rp_idaz xml:space="preserve"> </rp_idaz>
+    <rp_idtdoc xml:space="preserve"> </rp_idtdoc>
+    <rp_nomprop>CHILD_BNORGSOR.FRMORSEDO</rp_nomprop>
+    <rp_valprop>BOORSEDO;FROORSEDO</rp_valprop>
+  </Tab1>
+  <Tab1>
+    <ts>AAAAAABC8Ns=</ts>
+    <rp_liv1>OPZIONI</rp_liv1>
+    <rp_liv2>.</rp_liv2>
+    <rp_liv3>.</rp_liv3>
+    <rp_idut xml:space="preserve"> </rp_idut>
+    <rp_idaz xml:space="preserve"> </rp_idaz>
+    <rp_idtdoc xml:space="preserve"> </rp_idtdoc>
+    <rp_nomprop>CHILD_BNVEBOLL</rp_nomprop>
+    <rp_valprop>BOVEBOLL;FROVEBOLL</rp_valprop>
+  </Tab1>
+</NewDataSet>

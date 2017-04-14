@@ -1,0 +1,836 @@
+29/03/2017 11:45:16:Admin: Tab1: SELECT syscolumns.* FROM (sysobjects INNER JOIN syscolumns ON sysobjects.id = syscolumns.id) LEFT JOIN syscomments ON syscolumns.cdefault = syscomments.id WHERE sysobjects.name = 'release' AND syscolumns.name = 'rel_pers'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 3/43 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: Tab1: SELECT tb_maxlencodart FROM tabinsg where tb_codinsg = 1
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/30 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: Tab1: SELECT tb_seriemaxlen FROM tabinsg 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT MAX(LEN(ar_codart)) AS lunghezza FROM artico
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/15 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT sys.objects.name as table_name, value  FROM sys.objects LEFT JOIN sys.extended_properties ON sys.objects.object_id = sys.extended_properties.major_id  AND sys.objects.parent_object_id = sys.extended_properties.minor_id  AND sys.extended_properties.name = 'MS_Description' WHERE sys.objects.type = 'U' AND is_ms_shipped = 0 AND sys.objects.name = 'release'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 3/34 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT SERVERPROPERTY('productversion')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT top 1 * FROM tabciva
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT distinct sys.tables.name as tabella, sys.columns.name as colonna  FROM sys.columns inner join sys.tables on sys.columns.object_id = sys.tables.object_id  WHERE sys.columns.system_type_id = 231 and sys.tables.name <> 'dtproperties'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/50 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: Tab1: SELECT rel_maior, rel_minor FROM release WHERE rel_sw = 'Business'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: TABANAZ: SELECT codditt FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT rel_maior, rel_minor FROM release WHERE rel_sw = 'Business'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: Tab1: SELECT ot_order, ot_nometab, ot_perditta FROM ordertbl ORDER BY ot_order
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1194
+29/03/2017 11:45:18:Admin: Tab1: SELECT TOP 1 * FROM contatti
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: Tab1: SELECT TOP 1 * FROM emailconf 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: Tab1: SELECT * FROM organig  WHERE (og_nomeserv IS NOT NULL OR og_nomeservu IS NOT NULL) AND og_email IS NOT NULL 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/20 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: Execute: INSERT INTO leads (codditt, le_codlead, le_descr1, le_ultagg, le_privacy)  SELECT codditt, -1, 'Lead Fittizio', GetDate(), 'S'   FROM tabanaz  WHERE NOT EXISTS (SELECT leads.codditt FROM leads                     WHERE le_codlead = -1                       AND leads.codditt = tabanaz.codditt)
+          TEMPO IMPIEGATO (in millisec): 37 - Record trattati: 0
+29/03/2017 11:45:18:Admin: Tab1: SELECT rel_dbpers FROM release WHERE rel_sw = 'Business'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: Tab1: SELECT * FROM reoffline  WHERE ro_tipoinst = 'C'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: TABANAZ: SELECT codditt FROM tabanaz
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 2
+29/03/2017 11:45:18:Admin: Tab1: SELECT count(*) as nrec, codditt FROM anazmod GROUP BY codditt
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 2
+29/03/2017 11:45:18:Admin: TABINSG: SELECT * FROM tabinsg WHERE tb_codinsg = 1
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT GETDATE() as ServerDate 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT cmptlevel FROM master.dbo.sysdatabases WHERE name = 'msdb'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT TOP 1 backup_finish_date FROM msdb.dbo.backupset WHERE type = 'D' AND database_name = 'riccio' AND is_snapshot = 0 ORDER BY backup_finish_date DESC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT GETDATE() as ServerDate 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT DATABASEPROPERTY('riccio', 'IsTruncLog') AS TruncLog
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT cmptlevel FROM master.dbo.sysdatabases WHERE name = 'msdb'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:19:Admin: TABANAZ: SELECT tb_azrags1, tb_azrags2 FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:20:Admin: TABINSG: SELECT * FROM tabinsg WHERE tb_codinsg = 1
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:45:20:Admin: Tab1: SELECT rel_dbpers FROM release WHERE rel_sw = 'Business'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:21:Admin: tabanaz: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:21:Admin: DITTE: SELECT tabanaz.codditt as tb_codice, tb_azrags1 as tb_descr FROM tabanaz WHERE 0 = 0  GROUP BY tabanaz.codditt, tb_azrags1 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 2
+29/03/2017 11:45:21:Admin: Tab1: SELECT * FROM accdito WHERE opdi_opnome = 'Admin' AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:21:Admin: Tab1: SELECT * FROM accditt WHERE opdi_opnome = 'Admin' AND (opdi_nomprog = 'BN__MENU'      OR opdi_nomprog = 'BS__MENU'     )  AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:21:Admin: tabanaz: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: TABANAZ: SELECT count(*) as NREC FROM tabanaz
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: TABINST:  SELECT * FROM TABINST  WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: ANAZMOD:  SELECT * FROM ANAZMOD  WHERE codditt = 'RICCIO' ORDER BY am_modulo 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 180
+29/03/2017 11:45:22:Admin: ORGANIG: SELECT * FROM organig WHERE codditt = 'RICCIO' AND og_coperat = 'Admin'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: TABANAZ: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: TABANAZ: SELECT * FROM tabanaz ORDER BY codditt
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 2
+29/03/2017 11:45:25:Admin: Tab1: SELECT opcr_alopnome AS cod FROM acccrm WHERE codditt = 'RICCIO' AND opcr_opnome = 'Admin' AND opcr_alopnome <> 'Admin' ORDER BY codditt, opcr_opnome, opcr_alopnome
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: TABANAZ: SELECT count(*) as NREC FROM tabanaz
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: TABINST:  SELECT * FROM TABINST  WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: ANAZMOD:  SELECT * FROM ANAZMOD  WHERE codditt = 'RICCIO' ORDER BY am_modulo 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/17 - Record prelevati: 180
+29/03/2017 11:45:25:Admin: TABANAZ: SELECT count(*) as NREC FROM tabanaz
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: TABINST:  SELECT * FROM TABINST  WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: ANAZMOD:  SELECT * FROM ANAZMOD  WHERE codditt = 'RICCIO' ORDER BY am_modulo 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 180
+29/03/2017 11:45:25:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.5))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/33 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: TABANAZ: SELECT tb_azrags1, tb_azrags2 FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:45:42:Admin: Tab1: SELECT ar_unmis AS ar_unmis, convert(binary(5), ar_unmis) FROM artico WHERE codditt = 'RICCIO' AND NOT ar_unmis IS NULL GROUP BY ar_unmis, convert(binary(5), ar_unmis)  UNION SELECT ar_unmis2 AS ar_unmis, convert(binary(5), ar_unmis2) FROM artico WHERE codditt = 'RICCIO' AND NOT ar_unmis2 IS NULL GROUP BY ar_unmis2, convert(binary(5), ar_unmis2)  UNION SELECT ar_confez2 AS ar_unmis, convert(binary(5), ar_confez2) FROM artico WHERE codditt = 'RICCIO' AND NOT ar_confez2 IS NULL GROUP BY ar_confez2, convert(binary(5), ar_confez2)  UNION SELECT ar_um4 AS ar_unmis, convert(binary(5), ar_um4) FROM artico WHERE codditt = 'RICCIO' AND NOT ar_um4 IS NULL GROUP BY ar_um4, convert(binary(5), ar_um4) 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/48 - Record prelevati: 9
+29/03/2017 11:45:48:Admin: tabanaz: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/27 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: TABANAZ: SELECT count(*) as NREC FROM tabanaz
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: TABINST:  SELECT * FROM TABINST  WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: ANAZMOD:  SELECT * FROM ANAZMOD  WHERE codditt = 'RICCIO' ORDER BY am_modulo 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 180
+29/03/2017 11:45:48:Admin: TABANAZ: SELECT count(*) as NREC FROM tabanaz
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: TABINST:  SELECT * FROM TABINST  WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/35 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: ANAZMOD:  SELECT * FROM ANAZMOD  WHERE codditt = 'RICCIO' ORDER BY am_modulo 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 180
+29/03/2017 11:45:48:Admin: TABANAZ: SELECT tb_azrags1, tb_azrags2 FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:50:Admin: DITTE: SELECT tabanaz.codditt as tb_codice, tb_azrags1 as tb_descr  FROM tabanaz INNER JOIN anazmod ON tabanaz.codditt = anazmod.codditt  WHERE am_modulo IN (7) AND am_abilit = 'S' GROUP BY tabanaz.codditt, tb_azrags1 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 2
+29/03/2017 11:45:50:Admin: Tab1: SELECT * FROM accdito WHERE opdi_opnome = 'Admin' AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:45:50:Admin: Tab1: SELECT * FROM accditm WHERE opdi_opnome = 'Admin' AND opdi_modulo in (7) AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/8 - Record prelevati: 0
+29/03/2017 11:45:50:Admin: Tab1: SELECT * FROM accditt WHERE opdi_opnome = 'Admin' AND (opdi_nomprog = 'BODBDIBA'      OR opdi_nomprog = 'BSDBDIBA'     )  AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: TABANAZ: SELECT tb_azrags1, tb_azrags2 FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:52:Admin: tabanaz: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/25 - Record prelevati: 1
+29/03/2017 11:45:52:Admin: tabanaz: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:52:Admin: TABANAZ: SELECT tb_azrags1, tb_azrags2 FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:52:Admin: tabanaz: SELECT * FROM tabanaz WHERE codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:53:Admin: DITTE: SELECT tabanaz.codditt as tb_codice, tb_azrags1 as tb_descr FROM tabanaz WHERE 0 = 0  GROUP BY tabanaz.codditt, tb_azrags1 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 2
+29/03/2017 11:45:53:Admin: Tab1: SELECT * FROM accdito WHERE opdi_opnome = 'Admin' AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: Tab1: SELECT * FROM accditt WHERE opdi_opnome = 'Admin' AND (opdi_nomprog = 'BNDBDIBA'      OR opdi_nomprog = 'BSDBDIBA'     )  AND opdi_abilit = 'N'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: DISTBAS: SELECT ar_codart as cod,  ar_descr as des  FROM artico INNER JOIN distbas ON distbas.codditt = artico.codditt AND distbas.db_coddb = artico.ar_codart WHERE artico.codditt = 'RICCIO' AND ar_descr like '%ggA%' ORDER BY ar_codart
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:56:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/26 - Record prelevati: 1
+29/03/2017 11:45:56:Admin: Tab1: SELECT db_coddb as xx_coddb, db_fascialiv as xx_fascialiv, db_fantasma as xx_fantasma, db_gruppo as xx_gruppo FROM distbas WHERE codditt = 'RICCIO' AND db_coddb = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: DISTBAS: SELECT DISTBAS.* FROM DISTBAS WHERE codditt = 'RICCIO' AND db_coddb = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: DEFAULT: SELECT sys.columns.name as colonna, case when sys.types.name = 'text' then '35' else sys.types.name end as tipo, sys.columns.max_length as lunghezza, case when sys.columns.is_identity = 'true' then 1 else 0 end as counter, OBJECT_DEFINITION(sys.columns.default_object_id) as valoredefault FROM sys.columns LEFT JOIN sys.types ON sys.columns.system_type_id = sys.types.system_type_id WHERE sys.columns.object_id = OBJECT_ID('DISTBAS') AND sys.types.name <> 'sysname'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/26 - Record prelevati: 7
+29/03/2017 11:45:57:Admin: ARTICO: SELECT ar_tipoopz, ar_codroot, ar_gesvar, ar_prevar, ar_tipo, ar_codtagl FROM ARTICO WHERE codditt = 'RICCIO' AND ar_codart = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/7 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/26 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: CICLI: SELECT cicli.*, tablavo.tb_deslavo as xx_codlavo, anagra.an_descr1 as xx_codterz, tabcent.tb_descent as xx_codcent, 0.0  as xx_ttrans, 0.0 as xx_tattrez, 0.0  as xx_tesec, 0.0  as xx_tattmo, 0.0  as xx_tesecmo, anagra2.an_descr1 as xx_ddcoclie, commess.co_descr1 as xx_ddcommeca, 0.0  as xx_tattrezmin, 0.0  as xx_tesecmin, '' as xx_fase, tabmaga.tb_desmaga as xx_magcent, tabmaga2.tb_desmaga as xx_magtran, confproc.pr_descr as xx_ddfvallegame, confproc2.pr_descr as xx_fdesnote, confproc3.pr_descr as xx_ftempatt, confproc4.pr_descr as xx_ftempese FROM (((((((((((CICLI  LEFT JOIN tablavo ON cicli.codditt = tablavo.codditt AND cicli.dd_codlavo = tablavo.tb_codlavo) LEFT JOIN anagra ON cicli.codditt = anagra.codditt AND cicli.dd_codterz = anagra.an_conto) LEFT JOIN tabcent ON cicli.codditt = tabcent.codditt AND cicli.dd_codcent = tabcent.tb_codcent) LEFT JOIN anagra as anagra2 ON cicli.codditt = anagra2.codditt AND cicli.dd_coclie = anagra2.an_conto) LEFT JOIN commess ON cicli.codditt = commess.codditt AND cicli.dd_commeca = commess.co_comme) LEFT JOIN tabmaga ON cicli.codditt = tabmaga.codditt AND cicli.dd_magcent = tabmaga.tb_codmaga) LEFT JOIN tabmaga as tabmaga2 ON cicli.codditt = tabmaga2.codditt AND cicli.dd_magtran = tabmaga2.tb_codmaga) LEFT JOIN confproc ON cicli.codditt = confproc.codditt AND cicli.dd_fvallegame = confproc.pr_codice) LEFT JOIN confproc as confproc2 ON cicli.codditt = confproc2.codditt AND cicli.dd_fdesnote = confproc2.pr_codice) LEFT JOIN confproc as confproc3 ON cicli.codditt = confproc3.codditt AND cicli.dd_ftempatt = confproc3.pr_codice) LEFT JOIN confproc as confproc4 ON cicli.codditt = confproc4.codditt AND cicli.dd_ftempese = confproc4.pr_codice) WHERE cicli.codditt = 'RICCIO' AND dd_coddb='GGAA_0001' AND dd_dtinval <='2017-3-29' AND dd_dtfival >='2017-3-29' AND dd_lottoin <=0 AND dd_lottofi>=0 AND 'GGAA_0001         ' LIKE UPPER(dd_filtart)  AND 'GGAA_0001         ' LIKE UPPER(dd_filtart2)  AND dd_coclie = 0 AND dd_commeca = 0 ORDER BY dd_riga
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: DEFAULT: SELECT sys.columns.name as colonna, case when sys.types.name = 'text' then '35' else sys.types.name end as tipo, sys.columns.max_length as lunghezza, case when sys.columns.is_identity = 'true' then 1 else 0 end as counter, OBJECT_DEFINITION(sys.columns.default_object_id) as valoredefault FROM sys.columns LEFT JOIN sys.types ON sys.columns.system_type_id = sys.types.system_type_id WHERE sys.columns.object_id = OBJECT_ID('CICLI') AND sys.types.name <> 'sysname'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/27 - Record prelevati: 39
+29/03/2017 11:45:57:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: CICLI: Select max(dd_riga) as xx_maxriga from  CICLI WHERE codditt = 'RICCIO' AND dd_coddb = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/23 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: MOVDIS: SELECT movdis.*,  artico.ar_descr as xx_codfigli, tabmaga.tb_desmaga as xx_codmaga, tabmaga2.tb_desmaga as xx_ultmaga, anagra.an_descr1 as xx_coclie, commess.co_descr1 as xx_commeca,  artico2.ar_desint as xx_desint, '' as xx_fasefigli, '' as xx_faseiniz, confproc.pr_descr as xx_formqta, confproc2.pr_descr as xx_formmis1,  confproc3.pr_descr as xx_formmis2, confproc4.pr_descr as xx_formmis3, confproc5.pr_descr as xx_fvallegame, confproc6.pr_descr as xx_fistanza, artico3.ar_codalt as xx_codalt  FROM (((((((((((((MOVDIS  LEFT JOIN artico ON movdis.codditt = artico.codditt AND movdis.md_codfigli = artico.ar_codart) LEFT JOIN tabmaga ON movdis.codditt = tabmaga.codditt AND movdis.md_codmaga = tabmaga.tb_codmaga) LEFT JOIN tabmaga as tabmaga2 ON movdis.codditt = tabmaga2.codditt AND movdis.md_ultmaga = tabmaga2.tb_codmaga) LEFT JOIN anagra ON movdis.codditt = anagra.codditt AND movdis.md_coclie = anagra.an_conto) LEFT JOIN commess ON movdis.codditt = commess.codditt AND movdis.md_commeca = commess.co_comme) LEFT JOIN artico as artico2 ON movdis.codditt = artico2.codditt AND movdis.md_codfigli = artico2.ar_codart) LEFT JOIN confproc ON movdis.codditt = confproc.codditt AND movdis.md_formqta = confproc.pr_codice) LEFT JOIN confproc as confproc2 ON movdis.codditt = confproc2.codditt AND movdis.md_formmis1 = confproc2.pr_codice) LEFT JOIN confproc as confproc3 ON movdis.codditt = confproc3.codditt AND movdis.md_formmis2 = confproc3.pr_codice) LEFT JOIN confproc as confproc4 ON movdis.codditt = confproc4.codditt AND movdis.md_formmis3 = confproc4.pr_codice) LEFT JOIN confproc as confproc5 ON movdis.codditt = confproc5.codditt AND movdis.md_fvallegame = confproc5.pr_codice) LEFT JOIN confproc as confproc6 ON movdis.codditt = confproc6.codditt AND movdis.md_fistanza = confproc6.pr_codice) LEFT JOIN artico as artico3 ON movdis.codditt = artico3.codditt AND movdis.md_codfigli = artico3.ar_codart) WHERE movdis.codditt = 'RICCIO' AND md_coddb='GGAA_0001' AND md_dtinval <='2017-3-29' AND md_dtfival >= '2017-3-29'  AND md_lottoin <=0 AND md_lottofi >=0 AND 'GGAA_0001         ' LIKE UPPER(md_filtart)  AND 'GGAA_0001         ' LIKE UPPER(md_filtart2)  AND md_coclie = 0  AND md_commeca = 0  ORDER BY md_riga
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 8
+29/03/2017 11:45:58:Admin: DEFAULT: SELECT sys.columns.name as colonna, case when sys.types.name = 'text' then '35' else sys.types.name end as tipo, sys.columns.max_length as lunghezza, case when sys.columns.is_identity = 'true' then 1 else 0 end as counter, OBJECT_DEFINITION(sys.columns.default_object_id) as valoredefault FROM sys.columns LEFT JOIN sys.types ON sys.columns.system_type_id = sys.types.system_type_id WHERE sys.columns.object_id = OBJECT_ID('MOVDIS') AND sys.types.name <> 'sysname'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/23 - Record prelevati: 81
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: MOVDIS: Select max(md_riga) as xx_maxriga from  MOVDIS WHERE codditt = 'RICCIO' AND md_coddb = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: Tab1:  SELECT tabtagl.*  FROM artico INNER JOIN tabtagl ON artico.codditt = tabtagl.codditt And artico.ar_codtagl = tabtagl.tb_codtagl  WHERE artico.codditt = 'RICCIO' AND artico.ar_codart = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/21 - Record prelevati: 0
+29/03/2017 11:45:58:Admin: Tab1: SELECT ar_descr, ar_forn, an_descr1 AS xx_forn1, ar_magprod, tb_desmaga AS xx_magprod, ISNULL(af_makebuy, ar_makebuy) AS ar_makebuy  FROM artico   LEFT JOIN artfasi ON artico.codditt = artfasi.codditt AND ar_codart = af_codart AND af_fase = 0  LEFT JOIN anagra ON artico.codditt = anagra.codditt AND ar_forn = an_conto   LEFT JOIN tabmaga ON artico.codditt = tabmaga.codditt AND ar_magprod = tb_codmaga  WHERE artico.codditt = 'RICCIO'   AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: DISTBAS: SELECT movdis.md_riga, movdis.md_codfigli, movdis.md_dtinval, movdis.md_tipofigl, artico2.ar_descr, artico2.ar_coddb  FROM ((distbas   INNER JOIN artico AS articoPadre ON distbas.codditt = articoPadre.codditt AND distbas.db_coddb = articoPadre.ar_coddb)   INNER JOIN MOVDIS ON distbas.codditt = movdis.codditt AND distbas.db_coddb = movdis.md_coddb )   INNER JOIN artico as artico2 on movdis.codditt = artico2.codditt AND movdis.md_codfigli = artico2.ar_codart  WHERE articoPadre.codditt = 'RICCIO' AND articoPadre.ar_codart='GGAA_0001'  AND md_dtinval <='2017-3-29' AND md_dtfival >='2017-3-29' AND md_lottoin <=0 AND md_lottofi >=0 AND 'GGAA_0001         ' LIKE UPPER (md_filtart)  AND 'GGAA_0001         ' LIKE UPPER (md_filtart2)  AND md_coclie = 0  AND md_commeca = 0  ORDER BY md_riga
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 8
+29/03/2017 11:45:58:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: CICLI: SELECT cicli.*, tablavo.tb_deslavo as xx_codlavo, anagra.an_descr1 as xx_codterz, tabcent.tb_descent as xx_codcent, 0.0  as xx_ttrans, 0.0 as xx_tattrez, 0.0  as xx_tesec, 0.0  as xx_tattmo, 0.0  as xx_tesecmo, anagra2.an_descr1 as xx_ddcoclie, commess.co_descr1 as xx_ddcommeca, 0.0  as xx_tattrezmin, 0.0  as xx_tesecmin, '' as xx_fase, tabmaga.tb_desmaga as xx_magcent, tabmaga2.tb_desmaga as xx_magtran, confproc.pr_descr as xx_ddfvallegame, confproc2.pr_descr as xx_fdesnote, confproc3.pr_descr as xx_ftempatt, confproc4.pr_descr as xx_ftempese FROM (((((((((((CICLI  LEFT JOIN tablavo ON cicli.codditt = tablavo.codditt AND cicli.dd_codlavo = tablavo.tb_codlavo) LEFT JOIN anagra ON cicli.codditt = anagra.codditt AND cicli.dd_codterz = anagra.an_conto) LEFT JOIN tabcent ON cicli.codditt = tabcent.codditt AND cicli.dd_codcent = tabcent.tb_codcent) LEFT JOIN anagra as anagra2 ON cicli.codditt = anagra2.codditt AND cicli.dd_coclie = anagra2.an_conto) LEFT JOIN commess ON cicli.codditt = commess.codditt AND cicli.dd_commeca = commess.co_comme) LEFT JOIN tabmaga ON cicli.codditt = tabmaga.codditt AND cicli.dd_magcent = tabmaga.tb_codmaga) LEFT JOIN tabmaga as tabmaga2 ON cicli.codditt = tabmaga2.codditt AND cicli.dd_magtran = tabmaga2.tb_codmaga) LEFT JOIN confproc ON cicli.codditt = confproc.codditt AND cicli.dd_fvallegame = confproc.pr_codice) LEFT JOIN confproc as confproc2 ON cicli.codditt = confproc2.codditt AND cicli.dd_fdesnote = confproc2.pr_codice) LEFT JOIN confproc as confproc3 ON cicli.codditt = confproc3.codditt AND cicli.dd_ftempatt = confproc3.pr_codice) LEFT JOIN confproc as confproc4 ON cicli.codditt = confproc4.codditt AND cicli.dd_ftempese = confproc4.pr_codice) WHERE cicli.codditt = 'RICCIO' AND dd_coddb='GGAA_0001' AND dd_dtinval <='2017-3-29' AND dd_dtfival >='2017-3-29' AND dd_lottoin <=0 AND dd_lottofi>=0 AND 'GGAA_0001         ' LIKE UPPER(dd_filtart)  AND 'GGAA_0001         ' LIKE UPPER(dd_filtart2)  AND dd_coclie = 0 AND dd_commeca = 0 ORDER BY dd_riga
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: DISTBAS: SELECT DISTBAS.* FROM DISTBAS WHERE codditt = 'RICCIO' AND db_coddb = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/30 - Record prelevati: 1
+29/03/2017 11:45:58:Admin: ARTICO: SELECT ar_tipoopz, ar_codroot, ar_gesvar, ar_prevar, ar_tipo, ar_codtagl FROM ARTICO WHERE codditt = 'RICCIO' AND ar_codart = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:46:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/8 - Record prelevati: 0
+29/03/2017 11:46:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.5167))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/16 - Record prelevati: 0
+29/03/2017 11:46:14:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/18 - Record prelevati: 1
+29/03/2017 11:46:14:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:46:14:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:46:14:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 4, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:46:14', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '113', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = null, md_hhvalbonus = null, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 4 
+          TEMPO IMPIEGATO (in millisec): 55 - Record trattati: 1
+29/03/2017 11:46:28:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:46:51:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 0
+29/03/2017 11:47:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:47:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.5333))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 0
+29/03/2017 11:47:19:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:47:19:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:47:19:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/21 - Record prelevati: 1
+29/03/2017 11:47:19:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:47:19:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:47:19:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 5, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:47:19', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '063', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 1575, md_hhmtbonus = null, md_hhvalbonus = null, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 5 
+          TEMPO IMPIEGATO (in millisec): 65 - Record trattati: 1
+29/03/2017 11:47:19:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 6, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:47:19', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '061', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 465.57, md_hhmtbonus = null, md_hhvalbonus = null, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 6 
+          TEMPO IMPIEGATO (in millisec): 40 - Record trattati: 1
+29/03/2017 11:47:36:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 1
+29/03/2017 11:47:51:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:47:51:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:47:51:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:47:51:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 6, md_codfigli = 'T', md_unmis = 'MT', md_quant = 60, md_ump = 'MT', md_quantump = 60, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:47:51', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '061', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 443.4, md_hhmtbonus = null, md_hhvalbonus = null, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 6 
+          TEMPO IMPIEGATO (in millisec): 41 - Record trattati: 1
+29/03/2017 11:47:56:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:48:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/7 - Record prelevati: 0
+29/03/2017 11:48:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.55))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/27 - Record prelevati: 0
+29/03/2017 11:48:08:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/18 - Record prelevati: 1
+29/03/2017 11:48:59:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:49:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:49:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.5667))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:49:16:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:49:16:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:49:16:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:49:16:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 5, md_codfigli = 'T', md_unmis = 'MT', md_quant = 60, md_ump = 'MT', md_quantump = 60, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:49:16', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '063', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1500, md_hhmtbonus = null, md_hhvalbonus = null, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 5 
+          TEMPO IMPIEGATO (in millisec): 45 - Record trattati: 1
+29/03/2017 11:49:21:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:50:19:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/34 - Record prelevati: 0
+29/03/2017 11:50:19:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.5833))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/28 - Record prelevati: 0
+29/03/2017 11:50:26:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:50:26:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/18 - Record prelevati: 1
+29/03/2017 11:50:26:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:50:26:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 6, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:26', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '061', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 465.57, md_hhmtbonus = null, md_hhvalbonus = null, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 6 
+          TEMPO IMPIEGATO (in millisec): 38 - Record trattati: 1
+29/03/2017 11:50:31:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:45:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/17 - Record prelevati: 1
+29/03/2017 11:50:45:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:45:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:45:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 3, md_codfigli = 'T', md_unmis = 'MT', md_quant = 60, md_ump = 'MT', md_quantump = 60, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:45', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '117', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = 191, md_hhva = 'P', md_hhcocad = 0.19, md_hhvaluso = 1500, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 3 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:50:46:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/19 - Record prelevati: 1
+29/03/2017 11:50:46:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:46:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:50:46:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 4, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:46', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '113', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 4 
+          TEMPO IMPIEGATO (in millisec): 66 - Record trattati: 1
+29/03/2017 11:50:46:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:50:46:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:50:46:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:46:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 5, md_codfigli = 'T', md_unmis = 'MT', md_quant = 60, md_ump = 'MT', md_quantump = 60, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:46', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '063', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1500, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 5 
+          TEMPO IMPIEGATO (in millisec): 44 - Record trattati: 1
+29/03/2017 11:50:47:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:50:47:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:50:47:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:50:47:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 6, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:47', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '061', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = 7.39, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 465.57, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 6 
+          TEMPO IMPIEGATO (in millisec): 44 - Record trattati: 1
+29/03/2017 11:50:49:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:50:49:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/22 - Record prelevati: 1
+29/03/2017 11:50:49:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 1
+29/03/2017 11:50:49:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 7, md_codfigli = 'T', md_unmis = 'MT', md_quant = 14, md_ump = 'MT', md_quantump = 14, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:49', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '064', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = null, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 7 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:50:53:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:50:53:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:53:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 1
+29/03/2017 11:50:54:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 8, md_codfigli = 'T', md_unmis = 'MT', md_quant = 14, md_ump = 'MT', md_quantump = 14, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:54', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '065', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 200, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = null, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 2, md_hhvaluso = null, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 8 
+          TEMPO IMPIEGATO (in millisec): 61 - Record trattati: 1
+29/03/2017 11:50:55:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/19 - Record prelevati: 1
+29/03/2017 11:50:55:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:50:55:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:50:55:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 7, md_codfigli = 'T', md_unmis = 'MT', md_quant = 14, md_ump = 'MT', md_quantump = 14, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:55', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '064', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = 0, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 0, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 7 
+          TEMPO IMPIEGATO (in millisec): 41 - Record trattati: 1
+29/03/2017 11:50:57:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:50:57:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/21 - Record prelevati: 1
+29/03/2017 11:50:57:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:50:57:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 8, md_codfigli = 'T', md_unmis = 'MT', md_quant = 14, md_ump = 'MT', md_quantump = 14, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:50:57', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '065', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 200, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = 0, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 2, md_hhvaluso = 0, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 8 
+          TEMPO IMPIEGATO (in millisec): 42 - Record trattati: 1
+29/03/2017 11:50:59:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:51:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:51:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.6))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 0
+29/03/2017 11:51:04:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/17 - Record prelevati: 1
+29/03/2017 11:51:04:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:04:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:51:04:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:51:04:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 3, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:04', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '117', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = 191, md_hhva = 'P', md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 3 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:51:06:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/19 - Record prelevati: 1
+29/03/2017 11:51:06:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:06:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:06:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:51:06:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 5, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:06', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '063', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 5 
+          TEMPO IMPIEGATO (in millisec): 44 - Record trattati: 1
+29/03/2017 11:51:10:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 1
+29/03/2017 11:51:10:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:10:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:10:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/28 - Record prelevati: 1
+29/03/2017 11:51:10:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 7, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:10', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '064', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = 7.39, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 465.57, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 7 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:51:12:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:12:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:12:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:51:12:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:51:12:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 8, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:12', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '065', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 200, md_hhcomp = '100PL', md_hhcostol = 7.39, md_hhcoston = 7.39, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 2, md_hhvaluso = 465.57, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 8 
+          TEMPO IMPIEGATO (in millisec): 45 - Record trattati: 1
+29/03/2017 11:51:13:Admin: Tab1: SELECT ar_descr, ar_forn, an_descr1 AS xx_forn1, ar_magprod, tb_desmaga AS xx_magprod, ISNULL(af_makebuy, ar_makebuy) AS ar_makebuy  FROM artico   LEFT JOIN artfasi ON artico.codditt = artfasi.codditt AND ar_codart = af_codart AND af_fase = 0  LEFT JOIN anagra ON artico.codditt = anagra.codditt AND ar_forn = an_conto   LEFT JOIN tabmaga ON artico.codditt = tabmaga.codditt AND ar_magprod = tb_codmaga  WHERE artico.codditt = 'RICCIO'   AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:51:23:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:23:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:51:23:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:23:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 6, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:23', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '061', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 1575, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 6 
+          TEMPO IMPIEGATO (in millisec): 53 - Record trattati: 1
+29/03/2017 11:51:24:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:24:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:24:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:24:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 7, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:24', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '064', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 1575, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 7 
+          TEMPO IMPIEGATO (in millisec): 41 - Record trattati: 1
+29/03/2017 11:51:25:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:51:25:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 1
+29/03/2017 11:51:25:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 1
+29/03/2017 11:51:25:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 8, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:25', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '065', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 200, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 25, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 2, md_hhvaluso = 1575, md_hhmtbonus = 0, md_hhvalbonus = 0, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 8 
+          TEMPO IMPIEGATO (in millisec): 42 - Record trattati: 1
+29/03/2017 11:51:29:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:29:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:51:29:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 1
+29/03/2017 11:51:29:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 3, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:29', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '117', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = 191, md_hhva = 'P', md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 3 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:51:30:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 1
+29/03/2017 11:51:30:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:30:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 1
+29/03/2017 11:51:30:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 4, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:30', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '113', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 4 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:51:30:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:51:30:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:30:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/31 - Record prelevati: 1
+29/03/2017 11:51:30:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 5, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:30', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '063', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 5 
+          TEMPO IMPIEGATO (in millisec): 46 - Record trattati: 1
+29/03/2017 11:51:31:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:31:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:51:31:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 1
+29/03/2017 11:51:31:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 6, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:31', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '061', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 6 
+          TEMPO IMPIEGATO (in millisec): 56 - Record trattati: 1
+29/03/2017 11:51:32:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:51:32:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 1
+29/03/2017 11:51:32:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:32:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 7, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:32', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '064', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = null, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 0, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 7 
+          TEMPO IMPIEGATO (in millisec): 43 - Record trattati: 1
+29/03/2017 11:51:32:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:51:32:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:32:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:32:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 8, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:32', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '065', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 200, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = null, md_hhva = null, md_hhcocad = 2, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 8 
+          TEMPO IMPIEGATO (in millisec): 42 - Record trattati: 1
+29/03/2017 11:51:35:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:51:35:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:35:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/20 - Record prelevati: 1
+29/03/2017 11:51:36:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 2, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:36', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '060', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 100, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 17.0634920634921, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = 190, md_hhva = 'G', md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 20, md_hhvalbonus = 500, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 2 
+          TEMPO IMPIEGATO (in millisec): 45 - Record trattati: 1
+29/03/2017 11:51:38:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:38:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:38:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:51:38:Admin: Execute: UPDATE movdis SET codditt = 'RICCIO', md_coddb = 'GGAA_0001', md_riga = 2, md_codfigli = 'T', md_unmis = 'MT', md_quant = 63, md_ump = 'MT', md_quantump = 63, md_tipofigl = null, md_sfrido = 0, md_sottopr = 'N', md_perpz = 1, md_note = null, md_formula = null, md_dtinval = '2017-3-9', md_dtfival = '2099-12-31', md_proven = 'M', md_codmaga = 0, md_ultmaga = -1, md_commeca = 0, md_filtart = '__________________', md_filtart2 = '__________________', md_perpian = 0, md_perpian2 = 0, md_ritardo = 0, md_faseiniz = 0, md_coclie = 0, md_lottoin = 0, md_lottofi = 999999999, md_misura1 = 0, md_misura2 = 0, md_misura3 = 0, md_interr = 'N', md_fasefigli = 0, md_formqta = 0, md_formmis1 = 0, md_formmis2 = 0, md_formmis3 = 0, md_fvallegame = 0, md_fistanza = 0, md_fllapcp3 = 'N', md_flconvccp3 = 'N', md_flqtavcp3 = 'N', md_flqtaccp3 = 'N', md_moltform = 1, md_notemolt = null, md_tctipo = ' ', md_tccodvar = ' ', md_tctaglia = ' ', md_tcindtagl = 0, md_tccodtap = 0, md_tccodtaf = 0, md_ultagg = '2017-3-29 11:51:38', md_opnome = 'Admin', md_aggcp2 = 'S', md_hhconto = 19010282, md_hhcodartf = 'ZEUS', md_hhcolore = '060', md_hhfin = null, md_hhalt = 300, md_hhlar = null, md_hhmtinv = 28, md_hhmtuso = 100, md_hhcomp = '100PL', md_hhcostol = 25, md_hhcoston = 13.0952380952381, md_hhprzlis = null, md_hhscomin = 10, md_hhscomax = 30, md_hhmolt = 500, md_hhpag = null, md_hhdescr = 'TAFFETA'' ROYALSETALUX', md_hhtirella = 190, md_hhva = 'G', md_hhcocad = 0.19, md_hhvaluso = 1575, md_hhmtbonus = 30, md_hhvalbonus = 750, md_hhcconf = null, md_hhcdors = null WHERE movdis.codditt = 'RICCIO' AND md_coddb = 'GGAA_0001' AND md_riga = 2 
+          TEMPO IMPIEGATO (in millisec): 56 - Record trattati: 1
+29/03/2017 11:52:00:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:52:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 0
+29/03/2017 11:52:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.6167))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/30 - Record prelevati: 0
+29/03/2017 11:52:03:Admin: Tab1: SELECT ar_descr, ar_forn, an_descr1 AS xx_forn1, ar_magprod, tb_desmaga AS xx_magprod, ISNULL(af_makebuy, ar_makebuy) AS ar_makebuy  FROM artico   LEFT JOIN artfasi ON artico.codditt = artfasi.codditt AND ar_codart = af_codart AND af_fase = 0  LEFT JOIN anagra ON artico.codditt = anagra.codditt AND ar_forn = an_conto   LEFT JOIN tabmaga ON artico.codditt = tabmaga.codditt AND ar_magprod = tb_codmaga  WHERE artico.codditt = 'RICCIO'   AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: Tab1: SELECT ar_descr, ar_forn, an_descr1 AS xx_forn1, ar_magprod, tb_desmaga AS xx_magprod, ISNULL(af_makebuy, ar_makebuy) AS ar_makebuy  FROM artico   LEFT JOIN artfasi ON artico.codditt = artfasi.codditt AND ar_codart = af_codart AND af_fase = 0  LEFT JOIN anagra ON artico.codditt = anagra.codditt AND ar_forn = an_conto   LEFT JOIN tabmaga ON artico.codditt = tabmaga.codditt AND ar_magprod = tb_codmaga  WHERE artico.codditt = 'RICCIO'   AND ar_codart = ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/85 - Record prelevati: 0
+29/03/2017 11:52:07:Admin: MOVDIS: Select max(md_riga) as xx_maxriga from  MOVDIS WHERE codditt = 'RICCIO' AND md_coddb = 'GGAA_0001'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/27 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: artico: SELECT * FROM artico WHERE ar_codart = 't' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/14 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: ARTICO: SELECT ar_unmis, ar_confez2, ar_qtacon2, ar_unmis2, ar_conver, ar_formula, ar_um4 FROM artico WHERE codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/27 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: Tab1: SELECT ar_descr, ar_forn, an_descr1 AS xx_forn1, ar_magprod, tb_desmaga AS xx_magprod, ISNULL(af_makebuy, ar_makebuy) AS ar_makebuy  FROM artico   LEFT JOIN artfasi ON artico.codditt = artfasi.codditt AND ar_codart = af_codart AND af_fase = 0  LEFT JOIN anagra ON artico.codditt = anagra.codditt AND ar_forn = an_conto   LEFT JOIN tabmaga ON artico.codditt = tabmaga.codditt AND ar_magprod = tb_codmaga  WHERE artico.codditt = 'RICCIO'   AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:52:15:Admin: Tab1: SELECT tb_codmast, tb_struttura FROM (tabmast INNER JOIN tabanaz ON tabmast.tb_codpcon = tabanaz.tb_azcodpcon)  INNER JOIN tabpcon ON tabmast.tb_codpcon = tabpcon.tb_codpcon  WHERE codditt = 'RICCIO' AND tb_tipomast = 'F' ORDER BY tb_codmast ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/118 - Record prelevati: 1
+29/03/2017 11:52:25:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'GGAA_0001' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 1
+29/03/2017 11:52:25:Admin: Tab1:  SELECT artico.*, artroot.*  FROM artico LEFT JOIN artroot ON artico.codditt = artroot.codditt And artico.ar_codart = artroot.arr_codroot  WHERE artico.codditt = 'RICCIO' AND ar_codart = 'T'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:52:25:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/17 - Record prelevati: 1
+29/03/2017 11:52:25:Admin: Execute: INSERT INTO movdis  ( codditt, md_coddb, md_riga, md_codfigli, md_unmis, md_quant, md_ump, md_quantump, md_tipofigl, md_sfrido, md_sottopr, md_perpz, md_note, md_formula, md_dtinval, md_dtfival, md_proven, md_codmaga, md_ultmaga, md_commeca, md_filtart, md_filtart2, md_perpian, md_perpian2, md_ritardo, md_faseiniz, md_coclie, md_lottoin, md_lottofi, md_misura1, md_misura2, md_misura3, md_interr, md_fasefigli, md_formqta, md_formmis1, md_formmis2, md_formmis3, md_fvallegame, md_fistanza, md_fllapcp3, md_flconvccp3, md_flqtavcp3, md_flqtaccp3, md_moltform, md_notemolt, md_tctipo, md_tccodvar, md_tctaglia, md_tcindtagl, md_tccodtap, md_tccodtaf, md_ultagg, md_opnome, md_aggcp2, md_hhconto, md_hhcodartf, md_hhcolore, md_hhfin, md_hhalt, md_hhlar, md_hhmtinv, md_hhmtuso, md_hhcomp, md_hhcostol, md_hhcoston, md_hhprzlis, md_hhscomin, md_hhscomax, md_hhmolt, md_hhpag, md_hhdescr, md_hhtirella, md_hhva, md_hhcocad, md_hhvaluso, md_hhmtbonus, md_hhvalbonus, md_hhcconf, md_hhcdors )  VALUES  ( 'RICCIO', 'GGAA_0001', 9, 'T', 'MT', 0, 'MT', 0, null, 0, 'N', 1, null, null, '2017-3-29', '2099-12-31', 'M', 0, -1, 0, '__________________', '__________________', 0, 0, 0, 0, 0, 0, 999999999, 0, 0, 0, 'N', 0, 0, 0, 0, 0, 0, 0, 'N', 'N', 'N', 'N', 1, null, ' ', ' ', ' ', 0, 0, 0, '2017-3-29 11:52:25', 'Admin', 'S', 19010282, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ) 
+          TEMPO IMPIEGATO (in millisec): 52 - Record trattati: 1
+29/03/2017 11:52:25:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:52:25:Admin: artico: SELECT * FROM artico WHERE ar_codart = 'T' AND codditt = 'RICCIO'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:53:00:Admin: Tab1: SELECT DISTINCT TOP 5 TMP.spt_postid, TMP.spt_ultagg, TMP.spt_opnome, TMP.spt_dtorpost FROM ( 
+  SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome = 'Admin'
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostar 
+  	  INNER JOIN surelaz ON sur_relid = spar_relid 
+      WHERE spar_postid = spt_postid 
+  	    AND sur_opnome2 = 'Admin'
+        AND sur_attiva = 'S' 
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome <> 'Admin' AND 
+  (SELECT COUNT(*) FROM supostal 
+ 	    INNER JOIN suliste ON sul_codsuli = spa_codsuli	
+  	  INNER JOIN surelaz ON sur_relid = sul_relid 
+      WHERE spa_postid = spt_postid 
+        AND sur_attiva = 'S' 
+        AND sur_opnome2 = 'Admin'
+  	    AND (SELECT COUNT(*) FROM surelaznoditta 
+      WHERE(surelaznoditta.codditt = supostt.codditt) 
+  		  AND surelaznoditta.sur_relid = surelaz.sur_relid) = 0) > 0 
+  UNION SELECT spt_postid, spt_ultagg, spt_opnome, spt_dtorpost FROM supostt 
+  WHERE spt_opnome IN (SELECT sur_opnome2 FROM surelaz WHERE sur_opnome = 'Admin' AND sur_attiva = 'S') 
+  AND (SELECT COUNT(*) FROM supostar 
+	     WHERE spar_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM supostal 
+	     WHERE spa_postid = spt_postid) = 0 
+  AND (SELECT COUNT(*) FROM surelaznoditta 
+	    INNER JOIN surelaz ON surelaznoditta.sur_relid = surelaz.sur_relid	
+        WHERE(surelaznoditta.codditt = supostt.codditt) 
+  	    AND surelaz.sur_opnome = 'Admin'
+  	    AND surelaz.sur_opnome2 = spt_opnome
+        AND sur_attiva = 'S') = 0 
+) AS TMP 
+ORDER BY TMP.spt_ultagg DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:53:00:Admin: Tab1:  SELECT cract.*, tabtaco.tb_color  FROM (SELECT DISTINCT TOP 50 cract.*          FROM cract INNER JOIN cractopp ON cap_codcrac = ca_codcrac AND cract.codditt = cractopp.codditt                 WHERE 'Admin' IN (ca_opnome, ca_opnomeinc, cap_opcrmincpr)     AND (ca_dataprev > '2017-3-29'     OR (ca_dataprev = '2017-3-29' AND ca_oraprev >= 11.6333))    AND ca_status = 'D')  AS cract INNER JOIN tabtaco ON ca_codtaco = tb_codtaco AND cract.codditt = tabtaco.codditt  ORDER BY ca_dataprev, ca_oraprev
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/16 - Record prelevati: 0
+29/03/2017 11:53:01:Admin: Tab1: SELECT  em_ogprogr AS ID, MAX(em_dtorsent) AS LAST_UPDATE FROM emails  WHERE em_tipo = 'S'    AND em_cartella IS NULL    AND em_id IN (SELECT emd_id FROM emaildes                   WHERE emd_opdest = 'Admin'                    AND emd_tipodes = 'B')  GROUP BY em_ogprogr  ORDER BY MAX(em_dtorsent) DESC 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 0

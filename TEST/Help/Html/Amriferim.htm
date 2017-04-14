@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> AM: Come vengono gestiti/proposti i riferimenti a commesse, centri, linee sui documenti/ordini/proposte d'ordine/MRP</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>11/11/2015</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-over.gif"></A></TD><TD align=right><A onmouseover="image4.src=loadImage4.src;" onmouseout="image4.src=staticImage4.src;" href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-out.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_03_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Come vengono gestiti/proposti i riferimenti a commesse, centri, linee sui documenti/ordini/proposte d'ordine/MRP</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>
+<u>
+<b>
+<i>Commessa/sotto-comessa (commeca/subcommeca)</i>
+</b>
+</u>
+</p>
+<p>
+<u>GESTIONE DOCUMENTI</u>
+</p>
+<ol>
+<li>Se si acquisisce un ordine/nota, e il corpo del documento no ha righe, eredita sulla testata del doc. <u>commeca</u> e <u>subcommeca</u> indicati sulla testata dell'ordine/nota; se si acquisisce un ordine che è stato già assegnato con nota ha priorità l'indicazione di commessa indicata sulla nota.</li>
+<li>Condizione dei punto 1. ma se il documento ha già righe nel corpo viene segnalata la differenza sui campi commeca e sub-commeca di testata fra ordine e documento.</li>
+<li>Se si crea un documento duplicandolo da un altro riporta in testata <u>commeca</u> e <u>subcommeca</u> dalla testata del documento di origine; le righe riportano commessa dalle righe di origine.</li>
+<li>Le righe nuove che si creano su un documento ereditano <u>commeca</u> e <u>subcommeca</u> dalla testata.</li>
+<li>Le righe di scarico di produzione, create assieme al carico di produzione leggendo la distinta base, ereditano <u>commeca</u> e <u>subcommeca</u> dalla corrispondente riga di carico (indipendentemente dalla gestione commessa del figlio).</li>
+<li>Le righe di scarico di produzione, create direttamente sugli scarichi collegati, ereditano <u>commeca</u> e <u>subcommeca</u> dalla dalla riga di carico di riferimento.</li>
+<li>Le righe che si acquisiscono da ordini/note ereditano <u>commeca </u>e <u>subcommeca</u> dalle righe originarie di ordine/note; se è presente la nota ha priorità rispetto all'ordine; per i carichi di prod. vale sia per i carichi che gli scarichi.</li>
+<li>Le righe con copia/incolla si portano dietro commeca e subcommeca.</li>
+<li>Le righe di lavorazione, create assieme al carico o direttamente, ereditano <u>commeca</u> e <u>subcommeca</u> dalla corrispondente riga di carico di produzione.</li>
+<li>Righe di lavorazione, se acquisite da un'ordine di produzione (ATTIVIT) ereditano <u>commeca</u> e <u>subcommeca</u> dalle righe di ordine di produzione (H), visto che su ATTIVIT/ASSRIS non esistono informazioni sulla commessa.</li>
+<li>Acquisendo un ordine di produzione, anche se esistono avanzamenti di lavorazione (LAVCENT tipo G) con proprie indicazioni di commessa, le righe di lavorazione ereditano <u>commeca</u> e <u>subcommeca</u> dalla riga di ordine di produzione (H). (*)</li>
+</ol>
+<p>
+<u>GESTIONE ORDINI</u>
+</p>
+<ol>
+<li>Se si crea un ordine duplicandolo da un altro riporta in testata <u>commeca</u> e <u>subcommeca</u> dalla testata del documento di origine; le righe riportano la commessa dalla testata del documento di origine (sulle duplicazioni R -&gt; H e R -&gt; O), per tutte le altre duplicazioni lo riporta dalle righe; nella duplicazione R -&gt; H sulle righe Y riporta la commessa solo se l'articolo padre è gestito a commessa.</li>
+<li>Le righe nuove che si creano sull'ordine ereditano <u>commeca</u> e <u>subcommeca</u> dalla testata.</li>
+<li>Le righe di impegno di prod., create assieme alle righe di ordine di prod., ereditano <u>commeca</u> e <u>subcommeca</u> dalla corrispondente riga del padre.</li>
+<li>Le righe di impegno di produzione, create direttamente sugli impegni collegati, ereditano <u>commeca</u> e <u>subcommeca</u> dalla riga del padre di riferimento.</li>
+<li>Le righe con copia/incolla si portano dietro commeca e subcommeca.</li>
+<li>Non esistono informazioni di commessa, sub-commessa sulle attività.</li>
+</ol>
+<p>
+<u>GENERAZIONE NOTE PRELIEVO DA IMPEGNI</u>
+</p>
+<ol>
+<li>In testata commessa e sub-commessa viene ereditata dal primo ordine (per numero) evaso.</li>
+<li>Le righe ereditano la commessa dalle righe degli ordini.</li>
+</ol>
+<p>
+<u>GESTIONE PROPOSTE D'ORDINE</u>
+</p>
+<ol>
+<li>Le righe di impegno di prod., create assieme alle righe di ordine di prod., ereditano <u>commeca</u> e <u>subcommeca</u> dalla corrispondente riga del padre.</li>
+<li>Le righe di impegno di produzione, create direttamente sugli impegni collegati, ereditano <u>commeca</u> e <u>subcommeca</u> dalla riga del padre di riferimento.</li>
+<li>Non esistono informazioni di commessa, sub-commessa sulle attività.</li>
+</ol>
+<p>
+<u>ELABORAZIONE MRP</u>
+</p>
+<p>
+<u>
+</u>
+</p>
+<ol>
+<li>Riportando gli Impegni cliente e la lista di produzione viene riportata la commessa solo se gli articoli (a tutti i livelli sottostanti) solo se hanno gescomm&lt;&gt;N, la sub-comm. viene pre riportata solo se la comessa riporatta è deversa da zero.</li>
+<li>Riportando i fabbisogni impliciti seleziona solo gli articoli con gescomm=N; quando determina cali di disponibilità nel tempo raggruppa comunque anche x numero di commessa creando documande indip. con codice commessa ma con gescomm=N.</li>
+</ol>
+<p>
+<b>
+<i>
+<u>Centro di C.A. (numecr/codcena)</u>
+</i>
+</b>
+</p>
+<p>
+<u>GESTIONE DOCUMENTI</u>
+</p>
+<ol>
+<li>Il codice centro CA di testata viene ereditato dal tipo bolla/fattura che si seleziona sul documento.</li>
+<li>Se si acquisisce un ordine/nota, e il corpo del documento no ha righe, acquisisce, sulla testata, il Centro CA che è indicato sulla testata dell'ordine/nota; se esistono già righe sul corpo segnala le differenze.</li>
+<li>Se si crea un documento duplicandolo da un altro riporta il Centro CA di testata dal documento di origine.</li>
+<li>Le righe del documento duplicato ereditano il Centro CA da quelle del documento di origine.</li>
+<li>Le righe nuove che si creano su un documento ereditano il codice Centro CA dall'anagrafica articolo (campo ar_numecr), se diverso da 0, in mancanza utilizza il Centro CA indicato in testata.</li>
+<li>Le righe di scarico di produzione, create assieme alla riga di carico, ereditano il Centro CA dalla corrispondente riga di carico.</li>
+<li>Le righe nuove di scarico di produzione, inserite direttamente sugli scarichi collegati, ereditano il codice Centro CA dalla riga di carico di riferimento.</li>
+<li>Le righe che si acquisiscono da ordini/note ereditano Centro CA dalle righe originarie di ordine/note; se è presente la nota ha priorità rispetto all'ordine; per i carichi di prod. vale sia per i carichi che gli scarichi.</li>
+<li>Le righe con copia/incolla si portano dietro Centro CA.</li>
+<li>Le righe di lavorazione create assieme alla riga di carico di prod. ereditano il codice centro CA da quello che è indicato nel Centro di lavoro indicato sulle fasi di lavorazioni in distinta base.</li>
+<li>Le righe di lavorazione create direttamente sulle lavorazioni collegate ereditano il Centro CA dal codice centro di lavoro utilizzato per eseguire la lavorazione.</li>
+<li>Righe di lavorazione, se acquisite da un'ordine di produzione (ATTIVIT) ereditano Centro CA da ASSRIS (qualora il record sia presente) altrimenti 0.</li>
+<li>Acquisendo un ordine di produzione, se esistono avanzamenti di lavorazione (LAVCENT tipo G), eredita il Centro CA dalle righe di avanzamento lavorazione.</li>
+</ol>
+<p>
+<u>GESTIONE ORDINI</u>
+</p>
+<ol>
+<li>Il codice centro CA di testata viene ereditato dal tipo bolla/fattura che si seleziona sul documento.</li>
+<li>Se si crea un ordine, duplicandolo da un altro, riporta in testata il Centro CA che è indicato nel nuovo tipo bolla/fattura selezionato durante la duplicazione.</li>
+<li>Le righe di ordine duplicati ereditano il centro CA all'anagrafica articolo (campo ar_numecr) se indicato, altrimenti dal codice Centro CA indicato in testata.</li>
+<li>Nella duplicazione se l'ordine di destinazione è un ordine di produzione, le righe degli impegni di prod. ereditano il Centro CA dalla riga padre.</li>
+<li>Le righe nuove che si creano su un documento ereditano il codice Centro CA dall'anagrafica articolo (campo ar_numecr), se diverso da 0, in mancanza utilizza il Centro CA indicato in testata.</li>
+<li>Le righe di impegno di produzione, create assieme alla riga di carico, ereditano il Centro CA dalla corrispondente riga di carico.</li>
+<li>Le righe nuove di impegno di produzione, inserite direttamente sugli impegni collegati, ereditano il codice Centro CA dalla riga di carico di riferimento.</li>
+<li>Le righe con copia/incolla si portano dietro Centro CA.</li>
+<li>Le righe di attività create assieme alla riga di ordine di prod. ereditano il codice centro CA da quello che è indicato nel Centro di lavoro indicato sulle fasi di lavorazioni in distinta base.</li>
+<li>Le righe di attività create direttamente sulle lavorazioni collegate ereditano il Centro CA dal codice centro di lavoro utilizzato per eseguire la lavorazione.</li>
+</ol>
+<p>
+<u>GENERAZIONE NOTE PRELIEVO DA IMPEGNI</u>
+</p>
+<ol>
+<li>In testata il centro CA viene ereditato dal primo ordine (per numero) evaso.</li>
+<li>Le righe ereditano il centro CA dalle righe degli ordini.</li>
+</ol>
+<p>
+<u>GENERAZIONE ORDINI DA PROPOSTE D'ORDINE</u>
+</p>
+<ol>
+<li>In testata dell'ordine generato (OP/IP, OF, IT) il centro CA viene ereditato dal tipo bolla/fattura scelto in fase di generazione.</li>
+<li>Sulle righe d'ordine generate viene conservato il codice centro presente a livello di proposta d'ordine (invece se a livello di proposta d'ordine c'è zero e nel tipo bolla/fattura, attribuito alla testata è &lt;&gt; da zero dovrebbe attribuire quello, per gli OP poi questo dovrebbe essere ereditato anche sulle righe IP, per rispettare la stessa logica di GESTIONE ORDINI. Problema risolto a partire dalla 12.0 SR3)</li>
+<li>Per gli OP sulle righe di attività (ASSRIS) viene ereditato il centro CA presente sulle attività delle proposte d'ordine (ZZASSRIS)</li>
+</ol>
+<p>
+<u>GESTIONE PROPOSTE D'ORDINE</u>
+</p>
+<ol>
+<li>Le righe nuove che si creano su un ordine ereditano il codice Centro CA dall'anagrafica articolo (campo ar_numecr).</li>
+<li>Le righe di impegno di produzione, create assieme alla riga di carico, ereditano il Centro CA dalla corrispondente riga di carico.</li>
+<li>Le righe nuove di impegno di produzione, inserite direttamente sugli impegni collegati, ereditano il codice Centro CA dalla riga di carico di riferimento.</li>
+<li>Le righe di attività create assieme alla riga di ordine di prod. ereditano il codice centro CA da quello che è indicato nel Centro di lavoro indicato sulle fasi di lavorazioni in distinta base.</li>
+<li>Le righe di attività create direttamente sulle lavorazioni collegate ereditano il Centro CA dal codice centro di lavoro utilizzato per eseguire la lavorazione.</li>
+</ol>
+<p>
+<u>ELABORAZIONE MRP</u>
+</p>
+<ol>
+<li>Proposte di ordine di produzione/fornitore e impegni di traf. ereditano in Centro CA dall'articolo in anagrafica.</li>
+<li>Le proposte di impegni di produzione ereditano il Centro CA dalle righe di ordine di produzione corrispondenti.</li>
+<li>Le attività create ereditano il Centro CA dal codice centro di lavoro utilizzato per eseguire la lavorazione.</li>
+</ol>
+<p>
+<b>
+<i>
+<u>Famiglia/Linea CA (famprod/codcfam)</u>
+</i>
+</b>
+</p>
+<p>
+<u>GESTIONE DOCUMENTI</u>
+</p>
+<ol>
+<li>Le righe nuove che si creano su un documento ereditano la Linea CA dall'articolo (ar_famprod).</li>
+<li>Le righe di scarico di produzione, create assieme alla riga di carico, ereditano la Linea CA dall'articolo padre.</li>
+<li>Le righe nuove di scarico di produzione, inserite direttamente sugli scarichi collegati, ereditano la Linea CA dall'articolo padre.</li>
+<li>Le righe che si acquisiscono da ordini/note ereditano la Linea CA dalle righe originarie di ordine/note; se è presente la nota ha priorità rispetto all'ordine; per i carichi di prod. vale sia per i carichi che gli scarichi.</li>
+<li>Le righe col copia/incolla si portano dietro Linea CA</li>
+<li>Le righe di lavorazione create assieme alla riga di carico di prod. ereditano la Linea CA da quello che è indicato nella riga dell'articolo padre.</li>
+<li>Le righe di lavorazione create direttamente sulle lavorazioni collegate ereditano la Linea CA da quello che è indicato nella riga dell'articolo padre.</li>
+<li>Righe di lavorazione, se acquisite da un'ordine di produzione (ATTIVIT) ereditano Linea CA dalle righe di ordine di produzione (movord H).</li>
+<li>Acquisendo un ordine di produzione, anche se esistono avanzamenti di lavorazione (LAVCENT tipo G) con proprie indicazioni di Linea CA, le righe di lavorazione ereditano comunque Linea CA dalla riga di ordine di produzione (H). (*)</li>
+</ol>
+<p>
+<u>GESTIONE ORDINI</u>
+</p>
+<ol>
+<li>Le righe di ordine, duplicate da un altro, ereditano la Linea CA dall'anagrafica articolo (campo ar_famprod)</li>
+<li>Nella duplicazione se l'ordine di destinazione è un ordine di produzione, le righe degli impegni di prod. ereditano la Linea CA dalla riga padre.</li>
+<li>Le righe nuove che si creano su un ordine ereditano la Linea CA dall'articolo (campo ar_famprod).</li>
+<li>Le righe di impegno di produzione, create assieme alla riga di carico, ereditano la Linea CA dall'articolo padre.</li>
+<li>Le righe nuove di impegno di produzione, inserite direttamente sugli impegni collegati, ereditano la Linea CA dall'articolo padre.</li>
+<li>Le righe col copia/incolla si portano dietro Linea CA</li>
+<li>Le attività non hanno codice Linea CA</li>
+</ol>
+<p>
+<u>GENERAZIONE NOTE PRELIEVO DA IMPEGNI</u>
+</p>
+<ol>
+<li>Le righe ereditano la linea/famiglia dalle righe degli ordini.</li>
+</ol>
+<p>
+<u>GESTIONE PROPOSTE D'ORDINE</u>
+</p>
+<ol>
+<li>Le righe nuove che si creano su un ordine ereditano la Linea CA dall'articolo (campo ar_famprod).</li>
+<li>Le righe di impegno di produzione, create assieme alla riga di carico, ereditano la Linea CA dall'articolo padre.</li>
+<li>Le righe nuove di impegno di produzione, inserite direttamente sugli impegni collegati, ereditano la Linea CA dall'articolo padre.</li>
+<li>Le attività non hanno codice Linea CA</li>
+</ol>
+<p>
+<u>ELABORAZIONE MRP</u>
+</p>
+<ol>
+<li>Proposte di ordine di produzione/fornitore e impegni di traf. ereditano la linea/famiglia dall'articolo in anagrafica.</li>
+<li>Le proposte di impegni di produzione ereditano la linea/famiglia dalle righe di ordine di produzione corrispondenti.</li>
+<li>Le attività non hanno codice Linea CA.</li>
+</ol>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

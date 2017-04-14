@@ -1,0 +1,7 @@
+C:\Bus.Riccio\BIZ2015\TEST\BD__HHLC.dll
+C:\Bus.Riccio\BIZ2015\TEST\BD__HHLC.pdb
+C:\Bus.Riccio\BIZ2015\BD__HHLC\obj\Debug\BD__HHLC.vbprojResolveAssemblyReference.cache
+C:\Bus.Riccio\BIZ2015\BD__HHLC\obj\Debug\NTSInformatica.Resources.resources
+C:\Bus.Riccio\BIZ2015\BD__HHLC\obj\Debug\BD__HHLC.vbproj.GenerateResource.Cache
+C:\Bus.Riccio\BIZ2015\BD__HHLC\obj\Debug\BD__HHLC.dll
+C:\Bus.Riccio\BIZ2015\BD__HHLC\obj\Debug\BD__HHLC.pdb

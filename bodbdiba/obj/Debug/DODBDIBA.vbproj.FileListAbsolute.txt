@@ -1,0 +1,8 @@
+C:\Bus.Riccio\BIZ2015\bodbdiba\obj\Debug\NTSInformatica.FRODBDIBA.resources
+C:\Bus.Riccio\BIZ2015\bodbdiba\obj\Debug\NTSInformatica.Resources.resources
+C:\Bus.Riccio\BIZ2015\bodbdiba\obj\Debug\DODBDIBA.vbproj.GenerateResource.Cache
+C:\Bus.Riccio\BIZ2015\TEST\BODBDIBA.dll
+C:\Bus.Riccio\BIZ2015\TEST\BODBDIBA.pdb
+C:\Bus.Riccio\BIZ2015\bodbdiba\obj\Debug\BODBDIBA.dll
+C:\Bus.Riccio\BIZ2015\bodbdiba\obj\Debug\BODBDIBA.pdb
+C:\Bus.Riccio\BIZ2015\bodbdiba\obj\Debug\DODBDIBA.vbprojResolveAssemblyReference.cache

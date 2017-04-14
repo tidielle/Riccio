@@ -1,0 +1,7 @@
+G:\BIZ2015SR5\TEST\BFORGSOR.dll
+G:\BIZ2015SR5\TEST\BFORGSOR.pdb
+G:\BIZ2015SR5\BEORGSOR\obj\Debug\BFORGSOR.vbprojResolveAssemblyReference.cache
+G:\BIZ2015SR5\BEORGSOR\obj\Debug\NTSInformatica.Resources.resources
+G:\BIZ2015SR5\BEORGSOR\obj\Debug\BFORGSOR.vbproj.GenerateResource.Cache
+G:\BIZ2015SR5\BEORGSOR\obj\Debug\BFORGSOR.dll
+G:\BIZ2015SR5\BEORGSOR\obj\Debug\BFORGSOR.pdb

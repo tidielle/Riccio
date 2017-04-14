@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Tab1" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Tab1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ui_progr" type="xs:int" minOccurs="0" />
+                <xs:element name="ui_db" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_ditta" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_child" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_form" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_tipodoc" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_ruolo" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_opnome" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_codling" type="xs:short" minOccurs="0" />
+                <xs:element name="ui_ctrltype" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_ctrlname" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_gridcol" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_comboitem" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_nomprop" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_valprop" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_usascript" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_script" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_parent" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Tab1>
+    <ui_progr>31828</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BNDBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSBarButtonItem</ui_ctrltype>
+    <ui_ctrlname>tlb_hhaggdb</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>EXT</ui_nomprop>
+    <ui_valprop>GRIC:0|TEXT:Conferma campionario|NOME:|VMIN:|VMAX:|MLEN:|FORM:|NULL:|CHEC:|UNCH:|DBAS:|ZOOM:|ITEM:</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>FRMDBDIBA.tlbMain</ui_parent>
+  </Tab1>
+</NewDataSet>

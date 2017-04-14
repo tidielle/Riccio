@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{637E475C-6960-43B1-AEB4-38A9B895B9DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NTSInformatica</RootNamespace>
+    <AssemblyName>BN__HELP</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>On</OptionStrict>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\TEST\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BDLBBASE, Version=18.0.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BDLBMENU, Version=18.0.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BD__BASE, Version=18.0.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BELBMENU, Version=18.0.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__BASN, Version=13.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__CZOO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\TEST\BE__CZOO.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__FRWK, Version=1.0.1846.18650, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\TEST\BE__FRWK.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__MENU, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\TEST\BE__MENU.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BN__CHIL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\TEST\BN__CHIL.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BN__STD, Version=1.1.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\TEST\BN__STD.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.Data.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.Utils.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.XtraBars.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.XtraEditors.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.XtraGrid.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BN__HIMG.designer.vb">
+      <DependentUpon>BN__HIMG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BN__HIMG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HELP.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HELT.Designer.vb">
+      <DependentUpon>BN__HELT.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BN__HELT.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HREC.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HREF.Designer.vb">
+      <DependentUpon>BN__HREF.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BN__HREF.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__PRIN.Designer.vb">
+      <DependentUpon>BN__PRIN.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BN__PRIN.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HELE.Designer.vb">
+      <DependentUpon>BN__HELE.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BN__HELE.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HELO.Designer.vb">
+      <DependentUpon>BN__HELO.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BN__HELO.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN__HELP_F.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BN__HIMG.resx">
+      <DependentUpon>BN__HIMG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HELP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BN__HELP.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HELT.resx">
+      <DependentUpon>BN__HELT.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HREC.resx">
+      <DependentUpon>BN__HREC.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HREF.resx">
+      <DependentUpon>BN__HREF.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__PRIN.resx">
+      <DependentUpon>BN__PRIN.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HELE.resx">
+      <DependentUpon>BN__HELE.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HELO.resx">
+      <DependentUpon>BN__HELO.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN__HELP_F.resx">
+      <DependentUpon>BN__HELP_F.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

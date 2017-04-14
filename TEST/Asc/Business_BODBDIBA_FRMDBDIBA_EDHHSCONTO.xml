@@ -1,0 +1,215 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Tab1" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Tab1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ui_progr" type="xs:int" minOccurs="0" />
+                <xs:element name="ui_db" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_ditta" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_child" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_form" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_tipodoc" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_ruolo" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_opnome" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_codling" type="xs:short" minOccurs="0" />
+                <xs:element name="ui_ctrltype" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_ctrlname" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_gridcol" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_comboitem" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_nomprop" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_valprop" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_usascript" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_script" type="xs:string" minOccurs="0" />
+                <xs:element name="ui_parent" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Tab1>
+    <ui_progr>38212</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>ed_hhsc</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>EXT</ui_nomprop>
+    <ui_valprop>GRIC:0|TEXT:|NOME:Sconto Confezione|VMIN:|VMAX:|MLEN:0|FORM:|NULL:0|CHEC:|UNCH:|DBAS:distbas.db_hhsccf|ZOOM:|ITEM:</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38219</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>ed_hhsc</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZANCHOR</ui_nomprop>
+    <ui_valprop>5</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38220</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZDOCK</ui_nomprop>
+    <ui_valprop>0</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38217</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZHEIGHT</ui_nomprop>
+    <ui_valprop>20</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38216</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZLEFT</ui_nomprop>
+    <ui_valprop>224</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38215</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZTOP</ui_nomprop>
+    <ui_valprop>45</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38218</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZWIDTH</ui_nomprop>
+    <ui_valprop>60</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38214</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZZMULTILINE</ui_nomprop>
+    <ui_valprop>0</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+  <Tab1>
+    <ui_progr>38213</ui_progr>
+    <ui_db xml:space="preserve"> </ui_db>
+    <ui_ditta xml:space="preserve"> </ui_ditta>
+    <ui_child>BODBDIBA</ui_child>
+    <ui_form>FRMDBDIBA</ui_form>
+    <ui_tipodoc xml:space="preserve"> </ui_tipodoc>
+    <ui_ruolo xml:space="preserve"> </ui_ruolo>
+    <ui_opnome xml:space="preserve"> </ui_opnome>
+    <ui_codling>0</ui_codling>
+    <ui_ctrltype>NTSInformatica.NTSTextBoxStr</ui_ctrltype>
+    <ui_ctrlname>edhhsconto</ui_ctrlname>
+    <ui_gridcol>.</ui_gridcol>
+    <ui_comboitem>.</ui_comboitem>
+    <ui_nomprop>ZZPARENT</ui_nomprop>
+    <ui_valprop>fm_hhtot</ui_valprop>
+    <ui_usascript>N</ui_usascript>
+    <ui_script xml:space="preserve"> </ui_script>
+    <ui_parent>fm_hhtot</ui_parent>
+  </Tab1>
+</NewDataSet>

@@ -1,0 +1,12 @@
+--------------------------------------------------------------------
+BE__CKDB Versione 21.0.0.49
+BD__CKDB Versione 21.0.0.15
+Controllo coerenza dati
+Operazione avviata il 14/03/2017 13:41:50
+--------------------------------------------------------------------
+--> Esecuzione controllo [00100]: Distinta base: presenza di più di una fase di lavorazione terzista per gli articoli non gestiti a fase
+--> Esecuzione controllo [00100] terminata con successo.
+--> --------------------------------------------------------------------
+--------------------------------------------------------------------
+Operazione terminata il 14/03/2017 13:41:50
+--------------------------------------------------------------------

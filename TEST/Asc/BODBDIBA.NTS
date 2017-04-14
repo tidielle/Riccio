@@ -1,0 +1,50 @@
+<nts>
+<use_ assembly="BN__SCTE.DLL"/>
+
+<reference assembly="BODBDIBA.dll" />
+<reference assembly="BEDBDIBA.dll" />
+
+<scriptCode><![CDATA[
+
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.Data
+Imports NTSInformatica.CLN__STD
+Imports NTSInformatica
+Imports NTSInformatica.FRODBDIBA
+'Imports System.Data.SqlClient
+
+Public Class BODBDIBAVBS 
+    Implements INT__SCRIPT
+
+  Dim frmParent as FRM__CHIL 'FRODBDIBA
+
+  Public Function Exec(ByVal strCommand As String, byref oApp as Object, ByRef oIn As Object, ByRef oParam As Object) as Object Implements INT__SCRIPT.Exec
+    Try
+	    Select Case strCommand
+           Case "InitControls":         InitControls(oIn, oApp)
+           'Case "edProva_Validated": return edProva_Validated(oIn, oApp)
+
+	    End Select
+	    Return Nothing
+
+    Catch ex As Exception
+       Dim strErr As String = CLN__STD.GestError(ex, nothing, "", oApp.InfoError, oApp.ErrorLogFile, True)
+       Return Nothing
+    End Try
+  End Function
+
+ Sub InitControls(ByRef oIn As Object, ByRef oApp As Object)
+  Try
+	    frmParent = oIn
+     oapp.MsgboxInfo("File BODBDIBA.NTS istanziato")
+
+    Catch ex As Exception
+       Dim strErr As String = CLN__STD.GestError(ex, nothing, "", oApp.InfoError, oApp.ErrorLogFile, True)
+    End Try
+  End Sub
+
+End Class
+
+]]></scriptCode>
+</nts>

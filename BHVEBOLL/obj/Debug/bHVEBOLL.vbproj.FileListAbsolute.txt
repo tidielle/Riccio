@@ -1,0 +1,7 @@
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BHVEBOLL.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BHVEBOLL.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BHVEBOLL\obj\Debug\NTSInformatica.Resources.resources
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BHVEBOLL\obj\Debug\bHVEBOLL.vbproj.GenerateResource.Cache
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BHVEBOLL\obj\Debug\BHVEBOLL.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BHVEBOLL\obj\Debug\BHVEBOLL.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BHVEBOLL\obj\Debug\bHVEBOLL.vbprojResolveAssemblyReference.cache

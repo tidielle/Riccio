@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Agg. configuraz. su D.B. Neu.</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>20/10/2015</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Agg. configuraz. su D.B. Neu.</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>Questo programma permette di aggiornare i prezzi di un range di configurazioni da indicare nei filtri Da/A configuratore (se spuntato il flag "Prezzi di vendita"), tale prezzo verrà rilevato in base alla data impostata nel campo "Data di valid. per listini".</p>
+<p>
+<IMG src="../images/help_bscpagco_01.jpg">
+</p>
+<p>Inoltre mediante opzione di registro BSCPCONP\OPZIONI\Aggiorna_Distinta = -1 (default = 0, non attiva), il programma da la possibilità in fase di aggiornamento di una configurazione, di effettuare anche un aggiornamento (ri-allineamento) della distinta base "chiusa" a partire da quella neutra, con possibilità di stabilire se farlo o meno, riga per riga, in base ad un flag ("Aggiorna riga": default SI) da impostare sui materiali e sulle lavorazioni della distinta base "chiusa" stessa.</p>
+<p>Praticamente con l'opzione si da la possibilità di far lavorare il configuratore in maniera opposta. Infatti chi lavora con questo modulo sa che le distinte basi vengono salvate articolo per articolo quindi ogni articolo ha la propria distinta base, e se si interviene sulla distinta base "modello" (quella neutra) le modifiche non si ripercuotono su tutti gli articoli già configurati, quindi è necessario allinearle manualmente, cioè vince la distinta base "chiusa".</p>
+<p>Adesso invece attivando l'opzione BSCPCONP\OPZIONI\Aggiorna_Distinta (di default non è attiva) si ha possibilità di fare lavorare la distinta base "modello", come distinta base vincente, cioè se viene modificata la distinta base "modello" questa allinea tutte le distinte base chiuse già configurate, quindi ad esempio se si vuole aggiungere un materiale in tutte le distinta base chiuse nel passato il programma lo fa in automatico. NB: l'allineamento avviene in modifica, cancellazione ed inserimento.</p>
+<p>Questo è possibile comunque derogarlo riga per riga, cioè il default abilitando l'opzione è che il programma allinea tutto, però si può anche decidere in qualche distinta base "chiusa", togliendo la spunta dal flag "Aggiorna riga" presente sia sui materiali che sulle lavorazioni, di poter andare a dire che in una distinta base "chiusa" quella riga di materiale o lavorazione non deve essere riallineato dalla distinta base "modello"; quindi se su una certa distinta base si vogliono fare delle deroghe è sufficiente dichiarare che non deve essere una riga aggiornabile.</p>
+<p>In questa modalità di lavoro se ad esempio dovessi fare un cambio di un materiale, dovrei fare scadere la data fine validità di quel materiale e poi aggiungere una riga nuova di materiale con data inizio validità uguale alla data fine validità del vecchio materiale, in pratica bisogna lavorare senza usare la funzione cancella riga presente in distinta base.</p>
+<p>Se si vuole invece modificare o aggiungere un materiale in un distinta base "chiusa", e non si vuole che nessuno poi tocchi quella riga, basta togliere la spunta da "Aggiorna riga" sui materiali (e/o sulle lavorazioni) della distinta base "chiusa".</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

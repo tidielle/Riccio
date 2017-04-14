@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Estrazione scadenze extracontabili</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>22/01/2016</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Estrazione scadenze extracontabili</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>
+<b>Nome programma: BNTFESEC.DLL</b>
+<br>
+<b>Moduli richiesti: Tesoreria e flussi finanziari</b>
+</p>
+<p>Il programma di Estrazione Scadenze ExtraContabili permette di lanciare l'estrazione di flussi entrata/uscita generati dalla gestione di magazzino e in particolare di:</p>
+<p>
+<b>Estrazioni di Default:</b>
+</p>
+<p>
+<b>Da TESTMAG/MOVMAG</b>
+</p>
+<ul>
+<li>
+<b>DDT emessi da fatturare </b>– sempre TUTTI
+<li>
+<b>Resi ai clienti</b> – sempre TUTTI
+<li>
+<b>DDT ricevuti da fatturare</b> – sempre TUTTI
+<li>
+<b>Resi ai fornitori</b> – sempre TUTTI
+<li>
+<b>Carichi da produzione terzisti</b> – sempre TUTTI
+<li>
+<b>Fatture emesse non contabilizzate</b> – Dall'opzione di registro BSTFESEC/OPZIONI/ConsideraFattAtt, ...che ha come valori: "N" (non elaborare, default); "S" (elaborare)</li>
+</ul>
+<p>I documenti elaborati sono:</p>
+<ul>
+<li>note di accredito immediate emesse (N);
+<li>note di accredito differite emesse(£);
+<li>note di addebito emesse (E);
+<li>fatture immediate emesse (A);
+<li>fatture differite emesse (D);</li>
+</ul>
+<ul>
+<li>
+<b>Fatture ricevute non contabilizzate</b> – Dall'opzione di registro BSTFESEC/OPZIONI/ConsideraFattPass.. che ha come valori: "N" (non elaborare, default); "S" (elaborare)</li>
+</ul>
+<p>I documenti elaborati sono:</p>
+<ul>
+<li>note di accredito immediate ricevute (J);
+<li>note di accredito differite ricevute(();
+<li>fatture immediate ricevute (L);
+<li>fatture differite ricevute (K);</li>
+</ul>
+<p>
+<b>Estrazioni da Opzioni di registro da testord/movord</b>
+</p>
+<ul>
+<li>Ordini Fornitore (Parte inevasa) -&gt; opz. T=tutti, N=non Conf , S=solo conf. Dall'opzione di registro BSTFESEC/OPZIONI/OrdineFornitoreConfermato
+<li>Ordini Prod. terzisti - &gt; opz. T=tutti, N=non Conf , S=solo conf. Dall'opzione di registro BSTFESEC/OPZIONI/OrdineProduzioneConfermato
+<li>Impegni clienti -&gt;opz. T=tutti, N=non Conf , S=solo conf.- Dall'opzione di registro BSTFESEC/OPZIONI/ImpegnoClienteConfermato
+<li>Impegni clienti aperti -&gt; opz. T=tutti, N=non Conf , S=solo conf. Dall'opzione di registro BSTFESEC/OPZIONI/ImpegnoClienteAperto
+<li>Ordini Fornitore Aperti -&gt; opz. T=tutti, N=non Conf , S=solo conf. Dall'opzione di registro BSTFESEC/OPZIONI/OrdineFornitoreAperto
+<li>Prop. ordine fornitore -&gt; opz. N=no default, S=si Dall'opzione di registro BSTFESEC/OPZIONI/PropostaOrdineFornitore
+<li>Prop. ordine produzione -&gt; opz. N=no default, S=si Dall'opzione di registro BSTFESEC/OPZIONI/PropostaOrdineProduzione
+<li>Documenti clienti non contabilizzati (*) -&gt; opz. N=no default, S=si
+<li>Documentio fornitori non contabilizzati (*) -&gt; opz. N=no default, S=si</li>
+</ul>
+<p>(*) fatture e note accredito di vario tipo</p>
+<p>Inoltre ci sono:</p>
+<p>BSTFESEC/OPZIONI/ControlloCommesse – gestione commesse, che ha come valori: "N" (Non considerare le commesse diverse sulle righe di documenti, default); "S" (Considerare le commesse diverse sulle righe di documenti)</p>
+<p>BSTFESEC/OPZIONI/UsaContoFattDoc – gestione conto fatturazione, che ha come valori: "N" (Non gestire conto fatturazione, default); "S" (Gestire conto fatturazione)</p>
+<p>Il programma di estrazione scadenze extracontabili in questa prima versione è lanciabile solo manualmente. Funzionalità batch potranno essere implementante nelle prossime release.</p>
+<p>
+<IMG border=0 src="../images/help_bntfesec_01.gif">
+</p>
+<p>ATTENZIONE: Il lancio di questa elaboraizone cancellerà e ripristinerà aggiornati tutti i record estratti (ad esclusione delle operazioni Manuali, che verranno lasciate inalterate). Quindi se avete inserito manualmente delle operaizone con tipologia Origine una voce diversa da Manuale, al lancio dell'estrazione tale operazione verrà cancellata.</p>
+<p>
+<b>
+<A name=lbDataElabDa>Elaborazione dal</A>: </b>
+</p>
+<p>l'elaborazione prende in considerazione tutti i documenti che hanno come data del documento, una data uguagle o superiore alla data di elaborazione</p>
+<p>
+<A name=lbDataScad>
+<b>Nuova data scadenza/consegna</b>
+</A>
+</p>
+<p>Tutti i documenti (DDT e Ordini) con data consegna scaduta, gli verranno attribuiti una nuova data scadenza/consegna.</p>
+<p>
+<b>
+<i>
+<u>Estrazione delle </u>
+</i>
+</b>
+<b>
+<i>
+<u>scadenza da rinnovi non fatturati/futuri</u>
+</i>
+</b>
+</p>
+<p>Si abilita con l'opzione BSTFESEC/OPZIONI/ConsideraContrattiCS = "S", e ad ogni rielaborazione le precedenti scadenze extracontabili di tipo 'contratti customer service' vengono tutte cancellate (NELL'ELABORAZIONE NON SONO GESTITI I CONTATORI!).</p>
+<p>Vengono cercati tutti i contratti in corso alla data di elaborazione; se la data di elaborazione è antecedente alla data odierna, usa la data odierna come paletto di partenza (non ha senso andare a cercare contratti più vecchi: o sono stati fatturati, oppure non sono più validi ai fini della tesoreria!).</p>
+<p>Per poter operare è necessario impostare l'opzione di registro BSTFESEC/OPZIONI/CSCodivaSTD con un codice IVA valido (da utilizzare per quei contratti che non hanno un codice iva specifico in testata contratto. Con questo si evidenza anche un limite: per i contratti con prezzo per riga, il cod. IVA non può essere diverso a seconda dell'articolo indicato in riga, come invece fa il programma di fatturazione canoni.</p>
+<p>Per ogni contratto in corso, viene verificato se il rinnovo è stato totalmente fatturato. Se si il contratto viene ignorato.</p>
+<p>Se non stato totalmente fatturato, viene fatto un ricalcolo per determinare le varie date scadenza in cui emettere le fatture (prima fattura = data inizio rinnovo, le altre a seguire in base alla periodicità di fatturazione indicata sul rinnovo); vengono scartate potenziali fatture che avrebbero data antecedente alla data di inizio elaborazione o data antecedente alla data indicata sul rinnovo in 'fatturato fino al ...'.</p>
+<p>Le scadenze per ogni fattura sono date dall'importo del canone del rinnovo diviso la periodicità. Non vengono aggiunte eventuali spese di piede (incasso, bolli, ecc). per ogni fattura il calcolo delle scadenze è quello standard, come se fosse fatto dal programma di fatturazione, ma non viene gestito il conto fatturazione, ne i sistemi di cambio cod. pagamento in base all'importo della fattura.</p>
+<p>Per poter elaborare virtualmente anche eventuali rinnovi futuri, non memorizzati nel DB, basta impostare l'opzione BSTFESEC/OPZIONI/ConsideraRinnoviCSFuturi= "S"; verranno calcolati i rinnovi fino alla data fine contratto. Per limitare il numero dei rinnovi futuri, è possibile impostare l'opzione di registro BSTFESEC/OPZIONI/ConsideraRinnoviCSFuturi_MesiAdd con il numero di mesi (default 99) da aggiungere alla odierna da utilizzare come data oltre la quale non calcolare rinnovi (e comunque mai oltre la data fine contratto).</p>
+<p>Per il calcolo dei rinnovi futuri il programma parte dal rinnovo corrente e determina la data di inizio e fine del nuovo rinnovo, ripetendo il giro fino alla data di fine contratto. Per ogni potenziale rinnovo, viene verificato se esiste un rinnovo di tipo 'rata futura' (confrontando la data di inizio rinnovo presente sul DB con quella virtuale calcolata come descritto qui sopra): se esiste viene preso l'importo del canone dal rinnovo 'rata futura', altrimenti viene preso l'importo del rinnovo precedente ed aumentato della % di incremento indicata nella tabella dei 'tipi contratto'.</p>
+<p>La procedura fa SOLO ciò che è stato descritto qui sopra. Tutto ciò che non è indicato è da intendersi come limite.</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

@@ -1,0 +1,5 @@
+[Busaggserver]
+FRAM=21016
+DESC=Business NET SR5
+DATE=20160620
+

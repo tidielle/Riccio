@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BNMGMAGA", "BNMGMAGA.vbproj", "{C0FBD198-FB68-4044-9205-3814ACAA6921}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bDMGMAGA", "..\BDMGMAGA\bDMGMAGA.vbproj", "{7D68C8F0-1AD0-4C8B-8C3E-B82F70312EF3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BEMGMAGA", "..\BEMGMAGA\BEMGMAGA.vbproj", "{7D7753BB-EEF3-4BC7-AD5F-08AAAF45BB69}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BUSNET", "..\BusNet\BUSNET.vbproj", "{14F92825-1FD1-41BE-8B97-1D37CB8C37D4}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName1 = BNMGMAGA.vbproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName2 = ..\\BDMGMAGA\\bDMGMAGA.vbproj
+		SccProjectName2 = \u0022$/BusNet/BusNet\u00202012/BDMGMAGA\u0022,\u0020NHBGAAAA
+		SccLocalPath2 = ..\\BDMGMAGA
+		CanCheckoutShared = true
+		SccProjectUniqueName3 = ..\\BEMGMAGA\\BEMGMAGA.vbproj
+		SccProjectName3 = \u0022$/BusNet/BusNet\u00202012/BEMGMAGA\u0022,\u0020AGBGAAAA
+		SccLocalPath3 = ..\\BEMGMAGA
+		CanCheckoutShared = true
+		SccProjectUniqueName4 = ..\\BusNet\\BUSNET.vbproj
+		SccProjectName4 = \u0022$/BusNet/BusNet\u00202009/BusNet\u0022,\u0020JSZAAAAA
+		SccLocalPath4 = ..\\BusNet
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0FBD198-FB68-4044-9205-3814ACAA6921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FBD198-FB68-4044-9205-3814ACAA6921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FBD198-FB68-4044-9205-3814ACAA6921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FBD198-FB68-4044-9205-3814ACAA6921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D68C8F0-1AD0-4C8B-8C3E-B82F70312EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D68C8F0-1AD0-4C8B-8C3E-B82F70312EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D68C8F0-1AD0-4C8B-8C3E-B82F70312EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D68C8F0-1AD0-4C8B-8C3E-B82F70312EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D7753BB-EEF3-4BC7-AD5F-08AAAF45BB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D7753BB-EEF3-4BC7-AD5F-08AAAF45BB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D7753BB-EEF3-4BC7-AD5F-08AAAF45BB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D7753BB-EEF3-4BC7-AD5F-08AAAF45BB69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F92825-1FD1-41BE-8B97-1D37CB8C37D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F92825-1FD1-41BE-8B97-1D37CB8C37D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F92825-1FD1-41BE-8B97-1D37CB8C37D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F92825-1FD1-41BE-8B97-1D37CB8C37D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

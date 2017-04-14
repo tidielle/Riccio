@@ -1,0 +1,941 @@
+29/03/2017 11:45:10:admin: Tab1: SELECT sys.objects.name as table_name, value  FROM sys.objects LEFT JOIN sys.extended_properties ON sys.objects.object_id = sys.extended_properties.major_id  AND sys.objects.parent_object_id = sys.extended_properties.minor_id  AND sys.extended_properties.name = 'MS_Description' WHERE sys.objects.type = 'U' AND is_ms_shipped = 0 AND sys.objects.name = 'release'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 3/42 - Record prelevati: 1
+29/03/2017 11:45:10:admin: Tab1: SELECT top 1 * FROM valprop
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/48 - Record prelevati: 1
+29/03/2017 11:45:10:admin: Tab1: SELECT SERVERPROPERTY('productversion')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:45:10:admin: Tab1: SELECT rel_maior, rel_minor FROM release WHERE rel_sw = 'Business'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:45:10:admin: Tab1: SELECT syscolumns.* FROM (sysobjects INNER JOIN syscolumns ON sysobjects.id = syscolumns.id) LEFT JOIN syscomments ON syscolumns.cdefault = syscomments.id WHERE sysobjects.name = 'release' AND syscolumns.name = 'rel_pers'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/81 - Record prelevati: 1
+29/03/2017 11:45:10:admin: Tab1: SELECT dl_nome, dl_nometab, dl_perditta, dl_prefisso, dl_campichiave, dl_tipocampichiave, dl_descampo, dl_db FROM dalconf
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:10:admin: TABANAZ: SELECT opNome, OpPasswd, OpAbil, OpDatscad, OpAzienda, OpRuolo, OpCodling, OpLoginsql, OpPasssql,OpGruppo, OpSulimiti FROM OPERAT WHERE opNome = 'admin' OR (opSumail = 'admin' AND opSutipouser <> 'N')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:45:10:admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'PwdComplessa', 'admin', '', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/54 - Record prelevati: 0
+29/03/2017 11:45:10:Admin: Tab1: SELECT tb_codling FROM tabling WHERE tb_codling = 0
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:10:Admin: REGPROP: bussp_getsettingbus 'WINSTYLE', '.', '.', 'WinStyle', 'Admin', '', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/22 - Record prelevati: 0
+29/03/2017 11:45:10:Admin: TABANAZ: SELECT opNome, OpPasswd, OpAbil, OpDatscad, OpAzienda, OpRuolo, OpCodling, OpLoginsql, OpPasssql,OpGruppo, OpSulimiti FROM OPERAT WHERE opNome = 'Admin' OR (opSumail = 'Admin' AND opSutipouser <> 'N')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:10:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'PwdComplessa', 'Admin', '', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:10:Admin: AZIENDE: SELECT * FROM aziende WHERE azCodaz = 'riccio' AND AzCodaz NOT IN (SELECT opaz_codazi FROM accazi WHERE opaz_opnome = 'Admin' AND opaz_abilit = 'N')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/47 - Record prelevati: 1
+29/03/2017 11:45:11:Admin: REGPROP: bussp_getsettingbus 'WINSTYLE', '.', '.', 'WinStyle', 'Admin', '', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:11:Admin: operat: SELECT * FROM operat WHERE OpNome = 'Admin'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:11:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SocialIgnoraTestConnessione', 'Admin', '', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/38 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: TABANAZ: SELECT opNome, OpPasswd, OpAbil, OpDatscad, OpAzienda, OpRuolo, OpCodling, OpLoginsql, OpPasssql,OpGruppo, OpSulimiti FROM OPERAT WHERE opNome = 'Admin' OR (opSumail = 'Admin' AND opSutipouser <> 'N')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'PwdComplessa', 'Admin', '', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: AZIENDE: SELECT * FROM aziende WHERE azCodaz = 'riccio' AND AzCodaz NOT IN (SELECT opaz_codazi FROM accazi WHERE opaz_opnome = 'Admin' AND opaz_abilit = 'N')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'DesktopDir', 'Admin', '', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaVecchiaCercaPrezzo', 'Admin', '', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaVecchiaCercaSconti', 'Admin', '', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaVecchiaCercaProvvigioni', 'Admin', '', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: AZIENDE: SELECT * FROM aziende WHERE azCodaz = 'riccio' AND AzCodaz NOT IN (SELECT opaz_codazi FROM accazi WHERE opaz_opnome = 'Admin' AND opaz_abilit = 'N')
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'RECENT', '.', 'UltDittariccio', 'Admin', 'METEL', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'DBCache', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ScriviActLogL', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ScriviActlogD', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ScriviActlogE', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'NETWriteQueryInLogFile', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TipoInstall', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'MsgboxMicrosoft', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'DaVb6SoloVb6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrMsgOld', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'DisableAltF2AltF3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/23 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'DisableInternalGRIAGG', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'ForzaFormTablet', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'ForzaFormTabletX', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'NoFocusMessaggi', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsePrinterDialogNet', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'nDecSuPrzUn', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'nDecSuPrzUnVal', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'nDecSuQta', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'nDecSuTempiDiba', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraLimiteNumeroMassimoDecimali', 'Admin', 'RICCIO', ''
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SpesePiedeIvateDocScorporo', 'Admin', 'RICCIO', ''
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SpeincaUsaMaxCodiva', 'Admin', 'RICCIO', ''
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TipoArrotondamentoIvaEuro', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'Promozioni_come_Rel10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'NdecDaTabvalu', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CostoMedioPondTipoMagaz', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CostoMedioPondNoStorico', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GestioneSconti', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaSc1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaSc2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaSc3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/23 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaSc4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaSc5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaSc6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'PriorSconti', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaScA', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaScB', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaScC', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaScD', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:16:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaScE', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaScF', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SconGenex', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SconSpecNoCum', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SconClCliDaList', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ProvvRelazScontiNoListino', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GestioneProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaPrA', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaPrB', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaPrC', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaPrD', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaPrE', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'TrattaPrF', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont1RigaCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont2RigaCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont3RigaCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont4RigaCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont5RigaCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont6RigaCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont1TestCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'IgnoraScont2TestCercaProvv', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont1Testa', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont2Testa', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScontoPagam', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/23 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CalcImponibProvvIgnoraScont6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'RilevaPrezziDaContoFatt', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'RilevaScontiDaContoFatt', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'RilevaContrattiDaContoFatt', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'OneriAccInValoriFifo', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UltSpeseInValoriFifo', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ScontoProvvigioniconDerogheCliArt', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CercaPrezzoSoloPrezziDiversiDa0', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'AutoCompleteArticoSuCod', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'AutoCompleteIgnoraCF', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'AutocompleteAnagraSuCod', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'MnuSecUserOld', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GestAccconf', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GestAccconfTipo', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZoomScartaDescrPrefix', 'Admin', 'RICCIO', ''
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'Um4UsaMSScriptControl', 'Admin', 'RICCIO', ''
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: Tab1: SELECT distinct sys.tables.name as tabella, sys.columns.name as colonna  FROM sys.columns inner join sys.tables on sys.columns.object_id = sys.tables.object_id  WHERE sys.columns.system_type_id = 231 and sys.tables.name <> 'dtproperties'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/56 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaCRPENet', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaCRPENet_DESKTOP-64GADH8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:17:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaCRPENet', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'UsaDSN', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CRPEPercZoom', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'CRPENoExport', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'NoFiltroRep1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'StampaPdfUsaPDFCreator', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONIUT', '.', '.', 'DefaultPrinterName', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'DefaultPrinterName_DESKTOP-64GADH8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'MillisecondiAttesaStampanti', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'OPEN'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/97 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: Execute: INSERT INTO sbslog (sb_porta, sb_idsession, sb_ultagg, sb_profilo, sb_device, sb_devicename, sb_db, sb_ditta, sb_user, sb_evento, sb_child, sb_actkey) VALUES (0, 0, getdate(), 'riccio', 'WIN', 'DESKTOP-64GADH8.max_m', 'riccio', 'RICCIO', 'Admin', 'C', ' ', '2014191')
+          TEMPO IMPIEGATO (in millisec): 62 - Record trattati: 1
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'BeepSuMessaggio', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'DBCheckFreeSpace', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: Tab1: SELECT SERVERPROPERTY('productversion') AS version, SERVERPROPERTY ('editionid') AS editionid, SERVERPROPERTY ('edition') AS edition
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/24 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: DBSIZE: sp_spaceused
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/173 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GGAlertBackupArcproc', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GGAlertBackupArcprocLog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: TMP: SELECT GETDATE() as ServerDate 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT cmptlevel FROM master.dbo.sysdatabases WHERE name = 'msdb'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT TOP 1 backup_finish_date FROM msdb.dbo.backupset WHERE type = 'D' AND database_name = 'ARCPROCRICCI' AND is_snapshot = 0 ORDER BY backup_finish_date DESC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT GETDATE() as ServerDate 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT DATABASEPROPERTY('ARCPROCRICCI', 'IsTruncLog') AS TruncLog
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT cmptlevel FROM master.dbo.sysdatabases WHERE name = 'msdb'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:18:Admin: TMP: SELECT TOP 1 backup_finish_date FROM msdb.dbo.backupset WHERE type = 'L' AND database_name = 'ARCPROCRICCI' AND is_snapshot = 0 ORDER BY backup_finish_date DESC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/35 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GGAlertBackupAzienda', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:18:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'GGAlertBackupAziendaLog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', ''
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:45:19:Admin: Tab1: SELECT TOP 1 ui_form FROM uiconf WHERE not (ui_nomprop like 'F2%') and ui_child = 'BN__MENU' AND ui_form = 'FRMMENU' 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/61 - Record prelevati: 0
+----------
+AVVIO PROGRAMMA FRMMENU (millisec da chiamata da menu): a classe istanziata: 0, ad inizio bn__chil.form_load (dopo FRMMENU.Init e Initializecomponents): 10078, a fine bn__chil.form_load: 10169
+----------
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/31 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/28 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/29 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 22/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/30 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/29 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/26 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:19:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:20:Admin: OPERAT: SELECT * FROM operat WHERE OpNome = 'Admin'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/14 - Record prelevati: 1
+29/03/2017 11:45:20:Admin: Execute: DELETE FROM recents WHERE rt_ultagg < '2017-1-29'
+          TEMPO IMPIEGATO (in millisec): 64 - Record trattati: 0
+29/03/2017 11:45:20:Admin: MENUPOP: SELECT MnLivello, MnLiv1, MnLiv2, MnLiv3, MnDescr, MnProgr, MnParam, Mncodstringa, Mncaption, Mnnomtabella FROM MENUPOP  WHERE mnlungdescr IN (0, 2, 4, 5)  AND MnProgr <> '.'  AND not(Mnprogr IS NULL)  AND Len(Mnprogr) <> 0 AND  (      Mnprogr NOT IN (SELECT mnmd_nomprog FROM ACCMODULI)   OR       Mnprogr IN (SELECT mnmd_nomprog FROM ACCMODULI WHERE SUBSTRING('SSSSNSSSSNNNNSSSNNSNSNNNNNNNNNSNNNNNSNNNNNNNNSNNNNNNNNSSSNNNSSSNNNSNNSSSNNNSNNNNNNNNNSNNSNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN', CASE WHEN mnmd_modulo > 200 THEN mnmd_modulo - 80 ELSE CASE WHEN mnmd_modulo > 100 AND mnmd_modulo < 200 THEN mnmd_modulo - 40 ELSE mnmd_modulo END END , 1) = 'S') ) AND  (      Mnprogr NOT IN (SELECT mnop_nomprog FROM ACCOPER INNER JOIN OPERAT ON ACCOPER.mnop_gruppo = OPERAT.opgruppo WHERE OPERAT.Opnome = 'Admin')   OR      Mnprogr IN (SELECT mnop_nomprog FROM ACCOPER INNER JOIN OPERAT ON ACCOPER.mnop_gruppo = OPERAT.opgruppo WHERE OPERAT.Opnome = 'Admin' AND mnop_abilit = 'S') ) AND  (      Mnprogr NOT IN (SELECT mnou_nomprog FROM ACCOPEU WHERE ACCOPEU.mnou_opnome = 'Admin')   OR      Mnprogr IN (SELECT mnou_nomprog FROM ACCOPEU WHERE ACCOPEU.mnou_opnome = 'Admin' AND mnou_abilit = 'S') ) ORDER BY MnLiv1, MnLiv2, MnLiv3
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/54 - Record prelevati: 414
+29/03/2017 11:45:20:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'OPZIONI', '.', 'VisCambioAz', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:20:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'OPZIONI', '.', 'VisProprieta', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:21:Admin: Tab1: SELECT * FROM accopeu WHERE mnou_opnome = 'Admin' AND mnou_nomprog IN ('BN__MENU','BS__MENU') AND mnou_abilit = 'N' ORDER BY mnou_nomprog ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 0
+29/03/2017 11:45:21:Admin: Tab1: SELECT * FROM accoper WHERE mnop_gruppo = 0 AND mnop_nomprog IN ('BN__MENU','BS__MENU') AND mnop_abilit = 'N' ORDER BY mnop_nomprog ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:21:Admin: REGPROP: bussp_getsettingbus 'BN__MENU', 'FRMMENU', '.', 'FormSize', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/30 - Record prelevati: 1
+29/03/2017 11:45:21:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'OPZIONI', '.', 'Mirto', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:22:Admin: REGPROP: bussp_getsettingbus 'RECENT', '.', '.', 'SocialSizeState', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: REGPROP: bussp_getsettingbus 'RECENT', '.', '.', 'SocialSize', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: REGPROP: bussp_getsettingbus 'RECENT', '.', '.', 'UtentiEsistenti', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: Tab1: SELECT opNome FROM operat  WHERE opNome NOT IN ('Admin') AND OpSutipouser = 'I'  AND opAbil = 'S'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 0
+29/03/2017 11:45:22:Admin: Tab1: SELECT opNome FROM operat  WHERE OpSutipouser = 'I'  AND opAbil = 'S'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'UtentiEsistenti'
+          TEMPO IMPIEGATO (in millisec): 14 - Record trattati: 1
+29/03/2017 11:45:22:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'UtentiEsistenti', '''Admin''')
+          TEMPO IMPIEGATO (in millisec): 12 - Record trattati: 1
+29/03/2017 11:45:22:Admin: OPERAT: SELECT * FROM operat WHERE opNome = 'Admin'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 1
+29/03/2017 11:45:22:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'RECENT', '.', 'MenuSocialLock', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'BS--MENU' AND rd_liv2 = 'RECENT' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'BS--MENU' AND rp_liv2 = 'RECENT' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuSocialLock'
+          TEMPO IMPIEGATO (in millisec): 23 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('BS--MENU', 'RECENT', '.', 'Admin', ' ', ' ', 'MenuSocialLock', '0')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'RECENT', '.', 'RecentRicerca', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'BS--MENU' AND rd_liv2 = 'RECENT' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'BS--MENU' AND rp_liv2 = 'RECENT' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'RecentRicerca'
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('BS--MENU', 'RECENT', '.', 'Admin', ' ', ' ', 'RecentRicerca', 'P')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGPROP: bussp_getsettingbus 'WINSTYLE', '.', '.', 'MenuIcons', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§')
+          TEMPO IMPIEGATO (in millisec): 25 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 27 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§')
+          TEMPO IMPIEGATO (in millisec): 12 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 22 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§')
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§BSORGSOR.CLSORGSOR|0|640|Gestione Ordini /Impegni/Prev.§')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/23 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§BSORGSOR.CLSORGSOR|0|640|Gestione Ordini /Impegni/Prev.§BSVEBOLL.CLSVEBOLL|180|960|Gestione Documenti Magazzino§')
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§BSORGSOR.CLSORGSOR|0|640|Gestione Ordini /Impegni/Prev.§BSVEBOLL.CLSVEBOLL|180|960|Gestione Documenti Magazzino§BSORGNNP.CLSORGNNP|180|880|Gener. Note di Prel. da Impegn§')
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§BSORGSOR.CLSORGSOR|0|640|Gestione Ordini /Impegni/Prev.§BSVEBOLL.CLSVEBOLL|180|960|Gestione Documenti Magazzino§BSORGNNP.CLSORGNNP|180|880|Gener. Note di Prel. da Impegn§BSRMPICK.CLSRMPICK|0|960|Picking§')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§BSORGSOR.CLSORGSOR|0|640|Gestione Ordini /Impegni/Prev.§BSVEBOLL.CLSVEBOLL|180|960|Gestione Documenti Magazzino§BSORGNNP.CLSORGNNP|180|880|Gener. Note di Prel. da Impegn§BSRMPICK.CLSRMPICK|0|960|Picking§BSRMPICK.CLSRMPICK|180|720|Picking§')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'WinStyle' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:23:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'WinStyle' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'MenuIcons'
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:45:23:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('WinStyle', '.', '.', 'Admin', ' ', ' ', 'MenuIcons', 'BSORCONF.CLSORCONF|0|720|Stampa Ordini/Conf.Ord./Prev.§BSVEBOLL.CLSVEBOLL|0|880|Gestione Documenti Magazzino§BSMGARTI.CLSMGARTI|90|640|Anagrafica Articoli§BSORGSOR.CLSORGSOR|0|640|Gestione Ordini /Impegni/Prev.§BSVEBOLL.CLSVEBOLL|180|960|Gestione Documenti Magazzino§BSORGNNP.CLSORGNNP|180|880|Gener. Note di Prel. da Impegn§BSRMPICK.CLSRMPICK|0|960|Picking§BSRMPICK.CLSRMPICK|180|720|Picking§BS__CLIE.CLS__CLIE|180|640|Anagrafiche cli./forn. Ditta§')
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:23:Admin: REGPROP: bussp_getsettingbus 'RECENTS', '.', '.', 'List', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: operat: SELECT * FROM operat WHERE OpNome = 'Admin'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:45:25:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:45:25')
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'RECENT', '.', '.', 'UltimaSelezioneSocial', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'UltimaSelezioneSocial'
+          TEMPO IMPIEGATO (in millisec): 10 - Record trattati: 1
+29/03/2017 11:45:25:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'UltimaSelezioneSocial', 'Programmi')
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'OPZIONIUT', '.', 'DisabilitaMenuCompleto', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BS--MENU', 'OPZIONI', '.', 'VisEsegui', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'LinkLogo', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'LinkBanner1', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'LinkBanner2', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'LinkBanner3', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BS--SOCI', 'OPZIONI', '.', 'LinkBannerPartner', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BNXXPLAN', 'RECENT', '.', 'ckOrarioRidotto', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BNXXPLAN', 'RECENT', '.', 'ckDaEseg', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BNXXPLAN', 'RECENT', '.', 'ckEseguito', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BNXXPLAN', 'RECENT', '.', 'ckAnnullato', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:25:Admin: REGPROP: bussp_getsettingbus 'BNXXPLAN', 'RECENT', '.', 'MainVis', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 1
+29/03/2017 11:45:27:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CHILD_BODBDIBA.FRODBDIBA', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:27:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CHILD_BODBDIBA', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 0
+29/03/2017 11:45:40:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:45:40:Admin: Execute: INSERT INTO sbslog (sb_porta, sb_idsession, sb_ultagg, sb_profilo, sb_device, sb_devicename, sb_db, sb_ditta, sb_user, sb_evento, sb_child, sb_actkey) VALUES (0, 0, getdate(), 'riccio', 'WIN', 'DESKTOP-64GADH8.max_m', 'riccio', 'RICCIO', 'Admin', 'A', 'FRMDBDIBA', '2014191')
+          TEMPO IMPIEGATO (in millisec): 12 - Record trattati: 1
+29/03/2017 11:45:40:Admin: Tab1: SELECT TOP 1 ui_form FROM uiconf WHERE not (ui_nomprop like 'F2%') and ui_child = 'BODBDIBA' AND ui_form = 'FRMDBDIBA' 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:45:40:Admin: UICONFEXT: SELECT * FROM uiconf WHERE ui_nomprop = 'EXT' and ui_child = 'BODBDIBA' AND ui_form = 'FRMDBDIBA' ORDER BY ui_progr
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/39 - Record prelevati: 26
+----------
+AVVIO PROGRAMMA FRMDBDIBA (millisec da chiamata da menu): a classe istanziata: 24, ad inizio bn__chil.form_load (dopo FRMDBDIBA.Init e Initializecomponents): 13191, a fine bn__chil.form_load: 14230
+----------
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/26 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/28 - Record prelevati: 0
+29/03/2017 11:45:41:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/34 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/28 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/28 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/26 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/27 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:42:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/26 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'DataInizioValMateriali', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'DataInizioValLavorazioni', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'UsaFiltroCommessa', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'UsaFiltroPadre', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/26 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'MagProgrDefault', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'Controlla_Materiale_Esistente', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'IncremContatoreRiga', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ModifColliSuQuant', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/27 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'TrattaFasiFino32000', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'Controlla_Legame_ArticoloTC', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'Controlla_Presenza_Abbinamenti', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'QtaPropostaMovDis', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'FiltroCommessa_InApriDB', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSCPCONP', 'OPZIONI', '.', 'Aggiorna_Distinta', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'Blocca_Cancellazioni_DbNeutre', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'RECENT', '.', 'Ordinamento', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'BSDBDIBA' AND rd_liv2 = 'RECENT' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/26 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'BSDBDIBA' AND rp_liv2 = 'RECENT' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = 'RICCIO' AND rp_idtdoc = ' ' AND rp_nomprop = 'Ordinamento'
+          TEMPO IMPIEGATO (in millisec): 46 - Record trattati: 1
+29/03/2017 11:45:48:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('BSDBDIBA', 'RECENT', '.', 'Admin', 'RICCIO', ' ', 'Ordinamento', 'R')
+          TEMPO IMPIEGATO (in millisec): 14 - Record trattati: 1
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'VisualizzaNoteArticoloFiglio', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'RilevaArticoliDaCatalogo', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: UICONF: SELECT ui_ctrltype, ui_ctrlname, lower(ui_gridcol) as ui_gridcol, ui_comboitem, ui_nomprop,  ui_valprop, ui_usascript, ui_script, ui_parent, ui_tipodoc, ui_opnome, ui_ruolo FROM uiconf WHERE ui_nomprop <> 'EXT' and ui_child = 'BODBDIBA' AND ui_form = 'FRMDBDIBA' AND ui_codling = 0 And (ui_ditta = 'RICCIO' OR ui_ditta = ' ') AND  (ui_db = 'riccio' OR ui_db = ' ') AND (ui_opnome = 'Admin' OR ui_opnome = ' ') AND (ui_ruolo = 'Amministratori' OR ui_ruolo = ' ') AND (ui_tipodoc = ' ' OR ui_tipodoc = ' ') ORDER BY ui_ctrltype ASC, ui_ctrlname ASC, lower(ui_gridcol) ASC, ui_comboitem ASC, ui_nomprop DESC, ui_tipodoc DESC , ui_opnome DESC , ui_ruolo DESC , ui_ditta DESC , ui_db DESC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/91 - Record prelevati: 426
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'RECENT', '.', 'spSplitter', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'RECENT', '.', 'spLeft', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: Tab1: SELECT * FROM menupop WHERE mnprogr = 'BODBDIBA' AND mnparam = 'FRODBDIBA'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/22 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: Tab1: SELECT * FROM menupop WHERE mnprogr = 'BODBDIBA'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:48:Admin: Tab1: SELECT * FROM menupop WHERE mnprogr = 'BSDBDIBA' AND mnparam = 'CLSDBDIBA'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: REGPROP: bussp_getsettingbus 'RECENTS', '.', '.', 'List', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'Recents' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:45:48:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'Recents' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'List'
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:45:48:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('Recents', '.', '.', 'Admin', ' ', ' ', 'List', 'BODBDIBA.FRODBDIBA Distinta Base§BNIEIMPO.FRMIEIMPO Strumento per Import/Export§BNIEMPTB.FRMIEMPTB Impostazione  Imp/Exp§BNIEPROF.FRMIEPROF Definiz. Profili Imp./Exp.§BNIESCTB.FRMIESCTB Definiz. Schema Tabelle est.§BOVEBOLL.FROVEBOLL Gestione Documenti Magazzino§BOMGARTI.FROMGARTI Anagrafica Articoli§BN__CLIE.FRM__CLIE Anagrafiche cli./forn. Ditta§BNDBSOCO.FRMDBSOCO Sostituzione Componenti§BN__GREG.FRM__GREG Registro di Business§BNDBDIBA.FRMDBDIBA Distinta Base§BN__GMEN.FRM__GMEN Gestione Menu''§BNDBSTDB.FRMDBSTDB Stampa/Vis. Distinta Base§BNDBEMRP.FRMDBEMRP Elab. MRP Commerciale§BNDBLPRO.FRMDBLPRO Gestione Lista di Produzione§BNDBSTLE.FRMDBSTLE Stampa Lav. da eseguire')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:45:49:Admin: REGPROP: bussp_getsettingbus 'RECENTS', '.', '.', 'List', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/180 - Record prelevati: 1
+29/03/2017 11:45:50:Admin: Tab1: SELECT mnliv1, mnliv2, mnliv3, mnprogr FROM menupop  WHERE mnprogr = 'BODBDIBA' OR mnprogr = 'BSDBDIBA' ORDER BY mnliv1, mnliv2, mnliv3
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:45:50:Admin: Tab1: SELECT mnliv1, mnliv2, mnliv3, mnprogr FROM menupop WHERE mnprogr like 'SUBM%'  AND mnliv1 = '07' AND (mnliv2 = '00' OR mnliv2 = '01')  AND mnliv3 = '00'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 2
+29/03/2017 11:45:50:Admin: Tab1: SELECT * FROM accopeu WHERE mnou_opnome = 'Admin' AND mnou_nomprog IN ('BODBDIBA','BSDBDIBA','SUBM0700','SUBM0701') AND mnou_abilit = 'N' ORDER BY mnou_nomprog ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 0
+29/03/2017 11:45:50:Admin: Tab1: SELECT * FROM accoper WHERE mnop_gruppo = 0 AND mnop_nomprog IN ('BODBDIBA','BSDBDIBA','SUBM0700','SUBM0701') AND mnop_abilit = 'N' ORDER BY mnop_nomprog ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:45:50:Admin: REGPROP: bussp_getsettingbus 'BODBDIBA', 'FRMDBDIBA', '.', 'FormSize', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 1
+29/03/2017 11:45:51:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CHILD_BNDBDIBA.FRMDBCODB', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: Execute: INSERT INTO sbslog (sb_porta, sb_idsession, sb_ultagg, sb_profilo, sb_device, sb_devicename, sb_db, sb_ditta, sb_user, sb_evento, sb_child, sb_actkey) VALUES (0, 0, getdate(), 'riccio', 'WIN', 'DESKTOP-64GADH8.max_m', 'riccio', 'RICCIO', 'Admin', 'A', 'FRMDBCODB', '2014191')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:45:52:Admin: Tab1: SELECT TOP 1 ui_form FROM uiconf WHERE not (ui_nomprop like 'F2%') and ui_child = 'BNDBDIBA' AND ui_form = 'FRMDBCODB' 
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+----------
+AVVIO PROGRAMMA FRMDBCODB (millisec da chiamata da menu): a classe istanziata: 0, ad inizio bn__chil.form_load (dopo FRMDBCODB.Init e Initializecomponents): 636, a fine bn__chil.form_load: 677
+----------
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/28 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/24 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/27 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Conto_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/26 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/13 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Articolo_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_1', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_2', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_3', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_4', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_5', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_6', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_7', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_8', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/26 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_9', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'SmartArt_Leads_10', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:52:Admin: UICONF: SELECT ui_ctrltype, ui_ctrlname, lower(ui_gridcol) as ui_gridcol, ui_comboitem, ui_nomprop,  ui_valprop, ui_usascript, ui_script, ui_parent, ui_tipodoc, ui_opnome, ui_ruolo FROM uiconf WHERE ui_nomprop <> 'EXT' and ui_child = 'BNDBDIBA' AND ui_form = 'FRMDBCODB' AND ui_codling = 0 And (ui_ditta = 'RICCIO' OR ui_ditta = ' ') AND  (ui_db = 'riccio' OR ui_db = ' ') AND (ui_opnome = 'Admin' OR ui_opnome = ' ') AND (ui_ruolo = 'Amministratori' OR ui_ruolo = ' ') AND (ui_tipodoc = ' ' OR ui_tipodoc = ' ') ORDER BY ui_ctrltype ASC, ui_ctrlname ASC, lower(ui_gridcol) ASC, ui_comboitem ASC, ui_nomprop DESC, ui_tipodoc DESC , ui_opnome DESC , ui_ruolo DESC , ui_ditta DESC , ui_db DESC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/16 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/34 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: Tab1: SELECT mnliv1, mnliv2, mnliv3, mnprogr FROM menupop  WHERE mnprogr = 'BNDBDIBA' OR mnprogr = 'BSDBDIBA' ORDER BY mnliv1, mnliv2, mnliv3
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:53:Admin: Tab1: SELECT mnliv1, mnliv2, mnliv3, mnprogr FROM menupop WHERE mnprogr like 'SUBM%'  AND mnliv1 = '07' AND (mnliv2 = '00' OR mnliv2 = '01')  AND mnliv3 = '00'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 2
+29/03/2017 11:45:53:Admin: Tab1: SELECT * FROM accopeu WHERE mnou_opnome = 'Admin' AND mnou_nomprog IN ('BNDBDIBA','BSDBDIBA','SUBM0700','SUBM0701') AND mnou_abilit = 'N' ORDER BY mnou_nomprog ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: Tab1: SELECT * FROM accoper WHERE mnop_gruppo = 0 AND mnop_nomprog IN ('BNDBDIBA','BSDBDIBA','SUBM0700','SUBM0701') AND mnop_abilit = 'N' ORDER BY mnop_nomprog ASC
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'BNDBDIBA', 'FRMDBCODB', '.', 'FormSize', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 1
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'AutoCompleteQuerySempreDB', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/28 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'NumRigheControllaDimColonneAutoComplete', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/12 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'CampiAggiuntiviArticoAutocompletamento', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'OrdinamentoArticoAutocompletamento', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/12 - Record prelevati: 0
+29/03/2017 11:45:53:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'FiltriFissiArticoAutocompletamento', 'Admin', 'RICCIO', '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/25 - Record prelevati: 0
+29/03/2017 11:45:56:Admin: Execute: UPDATE recents  SET rt_ultagg = '2017-3-29 11:45:56' WHERE rt_db = 'riccio' AND rt_ditta = 'RICCIO' AND rt_opnome = 'Admin' AND rt_child = 'BNDBDIBA' AND rt_form = 'FRMDBCODB' AND rt_ctrlname = 'edCoddb' AND rt_gridcol = '.' AND cast(rt_filterprec as varchar(2000)) = '' AND rt_cods = '''ggaa_0001'''
+          TEMPO IMPIEGATO (in millisec): 18 - Record trattati: 1
+29/03/2017 11:45:56:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/17 - Record prelevati: 0
+29/03/2017 11:45:56:Admin: Execute: UPDATE recents  SET rt_ultagg = '2017-3-29 11:45:56' WHERE rt_db = 'riccio' AND rt_ditta = 'RICCIO' AND rt_opnome = 'Admin' AND rt_child = 'BNDBDIBA' AND rt_form = 'FRMDBCODB' AND rt_ctrlname = 'edCoddb' AND rt_gridcol = '.' AND cast(rt_filterprec as varchar(2000)) = '' AND rt_cods = '''GGAA_0001'''
+          TEMPO IMPIEGATO (in millisec): 26 - Record trattati: 1
+29/03/2017 11:45:56:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'BNDBDIBA' AND rd_liv2 = 'FRMDBCODB' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/15 - Record prelevati: 1
+29/03/2017 11:45:56:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'BNDBDIBA' AND rp_liv2 = 'FRMDBCODB' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'FormSize'
+          TEMPO IMPIEGATO (in millisec): 15 - Record trattati: 1
+29/03/2017 11:45:56:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('BNDBDIBA', 'FRMDBCODB', '.', 'Admin', ' ', ' ', 'FormSize', '121;387;0;356;574')
+          TEMPO IMPIEGATO (in millisec): 28 - Record trattati: 1
+29/03/2017 11:45:56:Admin: Execute: INSERT INTO sbslog (sb_porta, sb_idsession, sb_ultagg, sb_profilo, sb_device, sb_devicename, sb_db, sb_ditta, sb_user, sb_evento, sb_child, sb_actkey) VALUES (0, 0, getdate(), 'riccio', 'WIN', 'DESKTOP-64GADH8.max_m', 'riccio', 'RICCIO', 'Admin', 'X', 'FRMDBCODB', '2014191')
+          TEMPO IMPIEGATO (in millisec): 13 - Record trattati: 1
+29/03/2017 11:45:56:Admin: REGPROP: bussp_getsettingbus 'RECENTS', '.', '.', 'List', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/10 - Record prelevati: 1
+29/03/2017 11:45:57:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ScriviActlog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/23 - Record prelevati: 0
+29/03/2017 11:45:57:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ScriviActlog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 0
+29/03/2017 11:45:57:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ScriviActlog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 0
+29/03/2017 11:45:58:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ScriviActlog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 0
+29/03/2017 11:45:58:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ScriviActlog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/17 - Record prelevati: 0
+29/03/2017 11:45:58:Admin: REGPROP: bussp_getsettingbus 'BSDBDIBA', 'OPZIONI', '.', 'ScriviActlog', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/29 - Record prelevati: 0
+29/03/2017 11:45:59:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/5 - Record prelevati: 1
+29/03/2017 11:46:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:46:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:46:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:46:00')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:46:19:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 1
+29/03/2017 11:46:29:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/52 - Record prelevati: 26
+29/03/2017 11:46:39:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 1
+29/03/2017 11:46:51:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/8 - Record prelevati: 1
+29/03/2017 11:46:51:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:46:51:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:46:51')
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:46:59:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:47:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/7 - Record prelevati: 1
+29/03/2017 11:47:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:47:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:47:00')
+          TEMPO IMPIEGATO (in millisec): 18 - Record trattati: 1
+29/03/2017 11:47:19:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:47:40:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/19 - Record prelevati: 1
+29/03/2017 11:47:40:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 26
+29/03/2017 11:47:56:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/9 - Record prelevati: 1
+29/03/2017 11:47:56:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 9 - Record trattati: 1
+29/03/2017 11:47:56:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:47:56')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:47:59:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:48:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:48:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:48:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:48:00')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:48:11:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/16 - Record prelevati: 26
+29/03/2017 11:48:19:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:48:39:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/5 - Record prelevati: 1
+29/03/2017 11:48:59:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/16 - Record prelevati: 1
+29/03/2017 11:48:59:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/7 - Record prelevati: 1
+29/03/2017 11:48:59:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:48:59:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:48:59')
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:49:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/8 - Record prelevati: 1
+29/03/2017 11:49:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:49:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:49:00')
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:49:19:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 1
+29/03/2017 11:50:18:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+29/03/2017 11:50:18:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 22/18 - Record prelevati: 0
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/6 - Record prelevati: 1
+29/03/2017 11:50:18:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/17 - Record prelevati: 26
+29/03/2017 11:50:19:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 1
+29/03/2017 11:50:19:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 15 - Record trattati: 1
+29/03/2017 11:50:19:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:50:19')
+          TEMPO IMPIEGATO (in millisec): 26 - Record trattati: 1
+29/03/2017 11:50:27:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:50:35:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 26
+29/03/2017 11:50:47:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/16 - Record prelevati: 26
+29/03/2017 11:50:47:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:50:51:Admin: Tab1: SELECT *  FROM REGDIR INNER JOIN REGPROP ON rd_liv1 = rp_liv1  AND rd_liv2 = rp_liv2 AND rd_liv3 = rp_liv3  WHERE (upper(rp_liv1) LIKE 'OPZIONI%' OR (upper(rp_liv1) LIKE '%DBDIBA%' AND upper(rp_liv2) LIKE 'OPZIONI%'))  AND rp_idut = CASE WHEN rd_diput = 'S' THEN 'Admin' ELSE ' ' END  AND not rp_nomprop like '%pwd%'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/17 - Record prelevati: 26
+29/03/2017 11:50:59:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/8 - Record prelevati: 1
+29/03/2017 11:50:59:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:50:59:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:50:59')
+          TEMPO IMPIEGATO (in millisec): 17 - Record trattati: 1
+29/03/2017 11:51:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/19 - Record prelevati: 1
+29/03/2017 11:51:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:51:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:51:00')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:51:07:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 1
+29/03/2017 11:51:12:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:51:12:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:51:13:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/21 - Record prelevati: 0
+29/03/2017 11:51:13:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:51:13:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:51:14:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMANAGRAF', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:51:14:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/10 - Record prelevati: 0
+29/03/2017 11:51:27:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:51:47:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:52:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/14 - Record prelevati: 1
+29/03/2017 11:52:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:52:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:52:00')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:52:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/7 - Record prelevati: 1
+29/03/2017 11:52:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:52:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:52:00')
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:52:01:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/13 - Record prelevati: 0
+29/03/2017 11:52:01:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:52:04:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/22 - Record prelevati: 0
+29/03/2017 11:52:04:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/11 - Record prelevati: 0
+29/03/2017 11:52:06:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/16 - Record prelevati: 0
+29/03/2017 11:52:07:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMARTICO', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/29 - Record prelevati: 0
+29/03/2017 11:52:07:Admin: Execute: UPDATE recents  SET rt_ultagg = '2017-3-29 11:52:07' WHERE rt_db = 'riccio' AND rt_ditta = 'RICCIO' AND rt_opnome = 'Admin' AND rt_child = 'BODBDIBA' AND rt_form = 'FRMDBDIBA' AND rt_ctrlname = 'grMovdis' AND rt_gridcol = 'md_codfigli' AND cast(rt_filterprec as varchar(2000)) = '' AND rt_cods = '''t'''
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 0
+29/03/2017 11:52:07:Admin: Execute: INSERT INTO recents (rt_db, rt_ditta, rt_opnome, rt_child, rt_form, rt_ctrlname, rt_gridcol, rt_filterprec, rt_cods, rt_ultagg)VALUES ('riccio','RICCIO','Admin','BODBDIBA','FRMDBDIBA','grMovdis','md_codfigli','','''t''','2017-3-29 11:52:07')
+          TEMPO IMPIEGATO (in millisec): 12 - Record trattati: 1
+29/03/2017 11:52:07:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:52:07:Admin: REGPROP: bussp_getsettingbus 'OPZIONI', '.', '.', 'ZOOMANAGRAF', 'Admin', 'RICCIO', ' '
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/11 - Record prelevati: 0
+29/03/2017 11:52:16:Admin: Execute: UPDATE recents  SET rt_ultagg = '2017-3-29 11:52:16' WHERE rt_db = 'riccio' AND rt_ditta = 'RICCIO' AND rt_opnome = 'Admin' AND rt_child = 'BODBDIBA' AND rt_form = 'FRMDBDIBA' AND rt_ctrlname = 'grMovdis' AND rt_gridcol = 'md_hhconto' AND cast(rt_filterprec as varchar(2000)) = '' AND rt_cods = '19010282'
+          TEMPO IMPIEGATO (in millisec): 12 - Record trattati: 0
+29/03/2017 11:52:16:Admin: Execute: INSERT INTO recents (rt_db, rt_ditta, rt_opnome, rt_child, rt_form, rt_ctrlname, rt_gridcol, rt_filterprec, rt_cods, rt_ultagg)VALUES ('riccio','RICCIO','Admin','BODBDIBA','FRMDBDIBA','grMovdis','md_hhconto','','19010282','2017-3-29 11:52:16')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:52:27:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1
+29/03/2017 11:52:47:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/29 - Record prelevati: 1
+29/03/2017 11:53:00:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 1/9 - Record prelevati: 1
+29/03/2017 11:53:00:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckNotizie'
+          TEMPO IMPIEGATO (in millisec): 8 - Record trattati: 1
+29/03/2017 11:53:00:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckNotizie', '29/03/2017 11:53:00')
+          TEMPO IMPIEGATO (in millisec): 11 - Record trattati: 1
+29/03/2017 11:53:01:Admin: REGDIR: SELECT rd_diput, rd_dipaz, rd_diptdoc FROM REGDIR WHERE rd_liv1 = 'RECENT' AND rd_liv2 = '.' AND rd_liv3 = '.'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/8 - Record prelevati: 1
+29/03/2017 11:53:01:Admin: Execute: DELETE FROM REGPROP WHERE rp_liv1 = 'RECENT' AND rp_liv2 = '.' AND rp_liv3 = '.' AND rp_idut = 'Admin' AND rp_idaz = ' ' AND rp_idtdoc = ' ' AND rp_nomprop = 'LastCheckMsg'
+          TEMPO IMPIEGATO (in millisec): 7 - Record trattati: 1
+29/03/2017 11:53:01:Admin: Execute: INSERT INTO REGPROP (rp_liv1, rp_liv2, rp_liv3, rp_idut, rp_idaz, rp_idtdoc, rp_nomprop, rp_valprop) VALUES ('RECENT', '.', '.', 'Admin', ' ', ' ', 'LastCheckMsg', '29/03/2017 11:53:01')
+          TEMPO IMPIEGATO (in millisec): 18 - Record trattati: 1
+29/03/2017 11:53:07:Admin: Tab1: bussp_conness 'DESKTOP-64GADH8', 10192, 'max_m', 'Admin', 'BODBDIBA.FRODBDIBA.1'
+          TEMPO IMPIEGATO apertura connessione/esecuzione query (in millisec): 0/6 - Record prelevati: 1

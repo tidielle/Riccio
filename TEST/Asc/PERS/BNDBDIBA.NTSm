@@ -1,0 +1,55 @@
+<nts>
+<use_ assembly="BN__SCTE.DLL"/>
+
+<reference assembly="BNDBDIBA.dll" />
+<reference assembly="BEDBDIBA.dll" />
+
+<scriptCode><![CDATA[
+
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.Data
+Imports NTSInformatica.CLN__STD
+Imports NTSInformatica
+Imports NTSInformatica.FRMDBDIBA
+'Imports System.Data.SqlClient
+
+Public Class BNDBDIBAVBS 
+    Implements INT__SCRIPT
+
+  Dim frmParent as FRM__CHIL 'FRMDBDIBA
+
+  Public Function Exec(ByVal strCommand As String, byref oApp as Object, ByRef oIn As Object, ByRef oParam As Object) as Object Implements INT__SCRIPT.Exec
+    Try
+	    Select Case strCommand
+           'Case "InitControls":         InitControls(oIn, oApp)
+           'Case "edProva_Validated": return edProva_Validated(oIn, oApp)
+          Case "tlbhhaggdb_Click":         tlbhhaggdb_Click(oIn, oApp)
+
+	    End Select
+	    Return Nothing
+
+    Catch ex As Exception
+       Dim strErr As String = CLN__STD.GestError(ex, nothing, "", oApp.InfoError, oApp.ErrorLogFile, True)
+       Return Nothing
+    End Try
+  End Function
+
+
+
+  Function tlbhhaggdb_Click(ByRef oIn As Object, ByRef oApp As Object) as Object
+  Try
+	   ' DecodificaCampoAggiuntivo = (oIn, oAp
+     oapp.MsgboxInfo("File BNDBDIBA.NTS istanziato")
+
+    Catch ex As Exception
+       Dim strErr As String = CLN__STD.GestError(ex, nothing, "", oApp.InfoError, oApp.ErrorLogFile, True)
+    End Try
+  End Function
+
+
+
+End Class
+
+]]></scriptCode>
+</nts>

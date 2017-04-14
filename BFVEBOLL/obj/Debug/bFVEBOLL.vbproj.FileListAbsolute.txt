@@ -1,0 +1,14 @@
+C:\BIZ2015SR5\TEST\BFVEBOLL.dll
+C:\BIZ2015SR5\TEST\BFVEBOLL.pdb
+C:\BIZ2015SR5\BFVEBOLL\obj\Debug\bFVEBOLL.vbprojResolveAssemblyReference.cache
+C:\BIZ2015SR5\BFVEBOLL\obj\Debug\NTSInformatica.Resources.resources
+C:\BIZ2015SR5\BFVEBOLL\obj\Debug\bFVEBOLL.vbproj.GenerateResource.Cache
+C:\BIZ2015SR5\BFVEBOLL\obj\Debug\BFVEBOLL.dll
+C:\BIZ2015SR5\BFVEBOLL\obj\Debug\BFVEBOLL.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BFVEBOLL.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\TEST\BFVEBOLL.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFVEBOLL\obj\Debug\NTSInformatica.Resources.resources
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFVEBOLL\obj\Debug\bFVEBOLL.vbproj.GenerateResource.Cache
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFVEBOLL\obj\Debug\BFVEBOLL.dll
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFVEBOLL\obj\Debug\BFVEBOLL.pdb
+\\DESKTOP-64GADH8\Bus.Riccio\BIZ2015\BFVEBOLL\obj\Debug\bFVEBOLL.vbprojResolveAssemblyReference.cache

@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Export fatture e incassi/pagamenti</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>22/03/2016</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Export fatture e incassi/pagamenti</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>
+<b>Nome programma: BSCGEXTS.DLL</b>
+<br>
+<b>Moduli richiesti: Import/Export, </b>
+<b>Contab. generale e sempl.</b>
+<br>Opzioni programma: <A href="ampers07.htm#BSCGEXTS">vai alle opzioni</A>
+</p>
+<p>Il programma permette l'export di fatture emesse, note di accredito emesse, fatture ricevute, note di accredito ricevute, incassi e pagamenti verso programmi esterni.</p>
+<p>Nota per incassi/pagamenti: relativamente ai codici clienti/fornitori, il programma può utilizzare quelli del gestionale che dovrà acquisire i dati (ed in questo caso occorrerà inserire tali valori nella rispettive anagrafiche clienti/fornitori di Business) oppure può esportare i codici utilizzati da Business. In caso di utilizzo del codici di Business è possibile esportare solo clienti/fornitori appartenenti ad un unico mastro per ogni tipologia (quindi un solo mastro clienti ed un solo mastro fornitori) e con progressivo cliente/fornitore compreso tra 1 e 9999. Per Export su Team System il flag 'Usa codice cliente\fornitore NTS' deve essere deselezionato.</p>
+<p>E' gestita la possibilità di esportare incassi/pagamenti leggendo dai documenti di magazzino (testmag) invece che da prima nota (prinot), la possibilità è alternativa, non possono convivere le due cose, l'importo dell'incasso/pagamento sarà quello indicato nel campo 'testmag.tm_pagato'. Per poterla gestire occorre settare le seguenti opzioni di registro:</p>
+<ul>
+<li>BSCGEXTS\OPZIONI\IncassiPagamentiDaTestmag = -1 abilità la gestione
+<li>BSCGEXTS\OPZIONI\CausTSIncPagDaTestmag = causale da utilizzare per registrare gli incassi/pagamenti nel gestionale che farà l'import (per team system 21)
+<li>BSCGEXTS\OPZIONI\DesCausTSIncPagDaTestmag = descrizione dela causale da utilizzare per registrare gli incassi/pagamenti nel gestionale che farà l'import (default 'Inc./pag.')
+<li>BSCGEXTS\OPZIONI\ContoCassaTSIncPagDaTestmag = conto cassa/banca da utilizzare per registrare l'incasso sul gestionale che farà l'import</li>
+</ul>
+<p>
+<IMG src="../images/help_bscgexts_02.jpg">
+</p>
+<p>
+<b>
+<A name=Usacodiciclient>Usa codici clienti/fornitori NTS</A>
+</b>
+</p>
+<p>Se selezionato in fase di export incassi/pagamenti viene esportato il codice cliente/fornitore di Business, invece di quello codificato nel campo 'codice nostro presso di loro'</p>
+<p>
+<b>
+<A name=DittaTSconsezio>Ditta TS con sezionali</A>
+</b>
+</p>
+<p>Se deselezionato l'export delle fatture avviene senza esportare il numero di registro IVA a cui appartiene il documento. Al suo posto viene esportata la serie documento se numerica. Se selezionato verrà esportato il numero di registro IVA, senza serie documento (Attenzione ai documenti emessi...) Se selezionato è possibile utilizzare l'appositaopzione di registro (BSCGEXTS/OPZIONI/NumeroRegIvaZeroTS ) per fare in modo che un numero di registro IVA di Business venga esportato con numero registro = 0</p>
+<p>
+<b>Impostazione iniziale</b>
+</p>
+<p>Nel registro di Business settare l'opzione Business/Opzioni/Tipoinstall = 'T' (questo per rendere visibile delle colonne altrimenti nascoste nella tabella dei codici IVA).</p>
+<p>
+<b>Tabella codici IVA</b>: per codici IVA che verranno esportati occorre impostare nella colonna 'Sigla per estrazione dati (1)' il codice IVA del programma che importerà i dati corrispondente a quello di Business. Se il codice IVA di Business è parzialmente deducibile, indicare nella colonna suddetta il codice IVA totalmente deducibile del programma che importerà i dati, mentre nella colonna 'Sigla per estrazione dati (2)' indicare il codice IVA totalmente indeducibile. Questo perché in fase di export la riga IVA di Business parzialmente deducibile verrà divisa in due righe: una totalmente deducibile ed una totalmente indeducibile. Esempio eseguito su codici IVA standard di Business e codice 20 multi IVA 20% deducibile, codice 620 di multi IVA 20% indeducibile, codice 306 esente art 15:</p>
+<ul>
+<li>1020 Sigla estr. dati (1) = 20; Sigla estr. dati (2) = vuota
+<li>1120 Sigla estr. dati (1) = 620; Sigla estr. dati (2) = vuota
+<li>1170 Sigla estr. dati (1) = 20; Sigla estr. dati (2) = 620
+<li>1702 Sigla estr. dati (1) = 306; Sigla estr. dati (2) = vuota</li>
+</ul>
+<p>
+<b>Causali contabili</b>: per fare in modo che le causali contabili di Business vengano tradotte in causali contabili del programma esterno occorre andare nel programma 'Tipi varianti/attributi' (menù di Business 1-K-1), creare una nuova variante con codice 'CAUS', descrizione libera, lunghezza 4, quindi entrare nei valori variante ed assegnare come 'valore variante' il codice causale di Business e come 'descrizione variante' il codice causale del programma esterno. Esempio eseguito con causali standard di Business (a sx) ed alcune causali di multi (a dx):</p>
+<ul>
+<li>1000 1 emessa fattura
+<li>1020 2 emessa nota di accred
+<li>1500 11 ricevuta fattura
+<li>1520 12 ricevuta nota di accred
+<li>2000 27 incasso cliente
+<li>2020 28 incasso nota accred forn
+<li>2500 28 pagamento fornitore
+<li>2508 27 pagamento nota accred cli</li>
+</ul>
+<p>
+<b>Anagrafica sottoconti</b>: nella tabella dei sottoconti/sottoconti ditta, per le voci che dovranno/potrebbero essere esportate occorre indicare nel campo 'NOTE' di ogni singola anagrafica il codice del sottoconto corrispondente del programma esteno (attenzione a non lasciare spazi/invii prima e dopo il codice).</p>
+<p>A<b>nagrafica clienti/fornitori</b>: è obbligatorio indicare, in ogni anagrafica da elaborare, almeno una valore tra codice fiscale e partita IVA. Questo perché il programma di importazione utilizza tali valori per verificare se il cliente/fornitore è già stato precedentemente passato. Qualora nel programma esterno non venisse trovato nessun cliente/fornitore con codice fiscale o partita IVA uguali a quello passato in fase di import il soggetto dovrebbe essere creato (funzionalità già supportata in multi). Per il passaggio di incassi/pagamenti oltre a quanto sopra è necessario che in ogni anagrafica di Business, nel campo 'codice nostro presso di loro' sia indicato il codice cliente/fornitore del programma esterno. In caso contrario verrà dato una messaggio e la registrazione non verrà esportata.</p>
+<p>
+<b>
+<A name=Limitazioni>Limitazioni</A>:</b>
+</p>
+<ul>
+<li>in fase di export vengono trasferite fatture emesse, note di accredito emesse, fatture ricevute, note di accredito ricevute, incassi e pagamenti
+<li>ogni registrazione con IVA può avere al massimo 8 codici IVA e 8 voci di costo/ricavo ed un solo cliente/fornitore
+<li>ogni registrazione non IVA può avere al massimo 80 righe
+<li>non possono essere trasferite registrazioni relative ad insoluti
+<li>gli incassi/pagamenti nel programma esterno non verranno collegati alle fatture relative, visto il passaggio dati avviene senza trasferimento di partite/scadenze
+<li>non vengono passate informazioni in valuta diversa dalla valuta principale (EURO), se la registrazione in Business è in valuta verrà esportata solo in EURO
+<li>non sono gestire serie protocollo
+<li>a causa di una limitazione nel programma della Team System, in fase di Export fatture possono venir esportate o le serie documento o i numeri dei registri IVA. Da ciò di desume che l'importazione non sarà corretta se in Business si usano più registri IVA vendite con n. serie documento
+<li>non è gestita l'IVA ad esigibilità differita, cosi come IVA autotrasportatori, pro-rata, ventilazione e tutti i regimi speciali. è gestito il caso di IVA parzialmente detraibile
+<li>non è gestito il passaggio di documenti di contabilità professionisti
+<li>per gli acquisti non è previsto passaggio di informazioni per la redazione del quadro A iva 11 (beni destinati alla rivendita, canoni leasing, cespiti, ..)
+<li>per il passaggio di documenti emessi è contemplato solo il caso di protocolli vendite coincidenti con numero di documento (vedi impostazione sul registro vendite presente in anagrafica ditta)</li>
+</ul>
+<p>
+<b>
+<A name=Specificheperpa>Specifiche per passaggio dati a Multi di Team System</A>:</b>
+</p>
+<ul>
+<li>attualmente in fase di importazione dati, multi provvede ad assegnare sempre il numero di protocollo per i documenti ricevuti
+<li>se in fase di acquisizione fatture il cliente/fornitore non viene trovato nell'archivio a parità di codice fiscale/partita IVA, verrà creato
+<li>durante l'export non deve essere selezionato il flag 'Usa codici Clienti/Fornitori NTS'</li>
+</ul>
+<p>Per eseguire l'importazione, copiare il file TRAF2000 generato da Business nella directory \CONTA di TeamSystem, quindi entrare in MULTI e lanciare il comando RUN: apparirà una finestra dove andrà indicato il programma RESD2000, quindi confermare. Apparirà una seconda schermata che andrà confermata senza indicare nessun valore, quindi alla scelta della stampante confermare. Nel programma di acquisizione, prima di eseguire l'import è possibile sfruttare il comando 'controlla' che preventivamente provvede a verificare la corretta compilazione del file da importare.</p>
+<p>
+<b>
+<i>
+<u>Export delle fatture INTRA sia per i servizi che per i beni</u>
+</i>
+</b>
+</p>
+<p>Sono state create nuove varianti allo stesso modo fatto per le causali contabili:</p>
+<ul>
+<li>INTRNT Natura transazione</li>
+<li>INTRST Stati esteri</li>
+<li>INTRVL Valute estere</li>
+</ul>
+<p>tramite le quali, vanno mappate le corrispondenze della Natura Transazione, Stati Esteri, Valute Estere tra Business e TeamSystem. La tabella della natura transazione può essere addirittura fissa. E' così in tutte le installazione TeamSystem.</p>
+<p>Sono state create delle nuove opzioni di registro:</p>
+<ul>
+<li>BSCGEXTS\OPZIONI\NomeFile=XXXX (XXXX = nome file di output, se non specificato TRAF2000)</li>
+<li>BSCGEXTS\OPZIONI\EliminaSiglaDaCF=0/1/2 (per eliminare la parte iniziale corrispondente allo stato estero)</li>
+<ul>
+<li>0 = funzione disabilitata</li>
+<li>1 = elimina dal Codice Fiscale la parte iniziale uguale al campo TABSTAT. tb_siglacee</li>
+<li>2 = elimina dal Codice Fiscale la parte iniziale uguale al campo TABSTAT. tb_siglaiso</li>
+</ul>
+</ul>
+<p>La motivazione è la compatibilità della partita iva estera presente nel codice fiscale di Business con il tracciato TeamSystem. Business ha tutto inglobato nel codice fiscale, mentre TeamSystem ha un campo per la sigla della partita iva estera e un campo per la partita iva estera.</p>
+<p>In TeamSystem utilizzare il programma IMPPN che ingloba il vecchio comando RESD2000. Con IMPPN è possibile fare una serie di operazione sul file esportato. E' possibile visualizzare i record, controllare i record, eseguire l'import, ecc. Prima di qualsiasi operazione, assicurarsi di configurazione in IMPPN l'opzione "Utilizza 24 contr.costo/ric." Impostandola a <b>No</b> per abilitare il tracciato record con cui il file TRAF2000 è stato scritto.</p>
+<p>Limitazioni:</p>
+<ul>
+<li>non è ammesso il pagamento contestuale della fattura Intra. E' obbligatorio fare 2 registrazioni in Business, una per la fattura Intra e una per il pagamento</li>
+<li>in TeamSystem, i dati importati riguardanti l'Intra non saranno relazionati con la prima nota, cioè, non c'è integrazione tra la prima nota e l'Intra. Quando si aprirà una fattura Intra non si vedranno i corrispondenti movimenti Intra. Si dovrà lanciare il programma della gestione Intra separatamente per visualizzare/modificare/eliminare i dati Intra. Pertanto, non essendoci integrazione tra la prima nota e l'Intra, le operazioni saranno sempre doppie, in prima nota e in Intra.</li>
+</ul>
+<p>Esempio step-by-step di come procedere:</p>
+<p>1 – NUOVI TIPI VARIANTI</p>
+<p>
+<IMG src="../images/help_bscgexts_03.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscgexts_04.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscgexts_05.jpg">
+</p>
+<p>2 – SU TEAMSYSTEM LANCIARE IL COMANDO <b>IMPPN</b> ED ENTRARE IN <b>TABELLA PERSONALIZZAZIONI</b> E PRESTARE ATTENZIONE ALL'IMPOSTAZIONE "UTILIZZA 24 CONTR.COSTO/RICAVO" CHE DEVE ESSERE IMPOSTATA A <b>NO</b>
+</p>
+<p>
+<IMG src="../images/help_bscgexts_06.jpg" width=987>
+</p>
+<p>
+<IMG src="../images/help_bscgexts_07.jpg">
+</p>
+<p>3 – IN BUSINESS I FORNITORI INTRA DEVONO ESSERE IMPOSTATI CORRETTAMENTE, QUINDI COMPLETI DI PARTITA IVA ESTERA, STATO, TIPO SOGGETTO IVA, ECC.</p>
+<p>4 – L'EXPORT DEI DATI DA BUSINESS</p>
+<p>
+<IMG src="../images/help_bscgexts_02.jpg">
+</p>
+<p>Creata nuova opzione di registro <b>BSCGEXTS\OPZIONI\NomeFile</b> (occhio! va indicato solo il nome del file) che poter personalizzare il nome del file di export</p>
+<p>Creata nuova opzione di registro <b>BSCGEXTS\OPZIONI\EliminaSiglaDaCF</b> (0/1/2) per eliminare dal Codice Fiscale/Partita Iva Estera la parte iniziale corrispondente alla sigla interessata. I valori che l'opzione può assumere sono:
+<br>0 = Funzione disabilitata
+<br>1 = Sigla CEE della tabella Stati (tabstat.tb_siglacee)
+<br>2 = Sigla ISO della tabella Stati (tabstat.tb_siglaiso)
+<br>Nel tracciato record di TS va riportato solo il Codice Fiscale/Partita Iva Estera senza anteporre la sigla CEE/ISO/ecc. Il meccanismo si attiva solo se indicato in anagrafica Intra CEE, Extra CEE, RSM.</p>
+<p>5 – L'IMPORT DEI DATI IN TEAMSYSTEM AVVIENE CON IL COMANDO <b>IMPPN</b>
+</p>
+<p>6 – LANCIARE PRIMA IL CONTROLLO IMPOSTANDO IL PERCORSO DEL FILE E LA DITTA</p>
+<p>
+<IMG src="../images/help_bscgexts_08.jpg" width=987>
+</p>
+<p>7 – EVENTUALMENTE SI PUO' PROCEDERE ANCHE ALLA VISUALIZZAZIONE DEI RECORD ESPORTATI DA BUSINESS SCEGLIENDO <b>VISUALIZZAZIONE</b>
+</p>
+<p>
+<IMG src="../images/help_bscgexts_09.jpg">
+</p>
+<p>8 – PER PROCEDERE CON L'IMPORTAZIONE SCEGLIERE <b>IMPORTAZIONE PRIMA NOTA</b>
+</p>
+<p>
+<IMG src="../images/help_bscgexts_10.jpg">
+</p>
+<p>9 – LANCIARE <b>MINQ</b> PER CONTROLLARE I PARTITARI</p>
+<p>10 – LANCIARE IL COMANDO <b>INTRAG</b> PER I DATI INTRASTAT</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Fatturazione canoni/contratti</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>19/05/2015</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Fatturazione canoni/contratti</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>
+<b>Nome programma: BSCSFACA.DLL</b>
+<br>
+<b>Moduli richiesti: Customer Service</b>
+<br>Opzioni programma: <A href="ampers07.htm#BSCSFACA">vai alle opzioni</A>
+<br>Report programma: <A href="ampers08.htm#BSCSFACA">vai ai report</A>
+</p>
+<p>Questo programma genera le fatture relative ai canoni, una volta inseriti i dati nei contratti, nella parte rinnovi e nel corpo. Il programma permette di generare una serie di documenti, che possono poi essere modificati col programma "Gestione documenti di magazzino". É possibile anche la generazione in prova e in tal caso il numero documento attribuito non è significativo trattandosi di numeri provvisori, i relativi documenti saranno eliminati al termine della stampa. Nel menu strumenti è presente una voce per visualizzare il log dell'ultima elaborazione, che viene generato ad ugni elaborazione con informazioni utili per capire come viene eseguito il riempimento del corpo del documento.</p>
+<p>
+<IMG src="../images/help_bscsfaca_19.jpg">
+</p>
+<p>
+<u>
+<b>Documenti da generare</b>
+</u>
+</p>
+<ul>
+<li>
+<b>
+<A name=Tipo>Tipo</A>
+</b>Indicare il tipo di documenti da generare tra fatture immediate o fatture/ricevute fiscali immediate.
+<li>
+<A name=Anno>
+<b>Anno</b>
+</A>
+<b>/</b>
+<A name=Serie>
+<b>Serie</b>
+</A>Indicare l'anno e la serie da attribuire alla fatture generate.
+<li>
+<b>
+<A name=Numeroiniziale>Numero iniziale</A>
+</b>Indicare il numero da attribuire alla prima fattura da emettere; è proposto il numero successivo all'ultimo utilizzato.
+<li>
+<A name=Datadoc>
+<b>Data doc.</b>
+</A>Indicare la data da attribuire alle fatture da generare.
+<li>
+<b>
+<A name=TipoBF>Tipo BF</A>
+</b>Indicare il tipo BF da attribuire alle fatture da generare.
+<li>
+<b>
+<A name=Articolo>Articolo</A>
+</b>Il codice articolo da usarsi di default (cioè in mancanza di), al posto del campo Cod. Articolo canone indicato in testata o riga del contratto. Vedi note sotto.
+<li>
+<b>
+<A name=Note>Note</A>
+</b>Campo descrittivo che è possibile passare al report per la stampa (uguale per tutti i clienti/contratti fatturati).</li>
+</ul>
+<p>
+<u>
+<b>Selezione contratti da fatturare</b>
+</u>
+</p>
+<ul>
+<li>
+<b>
+<A name=Statusperiodo>Status periodo</A>
+</b>Il programma tratta solo i rinnovi con status "In corso".
+<li>
+<b>
+<A name=Tipocontratto>Tipo contratto</A>
+</b>Se si vuole trattare solo i contratti di un determinato tipo (da tabella tipi contratto) indicare qui il codice relativo.
+<li>
+<b>
+<A name=DacodCliente>Da\A cod. Cliente</A>
+</b>Per considerare solo i contratti di un determinato cliente o di un range di codici cliente, indicare in questi due campi il primo e l'ultimo di essi.
+<li>
+<A name=Dadatadecorrenz>
+<b>Da data decorrenza</b>
+</A>
+<b>/ </b>
+<A name=Adatadecorrenza>
+<b>A data decorrenza</b>
+</A>Indicare le date iniziale e finale del periodo a cui appartengono i contratti da fatturare, inteso come filtro sulla data decorrenza sui dati del rinnovo. In caso di periodo fatturazione diverso dal periodo canone, è considerata come data decorrenza la data competenza ultima fatturazione emessa + 1 giorno.
+<li>
+<b>
+<A name=Danumcontratto>Da \ A numero contratto</A>
+</b>Per considerare solo un determinato contratto o un range di codici identificativi contratto, indicare in questi due campi il primo e l'ultimo di essi.
+<li>
+<b>Usa lista selezionata </b>Genera la fatturazione ad una lista selezionata di clienti anzichè usare il filtro Da\A cliente.</li>
+</ul>
+<p>
+<b>
+<A name=Periodofatturaz>Periodo fatturazione</A>
+<br>
+</b>Spuntare le caselle relative ai rinnovi che hanno quel (o quel tipo di) periodo/i di fatturazione. Per es, fatturare solo i contratti / rinnovi con fatturazione annuale.</p>
+<p>
+<b>
+<A name=Opzionidistampa>Opzioni di stampa</A>
+<br>
+</b>Indicare "In prova" per produrre una simulazione di fatturazione canoni; non sarà aggiornato alcun dato sui contratti/rinnovi eleborati. Indicare "In definitivo" per l'elaborazione con aggiornamento. In questo caso i numeri attribuiti alle fatture emesse sono quelli corretti. Inoltre il programma sui dati del rinnovo fatturato spunta la casella "fatturato canone del periodo", aggiunge l'importo fatturato al campo "canone fatturato", ed inserisce/aggiorna in modo opportuno la "data fine competenza ultima fatturazione eseguita"</p>
+<p>Nella gestione contratti di assistenza con la casistica di tipo determinazione nelle righe è possibile impostare gli sconti, ma non sono applicati quando si genera la fattura; durante la fatturazione non sono applicati gli sconti sulle righe del contratto. Questo è un limite della fatturazione canoni che non espone mai quantità, prezzo unitario, sconti e netto, ma solo quantità canone (uguale a 1) e nel prezzo il netto canone complessivo (idem come valore). Di fatto per la fatturazione della riga contratti è significativo solo il campo canone del periodo, gli altri campi (prezzo unitario, sconti, ecc...) possono non essere affatto gestiti. Prezzo unitario e sconti servono ad aiutare a determinare, in fase inserimento riga, il canone netto del periodo. É quindi importante sapere che in riga fattura ci va il canone complessivo netto della riga.</p>
+<p>
+<IMG src="../images/help_bscsfaca_18.jpg">
+</p>
+<p>Per quanto riguarda le <b>provvigioni</b> queste sono calcolate a seconda del tipo di determinazione del canone indicato sul rinnovo del contratto. 
+<br>In particolare, se la determinazione del canone è:</p>
+<ol>
+<li>sintetico, sulla testata: le percentuali o i valori delle provvigioni sono prese dalla testata del rinnovo (nnrinnovi) ed assegnate alla prima riga della fattura.
+<li>analitico, con fatturazione sintetica: come nel caso precedente, le percentuali o i valori delle provvigioni vengono prese dalla testata del rinnovo (nnrinnovi) ed assegnate alla prima riga della fattura.
+<li>sulle righe: le percentuali o i valori delle provvigioni sono prese dalla relativa riga presente nel dettaglio del rinnovo (nnmovctra).</li>
+</ol>
+<p>Le provvigioni 1 e 2 vanno gestite entrambe a percentuale o a valore, inoltre la provvigione 2 è letta solo se presente la provvigione 1. 
+<br>In presenza del modulo "<b>Contabilità Analitica DC</b>" attivo, i campi presenti sui documenti generati sono valorizzati come segue:</p>
+<p>
+<u>
+<b>Testata documento</b>
+</u>
+</p>
+<ul>
+<li>
+<b>Cliente </b>É valorizzato dal "cliente" di testata documento.
+<li>
+<b>Divisione </b>É valorizzato dalla "divisione" del tipo bolla\fattura di testata documento.
+<li>
+<b>Centro </b>É valorizzato dal "centro" inserito nel contratto.
+<li>
+<b>Commessa </b>É valorizzato dalla "commessa" inserita nel contratto.
+<li>
+<b>Negozio/Filiale </b>É valorizzato dal "negozio/filiale" del magazzino 1 di testata documento.</li>
+</ul>
+<p>
+<u>
+<b>Corpo Documento</b>
+</u>
+</p>
+<ul>
+<li>
+<b>Divisione </b>É valorizzato dalla "divisione" del tipo bolla\fattura di testata documento.
+<li>
+<b>Centro </b>É valorizzato dal "centro" inserito nel contratto.
+<li>
+<b>Commessa </b>É valorizzato dalla "commessa" inserita nel contratto.
+<li>
+<b>Linea (Famiglia) </b>É valorizzato dalla "Linea (Famiglia)" inserita nel contratto.
+<li>
+<b>Conto CA </b>É valorizzato da quello della testata o della riga di dettaglio, scelta dal programma a seconda dei casi di fatturazione.
+<li>
+<b>Causale </b>É valorizzato dalla "causale" del tipo bolla\fattura della testata documento.
+<li>
+<b>Negozio/Filiale </b>É valorizzato dal "negozio/filiale" del magazzino 1 di testata documento.</li>
+</ul>
+<p>Indipendentemente dal tipo di fatturazione definita sul rinnovo (sintetica, analitica con fatturazione sintetica o analitica per riga), la descrizione del <b>testo della fattura generata</b> riporta sulla prima riga del documento sul campo descrizione articolo e campo note, quello che è stato indicato come 'Descr. fatturazione' nei dati del rinnovo. Se come 'Descr. fatturazione' nei dati del rinnovo invece non è stato inserito nulla viene utilizzata la descrizione articolo indicata nel campo 'Articolo' della sezione 'Documenti da generare'. Alla descrizione così determinata si aggiunge tra parentesi il periodo di competenza dei canoni fatturati con la formula 'Dal xx/xx/xxxx al yy/yy/yyyy'. 
+<br>
+</p>
+<p>Invece per quanto riguarda le righe del corpo rinnovo che andranno poi a popolare le righe documento, anche in questo caso indipendentemente dal tipo di fatturazione definita sul rinnovo (sintetica, analitica con fatturazione sintetica o analitica per riga), ogni riga documenti riporterà sul campo descrizione articolo e campo note quello indicato come 'Descr. fatturazione' nei dati della riga del contratto, se presente. Ad esso si aggiunge la descrizione dell'apparecchio (articolo modello), seguito tra parentesi dal codice articolo modello e se presente dall'identificativo della matricola corrispondente all'apparecchio.</p>
+<p>
+<b>Il codice articolo di riga segue invece le seguenti regole:</b>
+</p>
+<ol>
+<li>indipendentemente dal tipo di fatturazione definita sul rinnovo (<b>sintetica, analitica con fatturazione sintetica o analitica per riga</b>), sulla <b>prima riga</b> è utilizzato il codice articolo indicato come 'Codice articolo canone' nella testata del contratto e in mancanza viene usato il codice articolo indicato nel campo 'Articolo' della sezione 'Documenti da generare'.
+<li>sulle righe del corpo documento (una per ogni riga di dettaglio del corpo rinnovo) viene utilizzato, nel caso di contratti in cui sul rinnovo è prevista una definzione analitica dei canoni (per riga), come codice articolo quello indicato come 'Codice articolo canone' sulla riga e in mancanza viene usato il codice articolo indicato nel campo 'Articolo' della sezione 'Documenti da generare'.
+<li>sulle righe del corpo documento (una per ogni riga di dettaglio del corpo rinnovo) viene utilizzato, nel caso di contratti in cui sul rinnovo è prevista una definizione sintetica dei canoni oppure analitica con fatturazione sintetica, come codice articolo quello indicato come 'Codice articolo canone' nella testata del contratto e in mancanza viene usato il codice articolo indicato nel campo 'Articolo' della sezione 'Documenti da generare'.</li>
+</ol>
+<p>
+<FONT style="BACKGROUND-COLOR: gold">
+<b>NB:</b> in merito alle descrizioni da riportare in fattura è presente anche una nuova possibilità di configurazione all'interno del programma<b>
+</b>
+</FONT>
+<A href="..\html\bscsnntc.htm">
+<FONT style="BACKGROUND-COLOR: gold">
+<b>tipi</b>
+<b>contratto</b>
+</FONT>
+</A>
+<FONT style="BACKGROUND-COLOR: gold"> usando la voce <b>'descrizione personalizzata in <FONT style="BACKGROUND-COLOR: gold">fattura'</FONT>
+</b>
+<FONT style="BACKGROUND-COLOR: gold">.</FONT>
+</p>
+<p>
+<b>
+<i>
+<u>Fatturazione Canoni in caso di Contratto con costo copia</u>
+</i>
+</b>
+</p>
+<p>Per Fatturare un contratto di noleggio con costo contatori, occorre avere:</p>
+<ul>
+<li>Sul tipo contratto, la spunta di Gestione Costo copia
+<li>Sul Parco installato, il numero di contatori da gestire (1 – 4)
+<li>Sul Contratto caricato, nelle righe di dettaglio, indicare per ciascun contatore la soglia per definire lo scaglione di applicazione primo prezzo ed i prezzi fino a soglia ed oltre soglia.</li>
+</ul>
+<p>I casi possibili sono:</p>
+<p>1. <b>Contratto di solo canone fisso, senza contatori -&gt; </b>In questo caso la fatturazione segue la periodicità indicata nel rinnovo e calcola la eventuale quota del canone incorso da fatturare di volta in volta, fino al raggiungimento dell'intero valore canone.</p>
+<p>
+<b>2. </b>
+<b>Contratto con soli costi contatore, senza canone fisso -&gt; </b>In questo caso invece non esiste una quota fissa da fatturare, ma vengono fatturate solo le rilevazioni contatori non ancora trattate. 
+<br>In questo caso si presentano 2 possibili scenari:</p>
+<ul>
+<li>
+<b>Fatturazione Contatori standard -&gt;</b> In questo caso le letture di rilevazione DEVONO essere fatte l'ultimo giorno del mese, e la fatturazione deve usare come data fatturazione e come data fine competenza di fatturazione l'ultimo giorno del mese da fatturare (in pratica devono coincidere).
+<li>
+<b>Fatturazione Contatori con nuovo calcolo (BSCSFACA\OPZIONI\Nuovo_Calcolo_Contatori) -&gt; </b>In questo caso la fatturazione canone memorizza nel parco installato la "Data fine periodo" dell'ultima lettura contatore Fatturata, serve per rintracciare l'ultima lettura fatturata alla prossima Fatturazione, e per calcolare la differenza da fatturare; normalmente in questo caso le due date dovrebbero coincidere. 
+<br>Alla fatturazione successiva viene presa l'ultima lettura di tipo valido nel periodo da fatturare (con data &lt;= alla data fine periodo ed alla data fatturazione impostate nella maschera) e viene calcolata la differenza rispetto all'ultima lettura fatturata (presa da parco installato), creando poi la fattura per la differenza. Dopo la fatturazione devono essere aggiornate la data ultima lettura fatturata (N.B.: NON la data fattura, ma la data della lettura) sul parco installato, la data fine competenza fatturazione sul rinnovo e la precedente "Data lettura ult. Fatt." dev'essere traslata in "Data lettura penult. Fatt.". 
+<br>Nel caso in cui la fatturazione trovasse letture da fattura ma NON fosse compilato il campo<b> "Data lettura ult. Fatt."</b> deve assumere quel campo uguale alla data fine competenza ultima fatturazione letta dal contratto (nnc_dtfcultf), questo è il caso classico in cui io inizio ad usare Business senza opzione attiva, inizio a fatturare contratti e letture contatori ... poi switcho alla modalità nuova attivando l'opzione. 
+<br>Nel caso in cui la fatturazione non trovasse letture da fatturare, NON viene aggiornata alcuna data (potrebbero non essere state ancora registrate le letture, e verranno fatturate in seguito).</li>
+</ul>
+<p>
+<b>3. </b>
+<b>Contratto con indicati contemporaneamente un canone fisso ed i costi unitari per contatori -&gt; </b>Funziona con la stessa logica del punto 1 (periodicità di fatturazione legata al rinnovo), ma fattura sia la quota di canone fisso (se per. Di fatturazione &lt; a periodicità contratto), che (in seguito) le eventuali letture da fatturare con la stessa logica del punto 2. 
+<br>
+<b>NB:</b> Qualora un periodo fosse totalmente fatturato, ma il contratto fosse di tipo con costo contatore, prima di saltare il contratto deve comunque essere fatto il test sulla presenza di letture da fatturare nel periodo.</p>
+<p>
+<b>
+<i>
+<u>Esempio di utilizzo delle descrizioni da riportare in fattura canoni e possibile caso di personalizzazione report</u>
+</i>
+</b>
+</p>
+<p>Nella gestione contratti sono specificabili le informazioni evidenziate che poi vengono riportate in fase di fatturazione.</p>
+<p>
+<IMG src="../images/help_bscsfaca_02.jpg">
+</p>
+<p>Nella finestra di selezione canoni da fatturare e possibile poi indicare nel campo note, note che verranno riportate nel campo note della fattura generata.</p>
+<p>
+<IMG src="../images/help_bscsfaca_03.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscsfaca_04.jpg">
+</p>
+<p>Invece il corpo sarà compilato con le descrizioni evidenziate prima nella maschera di gestione contratti e in più in automatico la procedura aggiunge alcune informazioni relative al periodo, più per le righe di corpo dettagli sull'articolo, matricola , ...</p>
+<p>
+<IMG src="../images/help_bscsfaca_05.jpg">
+</p>
+<p>Con una apposita opzione è possibile anche riportare le note eventualmente indicate sulle righe del corpo rinnovo</p>
+<p>
+<IMG src="../images/help_bscsfaca_06.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscsfaca_07.jpg">
+</p>
+<p>Nel caso in cui si vogliano personalizzare ulteriormente i testi riportati nelle fatture dei canoni si consiglia di lavorare a livello di report, di seguito c'è un esempio che fornisce un'ottima base di partenza per queste operazioni. Come prima cosa inseriamo ad esempio un marcatore univoco (a scelta nell'esempio ###) che il cliente non usa nelle sue descrizioni (altri esempi @@@@, §§§§, .....) e accodiamolo nel punto in cui vogliamo terminare la descrizione da riportare in fattura.</p>
+<p>
+<IMG src="../images/help_bscsfaca_08.jpg">
+</p>
+<p>Poi personalizziamo il report delle fatture mettendo al posto dei campi fissi delle descrizioni e delle note (mm_....) un campo formula che stampa tutto il testo fino a che non trova il marcatore.</p>
+<p>
+<IMG src="../images/help_bscsfaca_09.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscsfaca_10.jpg" width=987>
+</p>
+<p>
+<IMG src="../images/help_bscsfaca_11.jpg">
+</p>
+<p>Lo salviamo nella Rpt\Pers con un nome diverso da quello standard, ad esempio bavefatics.rpt</p>
+<p>
+<IMG src="../images/help_bscsfaca_12.jpg">
+</p>
+<p>Impostiamo il multi-report</p>
+<p>
+<IMG src="../images/help_bscsfaca_13.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscsfaca_14.jpg">
+</p>
+<p>Generiamo come prima la fattura ma questa volta la stampiamo con il modello rprot appena creato</p>
+<p>
+<IMG src="../images/help_bscsfaca_15.jpg">
+</p>
+<p>
+<IMG src="../images/help_bscsfaca_16.jpg">
+</p>
+<p>Ovviamente a livello di dati business si comporta come prima (ci sono in più i marcatori)</p>
+<p>
+<IMG src="../images/help_bscsfaca_17.jpg">
+</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

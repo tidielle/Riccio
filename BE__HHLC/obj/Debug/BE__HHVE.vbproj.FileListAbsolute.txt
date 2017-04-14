@@ -1,0 +1,7 @@
+C:\BIZ2015\BE__HHVE\obj\Debug\NTSInformatica.Resources.resources
+C:\BIZ2015\BE__HHVE\obj\Debug\BE__HHVE.vbproj.GenerateResource.Cache
+C:\BIZ2015\TEST\BE__HHVE.dll
+C:\BIZ2015\TEST\BE__HHVE.pdb
+C:\BIZ2015\BE__HHVE\obj\Debug\BE__HHVE.vbprojResolveAssemblyReference.cache
+C:\BIZ2015\BE__HHVE\obj\Debug\BE__HHVE.dll
+C:\BIZ2015\BE__HHVE\obj\Debug\BE__HHVE.pdb

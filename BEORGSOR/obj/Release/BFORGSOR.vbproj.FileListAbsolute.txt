@@ -1,0 +1,14 @@
+G:\BIZ2015SR5\BEORGSOR\obj\Release\NTSInformatica.Resources.resources
+G:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.vbproj.GenerateResource.Cache
+G:\BIZ2015SR5\TEST\BFORGSOR.dll
+G:\BIZ2015SR5\TEST\BFORGSOR.pdb
+G:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.dll
+G:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.pdb
+G:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.vbprojResolveAssemblyReference.cache
+C:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.vbprojResolveAssemblyReference.cache
+C:\BIZ2015SR5\BEORGSOR\obj\Release\NTSInformatica.Resources.resources
+C:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.vbproj.GenerateResource.Cache
+C:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.dll
+C:\BIZ2015SR5\BEORGSOR\obj\Release\BFORGSOR.pdb
+C:\BIZ2015SR5\TEST\BFORGSOR.dll
+C:\BIZ2015SR5\TEST\BFORGSOR.pdb

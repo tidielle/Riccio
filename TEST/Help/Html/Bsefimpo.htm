@@ -1,0 +1,1788 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Integra dati Spesometro da import file ascii</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>17/03/2016</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Importa dati per Telematico operazioni rilevanti IVA/Spesometro</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>La funzione è richiamabile all'interno della form di gestione spesometro e serve per integrare i dati di Business relativa allo spesometro estratti da Business. In particolare la funzione è utile per clienti che migrano da altri gestionali che non hanno uno storico da estrarre, oppure hanno dati parziali da integrare. Con questa funzione è possibile quindi acquisire i dati mancanti da un tracciato record ascii (sotto riportato).</p>
+<p>
+<IMG src="../images/help_bsefimpo_01.jpg">
+</p>
+<p>Una volta realizzato il file e possibile quindi sfruttare questa funzione e selezionare il file in questione per essere acquisito.</p>
+<p>
+<IMG src="../images/help_bsefimpo_03.jpg">
+</p>
+<p>Nella finestra ci sono due icone in toolbar: la prima "Importa file" che importa il file e popola la griglia spesometro con i dati presenti sul tracciato sia nei quadri esistenti che in quelli mancanti che vengono aggiunti; la seconda "Controlla file" che esegue i controlli sul file (simula l'importazione) ma non aggiorna alcun dato attualmente aperto in visualizzazione/modifica (la funzione di controllo serve principalmente in fase di creazione del file tracciato). NB: ovviamente la funzione di "Importa file" lancia anche quella di "Controlla file" e importa tutte le righe che non hanno errori, mentre scarta quelle con errori.</p>
+<p>
+<IMG src="../images/help_bsefimpo_04.jpg">
+</p>
+<p>Al termine della funzione sia di "Importa file" che di "Controlla file" vengono aperti due file di log, uno che contiene degli avvisi sui record trattati, ma che non bloccano l'importazione del record (BNEFSPES_Avvisi_Import_.......log):</p>
+<p>
+<IMG src="../images/help_bsefimpo_05.jpg" width=987>
+</p>
+<p>e uno che contiene invece gli errori sui record trattati, e che causano quindi lo scarto del record (BNEFSPES_Errori_Import_.......log):</p>
+<p>
+<IMG src="../images/help_bsefimpo_07.jpg" width=987>
+</p>
+<p>Dettaglio del tracciato ASCII a posizioni fisse da realizzare, richiesto per l'acquisizione dei dati tramite la funzione citata:</p>
+<TABLE width=987 border=1>
+<TR>
+<TD>
+<b>Nome campo</b>
+</TD>
+<TD>
+<b>Obblig.</b>
+</TD>
+<TD>
+<b>Tipo</b>
+</TD>
+<TD>
+<b>Lunghezza</b>
+</TD>
+<TD>
+<b>BL</b>
+</TD>
+<TD>
+<b>FA</b>
+</TD>
+<TD>
+<b>SA</b>
+</TD>
+<TD>
+<b>TU</b>
+</TD>
+<TD>
+<b>DF</b>
+</TD>
+<TD>
+<b>FE</b>
+</TD>
+<TD>
+<b>FN</b>
+</TD>
+<TD>
+<b>FR</b>
+</TD>
+<TD>
+<b>NE</b>
+</TD>
+<TD>
+<b>NR</b>
+</TD>
+<TD>
+<b>SE</b>
+</TD>
+</TR>
+<TR>
+<TD>Quadro</TD>
+<TD>Si</TD>
+<TD>Alfanumerico</TD>
+<TD>2</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Codice Fiscale</TD>
+<TD>Si</TD>
+<TD>Alfanumerico</TD>
+<TD>16</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Partita IVA</TD>
+<TD>Si</TD>
+<TD>Alfanumerico</TD>
+<TD>11</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Codice riferimento</TD>
+<TD>Si</TD>
+<TD>Alfanumerico</TD>
+<TD>50</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Cognome</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>50</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Nome</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>50</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Ragione sociale</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>100</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Data di nascita</TD>
+<TD>No</TD>
+<TD>Data</TD>
+<TD>10</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Comune/stato estero nasc.</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>50</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Prov. nasc.</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>2</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Stato PF</TD>
+<TD>No</TD>
+<TD>Num. Intero</TD>
+<TD>10</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Città</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>50</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Stato</TD>
+<TD>No</TD>
+<TD>Num. Intero</TD>
+<TD>10</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Indirizzo</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>70</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>ID Iva</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>50</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Doc. riepilog.</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Tipo movim.</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Tipo documento</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Data documento</TD>
+<TD>No</TD>
+<TD>Data</TD>
+<TD>10</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Data registrazione</TD>
+<TD>No</TD>
+<TD>Data</TD>
+<TD>10</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Serie doc.</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>3</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>N° docum.</TD>
+<TD>No</TD>
+<TD>Num. Intero</TD>
+<TD>10</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Iva non esp.</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Reverse charge</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Autofattura</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Noleggio/Leasing</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Importo o imponibile</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Imposta</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+</TR>
+<TR>
+<TD>Op. Iva non esp./op. non sogg. merci BL</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Imp. prest servizi</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Impon. note variaz. att.</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Imposta note variaz. att.</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Impon. op. pass. aggr.</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Imposta op. pass. aggr.</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Op. Iva non esp./op. non sogg. BL</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Impon. note var. pass.</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Imposta note var. pass.</TD>
+<TD>No</TD>
+<TD>Num. Decimale</TD>
+<TD>20</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>Tipo operazione</TD>
+<TD>No</TD>
+<TD>Alfanumerico</TD>
+<TD>1</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>N° op. attive man.</TD>
+<TD>No</TD>
+<TD>Num. Intero</TD>
+<TD>10</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>N° op. passive man.</TD>
+<TD>No</TD>
+<TD>Num. Intero</TD>
+<TD>10</TD>
+<TD>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+<FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<p>Note sulla rappresentazione dei dati:</p>
+<ul>
+<li>Alfanumerico (nessun formato particolare)
+<li>Num. intero (la lunghezza comprende se necessario l'eventuale segno meno)
+<li>Num. decimale (la lunghezza comprende se necessario l'eventuale segno meno, utilizzare la virgola ',' come separatore decimale)
+<li>Data (sempre nel formato GG/MM/AAAA)</li>
+</ul>
+<p>NB: in tutti i campi è indifferente l'allineamento che può essere a piacere sia a sinistra che a destra.</p>
+<p>
+<b>
+<i>
+<u>Note particolari sulla compilazione di alcuni campi</u>
+</i>
+</b>
+</p>
+<p>
+<b>Quadro</b> - indicare il quadro sul quale va acquisito il record, a seconda del tipo spesometro è possibile indicare:</p>
+<ul>
+<li>se Aggregato i quadri validi sono "BL"<b>, </b>"FA"<b>, </b>"SA"<b>, </b>"TU"
+<li>se Analitico i quadri validi sono "BL"<b>, </b>DF"<b>, </b>"FE"<b>, </b>"FN"<b>, </b>"FR"<b>, </b>"NE"<b>, </b>"NR"<b>, </b>"SE", "TU"</li>
+</ul>
+<p>in base al quadro assegnato al record i campi specificabili a partire dal Cognome in avanti non sono tutti, ma dipendono dal quadro; compilare solo quelli che hanno nel tracciato indicato sopra la <FONT style="BACKGROUND-COLOR: orange">
+<b>x</b>
+</FONT>. Comunque anche se vengono compilati dei campi che il quadro non gestisce, verranno dati solo degli avvisi nel log ed il valore del campo sarà considerato come se non fosse compilato.</p>
+<p>
+<b>Codice Fiscale, Partita IVA, Codice riferimento</b> – sul tracciato sono indicati tutti e 3 come obbligatori, ma in realtà ne basta uno che porti all'identificazione del conto fornitore, la priorità viene ricercata a partire dal codice fiscale, per poi passare alla partita iva e per ultimo il codice riferimento. Il codice riferimento viene ricercato su un campo dell'anagrafica fornitore (di default il contatto) ma è modificabile da parte dell'operatore, per esempio si potrebbe scegliere la sigla di ricerca, il codice nostro presso loro, ...</p>
+<p>
+<b>Stato PF, Stato</b>
+</p>
+<p>Lasciare a blank se non si vuole indicare altrimenti indicare un numero fra 0 e 9999999999.</p>
+<p>
+<b>Doc. riepilog., Iva non esp., Reverse charge, Autofattura</b>
+</p>
+<p>Lasciare a blank " " oppure "N" se non si vuole indicare il flag, altrimenti specificare "S".</p>
+<p>
+<b>Tipo movim.</b> - indicare uno dei seguenti:</p>
+<ul>
+<li>"A" per Acquisti
+<li>"V" per Vendite
+<li>"C" per Corrispettivi<b>
+</li>
+</ul>
+</b>
+<p>
+<b>Tipo documento</b> - indicare uno dei seguenti:</p>
+<ul>
+<li>"F" per Fattura
+<li>"N" per Nota di credito
+<li>"D" per Nota di addebito
+<li>"C" per Corrispettivi<b>
+</li>
+</ul>
+</b>
+<p>
+<b>Noleggio/Leasing</b> - indicare uno dei seguenti:</p>
+<ul>
+<li>" " per (Non definito)
+<li>"A" per Noleggio/Leasing Autovettura
+<li>"B" per Noleggio/Leasing Caravan
+<li>"C" per Noleggio/Leasing Altri veicoli
+<li>"D" per Noleggio/Leasing Unit da diporto
+<li>"E" per Noleggio/Leasing Aeromobili"</li>
+</ul>
+<p>
+<b>Tipo operazione</b> - indicare uno dei seguenti:</p>
+<ul>
+<li>"A" per Black List
+<li>"B" per Con soggetti non residenti
+<li>"C" per Acquisti di servizi da non residenti</li>
+</ul>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

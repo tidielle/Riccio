@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Gestione parcelle/notule</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>24/05/2016</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Gestione parcelle/notule</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>
+<b>Nome programma: BSPABOLL.DLL</b>
+<br>
+<b>Moduli richiesti: Parcellazione</b>
+<br>Opzioni programma: <A href="ampers07.htm#BSPABOLL">vai alle opzioni</A>
+<br>Report programma: <A href="ampers08.htm#BSPABOLL">vai ai report</A>
+</p>
+<p>Questo programma crea, modifica e cancella avvisi di parcella, fatture, note d'accredito e corrispettivi per la gestione professionisti. Le tipologie di documento gestite sono: Avviso di parcella/notula, Fatture, Fatture di acconto, Corrispettivo, Nota di accredito a storno fattura - in caso di fattura non incassata, Nota di accredito - in caso di fattura da stornare già incassata.</p>
+<p>
+<u>Caratteristiche</u>
+</p>
+<ul>
+<li>Nella fattura d'acconto non è possibile inserire le spese generali e nel corpo è possibile inserire solo una riga di tipo acconto;
+<li>per chiudere una fattura di acconto occorre emettere una fattura, non un corrispettivo;
+<li>nel caso di fattura di acconto che deve venir stornata con una nota di accredito, attualmente occorre evadere la fattura di acconto con una fattura che la richiama, quindi emettere una nota di accredito che storna l'ultima fattura citata; diversamente occorre cancellare la fattura di acconto e reinserirla senza il flag 'acconto';
+<li>per emettere una fattura prelevando i dati da un avviso di parcella, occorre utilizzare l'apposita funzione di menù "Testata" – "Crea fattura da notula"; il documento generato sarà una fattura identica alla notula e non potrà essere modificato, poichè la fattura dev'essere obbligatoriamente identica alla notula. Se devono esser eseguite modifiche, inserire la fattura senza collegarla alla notula, che non potendo essere saldata con altro documento potrà anche essere cancellata;
+<li>quando s'emette una nota d'accredito a storno fattura, subito dopo la conferma del nuovo documento è richiesto quale documento dev'essere stornato. La nota d'accredito può utilizzare solo gli stessi codici IVA indicati nella fattura, oltre a tutti i codici di esenzione;
+<li>per spese generali si intendono spese da addebitare al cliente, calcolate sulle singole voci che compongono il documento, in percentuale indicata in Anagrafica ditta nella sezione "Dati aggiuntivi parcellazione".</li>
+</ul>
+<p>Le funzioni di menù prevedono la possibilità di emettere nuovi documenti e aprire per modificare o cancellare documenti esistenti. Le funzioni di stampa consentono elaborazioni su carta o di anteprima a video. Se si lavora con Microsoft Word, è anche possibile generare documenti in base a modelli Word preimpostati, col vantaggio di poter modificare il file creato, sebbene le variazioni eseguite sul file di Word non abbiano alcuna ripercussione sui dati inseriti prima della stampa.</p>
+<p>Le voci di attività da inserire dei documenti possono essere digitate manualmente o prelevate dall'archivio "Gestione attività", in cui dovrebbero essere state inserite in precedenza, all'atto dell'effettuazione della prestazione. In entrambi i casi non possono essere selezionate voci di tipo "Cassa commercialisti", "Spese generali" e "Spese anticipate dal cliente".</p>
+<p>Le attività di tipo "Acconto" possono essere utilizzate solo nei documenti di tipo "Fatture di acconto", poichè in questo tipo di documento si può inserire una sola riga nel corpo e non possono essere addebitate spese accessorie.</p>
+<p>
+<b>
+<u>Testata</u>
+</b>
+</p>
+<p>In questa sezione sono inserite o modificate le informazioni principali del documento che dev'esser generato o modificato. Alcuni di questi campi, ad esempio il codice del cliente, sono bloccati quando nel corpo del documento sono state inserite delle voci.</p>
+<p>
+<IMG src="../images/help_bspaboll_06.jpg">
+</p>
+<p>
+<b>
+<A name=Datadocumento>Data documento</A>
+</b>Inserire la data di assegnare al documento. Questa data è anche utilizzata per filtrare le righe di attività eseguite che dovrebbero essere inserite nel documento.</p>
+<p>
+<b>
+<A name=Codicecliente>Codice cliente</A>
+</b>Indicare il codice del cliente a cui dev'essere intestata la fattura o notula.</p>
+<p>
+<b>
+<A name=Dittadidestinaz>Ditta di destinazione</A>
+</b>Attualmente non gestito. Indica il codice della ditta associata al cliente intestatario del documento in modo che, in una fase successiva, oltre a contabilizzare il documento nella ditta dello studio si possa contabilizzare il documento anche come fattura ricevuta nella ditta del cliente, se il cliente gestisce la contabilità all'interno dello studio che emette il documento.</p>
+<p>
+<b>
+<A name=Tipobollafattur>Tipo bolla/fattura</A>
+</b>Richiesto ma attualmente non gestito. Si può impostare in tabella Personalizzazione parcellazione in modo che sia proposto in automatico.</p>
+<p>
+<b>
+<A name=Contropartita>Contropartita</A>
+</b>Permette di compilare la contropartita contabile da associare alle righe del corpo del documento se in anagrafica della singola voce di parcellazione non è stata impostata. In caso contrario, se nelle voci di parcellazione il campo contropartita è compilato, il valore qui impostato è ignorato.</p>
+<p>
+<b>
+<A name=EsenzioneIVA>Esenzione IVA</A>
+</b>Consente d'impostare un codice IVA, di esenzione o non, da utilizzare in deroga a quanto indicato nel campo "Codice IVA" delle voci di parcellazione. Il valore di questo campo ha prevalenza rispetto a quello della voce di parcellazione.</p>
+<p>
+<b>
+<A name=Annodicompetenz>Anno di competenza certificazione</A>
+</b>Indicare l'anno di competenza che dovrà essere assegnato al compenso.</p>
+<p>
+<b>
+<A name=Causalericorren>Causale ricorrente</A>
+</b>Indicare il codice della causale che identifica il tipo di compenso.</p>
+<p>
+<b>
+<A name=Tipoassoggettam>Tipo assoggettamento ritenuta d'acconto</A>
+</b>Indicare il tipo di assoggettamento ritenuta, ovvero selezionare la voce che permette di impostare correttamente le voci percentuale compenso su cui calcolare la ritenuta e percentuale ritenuta. Se il cliente non ha il codice partita IVA impostato nella sua anagrafica, sarà prelevata l'informazione da Anagrafica ditta - Dati aggiuntivi parcellazione - C. assogett. ritenuta per privati. Altrimenti è proposto il codice impostato in Anagrafica ditta - Altri dati - Tipo assogettamento a ritenuta d'acconto.</p>
+<p>
+<b>
+<A name=Percentuali>Percentuali</A>
+<br>
+</b>Questa sezione contiene le varie % da utilizzare nei calcoli per determinare l'imponibile su cui calcolare la ritenuta, l'importo della ritenuta, della Cassa commercialisti e delle spese generali.
+<br>E' possibile anche indicare una percentuale <b>Enasarco</b>. NB: per questa percentuale c'è comunque la possibilità di indicare il valore dell'enasarco manualmente, anche quando è impostata l'opzione di registro BSPABOLL\OPZIONI\Perc_Enasarco_Std; per poter impostare il valore enasarco a mano, devo prima impostare a 0 la % enasarco (attenzione in riapertura documento la % enasarco viene ricalcolata all'indietro, per cui se prima di salvare il documento avevo impostato la % enasarco = 0, in riapertura me la trovo precompilata e va riportata a zero).</p>
+<p>
+<b>
+<A name=Contabilitagrav>Contabilità analitica</A>
+</b>In presenza del modulo di Contabilità analitica, in questa sezione è possibile indicare le voci di centro, linea, commessa e sottocommessa da proporre nelle nuove righe del corpo del documento.</p>
+<p>
+<b>
+<A name=Riferimenti>Riferimenti</A>
+</b>Spazio libero a disposizione dell'operatore.</p>
+<p>
+<b>
+<A name=Addebitabolli>Addebita bolli</A>
+</b>Se selezionato, e come sistema di pagamento sono utilizzate delle tratte, permette di addebitare le spese dei bolli delle tratte. 
+<br>Nel caso di documenti esenti, le spese di esenzione sono sempre addebitate, se il codice di esenzione IVA in testata è impostato con un valore che richiama un esente/non imponibile, indipendentemente dal fatto che questo campo sia selezionato oppure no. 
+<br>Per le impostazioni in merito all'addebito delle spese sui documenti esenti vedere la voce di menù Strumenti - Tabella bolli.</p>
+<p>
+<b>
+<A name=Addebitacassaco>Addebita cassa commercialisti</A>
+</b>Se selezionato, nel piede del documento saranno calcolate le spese per la cassa commercialisti. Tale flag è proposto in base alle impostazioni della sezione "Dati aggiuntivi per parcellazione" in Anagrafica ditta. 
+<br>La base imponibile per calcolare la cassa commercialisti è data dalla sommatoria dei valori delle voci che compongono il corpo del documento e che hanno selezionato il flag "Applica cassa commercialisti" in tabella "Voci di parcellazione". Nella sommatoria non sono tenuti in considerazione gli acconti, le spese per bolli e le spese anticipate dalla ditta.</p>
+<p>
+<b>
+<A name=Addebitaspesege>Addebita spese generali</A>
+</b>Se selezionato, nel piede del documento sono calcolate le spese generali. Tale flag è proposto selezionato solo se è barrato l'apposito campo in Anagrafica ditta - "Dati aggiuntivi per parcellazione" e in Anagrafica del cliente è spuntato "Applica spese generali". 
+<br>La base imponibile è data dalla sommatoria dei valori delle voci che compongono il corpo del documento e che hanno selezionato il flag "Applica cassa commercialisti" in tabella "Voci di parcellazione".</p>
+<p>
+<b>
+<A name=Addebitaspesein>Addebita spese incasso</A>
+</b>Se selezionato, nel piede del documento sono addebitate le spese d'incasso indicate sul codice pagamento.</p>
+<p>
+<b>
+<A name=GeneraF24intest>Genera F24 intestato al cliente</A>
+</b>Se selezionato, in fase di stampa fatture con importo della ritenuta maggiore di 0 è creato anche un F24 intestato al cliente riportato in testata per il versamento della ritenuta.</p>
+<p>
+<b>
+<A name=Ritenutaversata>Ritenuta versata a cura dello studio</A>
+</b>Se selezionato, nella stampa il totale da incassare è maggiorato dell'importo della ritenuta. In questo modo il cliente dovrebbe pagare, insieme al totale delle prestazioni, anche l'importo della ritenuta che dovrà essere versata, per conto del cliente, da chi emette la fattura. Si fa presente che il programma si limita ad indicare un totale da pagare aumentato della ritenuta.</p>
+<p>
+<b>
+<u>Corpo</u>
+</b>
+</p>
+<p>
+<IMG src="../images/help_bspaboll_02.jpg">
+</p>
+<p>Questa sezione, in cui è possibile inserire o modificare le attività da addebitare al cliente, può essere compilata a mano oppure attingendo le attività precedentemente inserite in "Gestione attività", tramite la funzione "Attività da fatturare" (CTRL+A) ed inserirle raggruppate selezionando il flag nella schermata in cui si esegue la selezione. 
+<br>Tra le fatture emesse è possibile selezionare eventuali fatture d'acconto da stornare dal documento finale, tramite la voce di menù "Precedenti acconti" (CTRL+E). 
+<br>La funzione "Mostra attività collegate", invece, può esser utilizzata trovandosi su una riga di attività generata e raggruppando diverse attività selezionate tramite la funzione "Attività da fatturare" per visualizzare quali attività sono state riepilogate sulla riga in analisi.</p>
+<p>
+<b>
+<A name=Riga>Riga</A>
+</b>Compilato in automatico, ogni riga è contrassegnata da un numero univoco.</p>
+<p>
+<b>
+<A name=Vocediparcellaz>Voce di parcellazione</A>
+</b>Indicare l'attività da addebitare al cliente.</p>
+<p>
+<b>
+<A name=Descrizionevoce>Descrizione voce</A>
+</b>Una volta selezionata la voce di parcellazione, è compilata con la descrizione della voce stessa. Può essere modificata per personalizzare il testo da riportare sul documento.</p>
+<p>
+<b>
+<A name=Testofattura>Testo fattura</A>
+</b>Se la voce di parcellazione, nella sua anagrafica, ha spuntato "Eredita testo in righe documenti" questo campo è compilato col testo fattura inserito nell'anagrafica della voce. Può esser modificato direttamente nella casella della griglia, oppure è possibile utilizzare la voce di menù Strumenti - Modifica testo fattura, per la quale non occorre essere sulla cella del testo fattura, basta essere sulla riga con testo da variare.</p>
+<p>
+<b>
+<A name=Valore>Valore</A>
+</b>Inserire il valore da addebitare al cliente. Questo campo è modificabile solo se nella tabella delle voci di parcellazione, come "Voce di imputazione", è selezionato "Valore" o "Quantità e valore".</p>
+<p>
+<b>
+<A name=UM>U.M.</A>
+</b>É compilata in automatico in base al valore indicato nella tabella della voce di parcellazione.</p>
+<p>
+<b>
+<A name=Prezzo>Prezzo</A>
+</b>Inserire il prezzo da addebitare al cliente. Prezzo per quantità determina il numero che sarà impostato nella colonna valore. Questo campo è modificabile solo se nella tabella delle voci di parcellazione, come "Voce di imputazione", è selezionato "Prezzo e quantità".</p>
+<p>
+<b>
+<A name=Quantitagrave>Quantità</A>
+</b>Inserire la quantità da utilizzare per moltiplicare il prezzo per determinare il valore della prestazione eseguita. Questo nel caso di impostazione "Voce di imputazione" su "Quantità e prezzo" nel programma "Voci di parcellazione". Diversamente il campo è solo informativo o non modificabile.</p>
+<p>
+<b>
+<A name=Codicedescrizio>Codice/descrizione IVA</A>
+</b>Indicare il codice IVA da utilizzare per la voce di parcellazione indicata.</p>
+<p>
+<b>
+<A name=Codicedescrizio>Codice/descrizione Contropartita</A>
+</b>Indicare il codice di contropartita da utilizzare, in fase di contabilizzazione documento, per assegnare il giusto sottoconto al ricavo da addebitare.</p>
+<p>
+<b>
+<A name=Tipoannoserienu>Tipo / anno / serie / numero doc. fatt. acc</A>. </b>Se la riga è stata generata dalla selezione di un documento di acconto emesso in precedenza, in queste colonne sono riportati gli estremi di tale documento.</p>
+<p>
+<b>
+<A name=Tiporigaparcell>Tipo riga parcellazione</A>
+</b>Riporta il tipo di riga indicato nella tabella delle voci di parcellazione per la voce in analisi.</p>
+<p>
+<b>
+<u>Piede</u>
+</b>
+</p>
+<p>
+<IMG src="../images/help_bspaboll_05.jpg">
+</p>
+<p>In questa sezione sono presenti i totalizzatori del documento, i campi per gestire il pagamento da applicare e le informazioni di carattere generale, quali gli estremi della notula da cui proviene la fattura che si sta trattando oppure, se si è su una notula, gli estremi della fattura che l'ha evasa. Se il documento è contabilizzato, sono riportati gli estremi della registrazione contabile.</p>
+<p>
+<b>
+<A name=Pagamento>Pagamento</A>
+</b>Indicare il codice pagamento da utilizzare per gestire la rimanenza da incassare. Per gli avvisi di parcella/notule il pagamento deve essere in una unica soluzione.</p>
+<p>
+<b>
+<A name=Dataprimopagame>Data primo pagamento</A>
+</b>Se il sistema di pagamento è di tipo "Data diversa", indicare la data di partenza per il calcolo delle scadenze.</p>
+<p>
+<b>
+<A name=Codicenostraban>Codice nostra banca</A>
+</b>Se il codice pagamento prevede l'emissione di riba o tratte, è possibile indicare il codice della nostra banca su pui appoggiare gli effetti.</p>
+<p>
+<b>
+<A name=Abicab>Abi/Cab</A>
+</b>Se il pagamento prevede l'indicazione della banca del cliente, come succede con l'emissione di RI.BA., indicare ABI e CAB del cliente.</p>
+<p>
+<b>
+<A name=Enasarcoaltripr>Enasarco / altri previdenziali</A>
+</b>Inserire gli eventuali importi relativi a contributi previdenziali.</p>
+<p>
+<A name=Importoincassat>
+<b>Importo incassato</b>
+</A>
+<b>/ </b>
+<A name=Datadiincasso>
+<b>Data di incasso</b>
+</A>Se il documento risulta essere incassato, indicarne l'importo. In fase di contabilizzazione documento è rilevata, oltre alla registrazione della fattura, anche la registrazione del relativo incasso. Inoltre, indicare la data in cui è avvenuto l'incasso per determinare la data entro cui dev'essere versata la ritenuta d'acconto.</p>
+<p>
+<b>
+<A name=Abbuono>Abbuono</A>
+</b>Indicare eventuali abbuoni concessi al cliente.</p>
+<p>
+<b>
+<A name=Destinazionediv>Destinazione diversa</A>
+</b>Attualmente non gestito.</p>
+<p>
+<b>
+<A name=Estreminotulafa>Estremi notula/fattura collegata</A>
+</b>Se la fattura è stata generata da una notula, in questo riquadro sono riportati gli estremi della notula. Se il documento aperto è una nota d'accredito a storno fattura, i riferimenti sono relativi alla fattura che dev'essere stornata.</p>
+<p>
+<b>
+<A name=Estremifatturap>Estremi fattura (per notule)</A>
+</b>Se il documento aperto è una notula già fatturata, in questo riquadro sono riportati gli estremi della fattura che ha saldato la notula.</p>
+<p>
+<b>
+<A name=Documentocontab>Documento contabilizzato</A>
+</b>Se il documento è stato contabilizzato, sono riportati gli estremi della registrazione di prima nota.</p>
+<p>
+<b>
+<A name=Estremipartitad>Estremi partita/documento ricevuto</A>
+</b>Sono solo dati informativi, attualmente non gestiti.</p>
+<p>
+<b>
+<u>Note</u>
+</b>
+</p>
+<p>In questa cartella è contenuto un ampio campo descrittivo per l'inserimento di note che l'operatore deve evidenziare nel documento.</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

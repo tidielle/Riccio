@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Gestione delle pratiche di reso</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>03/09/2015</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Gestione delle pratiche di reso</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>In GPV, nella maschera dei totali, è stato aggiunto un nuovo tab <u>Pratica di reso</u>, alternativo al tab <u>Totale documento</u>, che è accessibile solo nei documenti che contengono esclusivamente righe di resi e\o difettosi, poichè la normativa vigente prevede l'apertura di una pratica di reso per la gestione dei resi merce (anche senza cambio con altri prodotti) relativi ad una vendita effettuata con corrispettivo o ricevuta fiscale emessa, questa ha una numerazione univoca per negozio e contiene i riferimenti del documento di vendita originario (o al relativo scontrino).
+<br>
+<b>NB: </b>Se il documento di origine è una fattura, la normativa prevede che sia creata una nota di accredito e non una pratica di reso.</p>
+<p>In maschera si trovano le seguenti informazioni (tabella REPRATRESI):</p>
+<ul>
+<li>
+<b>
+<u>Scenario</u>
+</b>
+<b>-&gt;</b> determina quale metodo di restituzione del valore della merce utilizzare e quelli possibili sono 3:
+<br>
+<br>
+<ol>
+<li>
+<b>Reso con restituzione contanti:</b> viene emesso uno scontrino o ricevuta fiscale negativa e si restituisce al cliente l'importo pagato in contanti, lo scontrino verrà stampato come se fosse una Nota di Credito. Disabilitato quando l'utente corrente non può generare corrispettivi e ricevute fiscali.</li>
+<li>
+<b>Reso con generazione Buono di Reso: </b>verrà generato un buono al portatore. Disabilitato se l'utente non può creare bolle di movimentazione interna o nel documento sono presenti righe con diversi codici iva (la normativa prevede di generare un buono per ogni codice iva quindi occorre creare più pratiche di reso).<u>
+</u>
+</li>
+<li>
+<b>Reso con ricarica tessera prepagata:</b> Viene ricaricata la tessera prepagata utilizzata sul documento di reso. Dsabilitato se l'utente non può creare corrispettivi e ricevute fiscali o se non è stata indicata una tessera nel documento.
+<br>
+</li>
+</ol>
+</li>
+<li>
+<b>
+<u>Dati cliente</u> -&gt; </b>la pratica di reso prevede che siano indicati almeno "Nome e Cognome o ragione sociale" e "codice fiscale o partita iva", i dati vengono compilati automaticamente se il documento è intestato o se sono stati indicati gli estremi per intestare il corripsettivo se non presente l'anagrafica.
+<br>
+</li>
+<li>
+<b>
+<u>Dati reso</u> -&gt;</b> contenente le informazioni relative alla pratica: <ul>
+<li>
+<u>Numero pratica</u> -&gt; proposto dal sistema ed è univoco nel negozio\anno.</li>
+<li>
+<u>Articoli resi</u> -&gt; è una vista su alcune colonne del documento, in caso non siano presenti (nelle note di riga), vanno indicati i riferimenti al corrispettivo\scontrino di vendita del reso.</li>
+</ul>
+</li>
+</ul>
+<p>
+<u>
+</u>
+</p>
+<p>In base allo scenario scelto il programma crea il documento e compila le tabelle dei movimenti di cassa e di movimentazione dei buoni:</p>
+<p>
+<b>Restituzione contanti
+<br>
+</b>Verrà generato un corrispettivo o ricevuta fiscale, nel caso l'utente potrà generare entrambi i documenti verrà chiesto quale documento generare. In questo caso sarà possibile stampare sia il documento cartaceo che il corrispettivo su registratore (lo scontrino verrà stampato come nota di credito).</p>
+<p>
+<IMG src="../images/help_bsgpv003_03.jpg">
+</p>
+<p>
+<b>Generazione Buoni
+<br>
+</b>Verrà generata una bolla di movimentazione interna per allineare il magazzino e un movimento (su movgift) per attivare il buono.
+<br>Il buono conterrà un barcode, di questo codice è possibile scegliere il prefisso tramite l'opzione di registro BSREGSRE\Opzioni\PrefissoBarcodeBuoniReso default 'B'. Nelle personalizzazioni GPV è presente una opzione per poter rendere modificabile la data di scadenza del buono (default senza scadenza).
+<br>Inoltre i buoni vengono consumati esattamente come se fossero delle <A href="..\html\bsremovg.htm">Gift Card</A>, per determinare se il buono deve essere consumato solo a saldo o a scalare è presente l'opzione di registro BSREGSRE\Opzioni\BuoniAScalare default 0 (a saldo).<b>
+<br>
+</b>
+<b>NB: </b>Non è prevista la stampa dei buoni su registratore di cassa.</p>
+<p>
+<IMG src="../images/help_Bsgpv003_05.jpg">
+</p>
+<p>
+<b>Ricarica tessera
+<br>
+</b>Il documento generato verrà determinato in base ai permessi dell'utente e potrà essere un corrispettivo o una ricevuta fiscale, nel caso l'utente possa generarli entrambi. 
+<br>Durante la generazione verrà creato un movimento di cassa di tipo "ricarica tessera prepagata" e stampata la stessa ricevuta generata dal programma dei movimenti di cassa. In pratica il programma si comporta come nel caso della restituzione contanti e poi simula che il cliente utilizzi i contanti ricevuti per ricaricare la tessera.</p>
+<p>
+<IMG src="../images/help_bsgpv003_04.jpg">
+</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

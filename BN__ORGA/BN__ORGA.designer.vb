@@ -1,0 +1,191 @@
+Partial Public Class FRM__ORGA
+  Inherits FRM__CHIL
+
+  <System.Diagnostics.DebuggerNonUserCode()> _
+  Public Sub New()
+    MyBase.New()
+  End Sub
+
+  'Form overrides dispose to clean up the component list.
+  <System.Diagnostics.DebuggerNonUserCode()> _
+  Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+    If disposing AndAlso components IsNot Nothing Then
+      components.Dispose()
+    End If
+    MyBase.Dispose(disposing)
+  End Sub
+
+  Public WithEvents NtsBarManager1 As NTSInformatica.NTSBarManager
+  Public WithEvents tlbMain As NTSInformatica.NTSBar
+  Public WithEvents tlbNuovo As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbSalva As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbCancella As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbRipristina As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbZoom As NTSInformatica.NTSBarButtonItem
+  Public WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
+  Public WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
+  Public WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
+  Public WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
+  Public WithEvents tlbGuida As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbEsci As NTSInformatica.NTSBarButtonItem
+  Public WithEvents grOrga As NTSInformatica.NTSGrid
+  Public WithEvents grvOrga As NTSInformatica.NTSGridView
+  Public WithEvents og_progr As NTSInformatica.NTSGridColumn
+  Public WithEvents og_coddest As NTSInformatica.NTSGridColumn
+  Public WithEvents og_sede As NTSInformatica.NTSGridColumn
+  Public WithEvents og_divis As NTSInformatica.NTSGridColumn
+  Public WithEvents og_rep As NTSInformatica.NTSGridColumn
+  Public WithEvents og_codruaz As NTSInformatica.NTSGridColumn
+  Public WithEvents og_codcont As NTSInformatica.NTSGridColumn
+  Public WithEvents og_telef As NTSInformatica.NTSGridColumn
+  Public WithEvents og_fax As NTSInformatica.NTSGridColumn
+  Public WithEvents og_email As NTSInformatica.NTSGridColumn
+  Public WithEvents og_dtiniz As NTSInformatica.NTSGridColumn
+  Public WithEvents og_dtfine As NTSInformatica.NTSGridColumn
+  Public WithEvents og_cell As NTSInformatica.NTSGridColumn
+  Public WithEvents og_descont As NTSInformatica.NTSGridColumn
+  Public WithEvents og_descont2 As NTSInformatica.NTSGridColumn
+  Public WithEvents og_titolo As NTSInformatica.NTSGridColumn
+  Public WithEvents og_indir As NTSInformatica.NTSGridColumn
+  Public WithEvents og_cap As NTSInformatica.NTSGridColumn
+  Public WithEvents og_citta As NTSInformatica.NTSGridColumn
+  Public WithEvents og_prov As NTSInformatica.NTSGridColumn
+  Public WithEvents og_stato As NTSInformatica.NTSGridColumn
+  Public WithEvents og_datnasc As NTSInformatica.NTSGridColumn
+  Public WithEvents og_sesso As NTSInformatica.NTSGridColumn
+  Public WithEvents og_codlead As NTSInformatica.NTSGridColumn
+  Public WithEvents og_coperat As NTSInformatica.NTSGridColumn
+  Public WithEvents og_mansioni As NTSInformatica.NTSGridColumn
+  Public WithEvents og_codcope As NTSInformatica.NTSGridColumn
+  Public WithEvents og_codcage As NTSInformatica.NTSGridColumn
+  Public WithEvents xx_codruaz As NTSInformatica.NTSGridColumn
+  Public WithEvents xx_codcont As NTSInformatica.NTSGridColumn
+  Public WithEvents xx_coddest As NTSInformatica.NTSGridColumn
+  Public WithEvents xx_codcage As NTSInformatica.NTSGridColumn
+  Public WithEvents xx_codcope As NTSInformatica.NTSGridColumn
+  Public WithEvents xx_stato As NTSInformatica.NTSGridColumn
+  Public WithEvents og_usaem As NTSInformatica.NTSGridColumn
+  Public WithEvents tlbRuoli As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbEmail As NTSInformatica.NTSBarButtonItem
+  Public WithEvents og_old As NTSInformatica.NTSGridColumn
+  Public WithEvents og_telefint As NTSInformatica.NTSGridColumn
+  Public WithEvents tlbSkype As NTSInformatica.NTSBarButtonItem
+  Public WithEvents pnAll As NTSInformatica.NTSPanel
+  Public WithEvents pnPersone As NTSInformatica.NTSPanel
+  Public WithEvents pnRicerca As NTSInformatica.NTSPanel
+  Public WithEvents edRicerca As NTSInformatica.NTSTextBoxStr
+  Public WithEvents cmdRicerca As NTSInformatica.NTSButton
+  Public WithEvents pnDati As NTSInformatica.NTSPanel
+  Public WithEvents pnDatiPersona As NTSInformatica.NTSPanel
+  Public WithEvents fmContatti As NTSInformatica.NTSGroupBox
+  Public WithEvents lbOg_descont2 As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_descont As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_titolo As NTSInformatica.NTSLabel
+  Public WithEvents edOg_descont2 As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_descont As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_titolo As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_codruaz As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbXx_codruaz As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_codruaz As NTSInformatica.NTSLabel
+  Public WithEvents fmRecapiti As NTSInformatica.NTSGroupBox
+  Public WithEvents lbFax As NTSInformatica.NTSLabel
+  Public WithEvents lbEmail As NTSInformatica.NTSLabel
+  Public WithEvents lbCellulare As NTSInformatica.NTSLabel
+  Public WithEvents lbTelefono As NTSInformatica.NTSLabel
+  Public WithEvents lbAziendale As NTSInformatica.NTSLabel
+  Public WithEvents lbPersonale As NTSInformatica.NTSLabel
+  Public WithEvents cmdOg_telef As NTSInformatica.NTSButton
+  Public WithEvents edOg_faxpers As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_fax As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_emailpers As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_email As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_cellpers As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_cell As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_telefpers As NTSInformatica.NTSTextBoxStr
+  Public WithEvents edOg_telef As NTSInformatica.NTSTextBoxStr
+  Public WithEvents cmdOg_email As NTSInformatica.NTSButton
+  Public WithEvents cmdOg_cell As NTSInformatica.NTSButton
+  Public WithEvents cmdOg_emailpers As NTSInformatica.NTSButton
+  Public WithEvents cmdOg_cellpers As NTSInformatica.NTSButton
+  Public WithEvents cmdOg_telefpers As NTSInformatica.NTSButton
+  Public WithEvents edOg_telefint As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_telefint As NTSInformatica.NTSLabel
+  Public WithEvents edOg_indir As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_indir As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_sesso As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_datnasc As NTSInformatica.NTSLabel
+  Public WithEvents edOg_datnasc As NTSInformatica.NTSTextBoxData
+  Public WithEvents cbOg_sesso As NTSInformatica.NTSComboBox
+  Public WithEvents lbOg_usaem As NTSInformatica.NTSLabel
+  Public WithEvents cbOg_usaem As NTSInformatica.NTSComboBox
+  Public WithEvents edOg_mansioni As NTSInformatica.NTSMemoBox
+  Public WithEvents lbOg_mansioni As NTSInformatica.NTSLabel
+  Public WithEvents edOg_rep As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_rep As NTSInformatica.NTSLabel
+  Public WithEvents edOg_divis As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_divis As NTSInformatica.NTSLabel
+  Public WithEvents edOg_sede As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_sede As NTSInformatica.NTSLabel
+  Public WithEvents edOg_dtfine As NTSInformatica.NTSTextBoxData
+  Public WithEvents lbOg_dtfine As NTSInformatica.NTSLabel
+  Public WithEvents edOg_dtiniz As NTSInformatica.NTSTextBoxData
+  Public WithEvents lbOg_dtiniz As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_referente As NTSInformatica.NTSLabel
+  Public WithEvents edOg_codstco As NTSInformatica.NTSTextBoxNum
+  Public WithEvents edOg_referente As NTSInformatica.NTSTextBoxNum
+  Public WithEvents lbXx_codstco As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_codstco As NTSInformatica.NTSLabel
+  Public WithEvents lbXx_referente As NTSInformatica.NTSLabel
+  Public WithEvents fmResidenza As NTSInformatica.NTSGroupBox
+  Public WithEvents edOg_stato As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_stato As NTSInformatica.NTSLabel
+  Public WithEvents edOg_prov As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_prov As NTSInformatica.NTSLabel
+  Public WithEvents edOg_citta As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_citta As NTSInformatica.NTSLabel
+  Public WithEvents edOg_cap As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_cap As NTSInformatica.NTSLabel
+  Public WithEvents lbXx_stato As NTSInformatica.NTSLabel
+  Public WithEvents fmSocialNetwork As NTSInformatica.NTSGroupBox
+  Public WithEvents cmdOg_twitteruser As NTSInformatica.NTSButton
+  Public WithEvents edOg_twitteruser As NTSInformatica.NTSTextBoxStr
+  Public WithEvents cmdOg_fbuser As NTSInformatica.NTSButton
+  Public WithEvents edOg_fbuser As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_twitteruser As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_fbuser As NTSInformatica.NTSLabel
+  Public WithEvents edOg_coddest As NTSInformatica.NTSTextBoxNum
+  Public WithEvents lbOg_coddest As NTSInformatica.NTSLabel
+  Public WithEvents fmStato As NTSInformatica.NTSGroupBox
+  Public WithEvents lbXx_coddest As NTSInformatica.NTSLabel
+  Public WithEvents edOg_coperat As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_coperat As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_codcope As NTSInformatica.NTSLabel
+  Public WithEvents edOg_codcope As NTSInformatica.NTSTextBoxNum
+  Public WithEvents lbXx_codcope As NTSInformatica.NTSLabel
+  Public WithEvents lbOg_codcage As NTSInformatica.NTSLabel
+  Public WithEvents edOg_codcage As NTSInformatica.NTSTextBoxNum
+  Public WithEvents lbXx_codcage As NTSInformatica.NTSLabel
+  Public WithEvents xx_descrizione As NTSInformatica.NTSGridColumn
+  Public WithEvents lbOg_contatto As NTSInformatica.NTSLabel
+  Public WithEvents edOg_contatto As NTSInformatica.NTSTextBoxNum
+  Public WithEvents lbOg_codcont As NTSInformatica.NTSLabel
+  Public WithEvents edOg_codcont As NTSInformatica.NTSTextBoxNum
+  Public WithEvents lbXx_codcont As NTSInformatica.NTSLabel
+  Public WithEvents ckOg_old As NTSInformatica.NTSCheckBox
+  Public WithEvents lbProponiContatto As NTSInformatica.NTSLabel
+  Public WithEvents cmdProssimo As NTSInformatica.NTSButton
+  Public WithEvents cmdCollega As NTSInformatica.NTSButton
+  Public WithEvents cmdCollegaAContatto As NTSInformatica.NTSButton
+  Public WithEvents cmdCreaNuovoContatto As NTSInformatica.NTSButton
+  Public WithEvents tlbGeneraGuest As NTSInformatica.NTSBarButtonItem
+  Public WithEvents lbOg_progr As NTSInformatica.NTSLabel
+  Public WithEvents lbID As NTSInformatica.NTSLabel
+  Public WithEvents tlbInterna As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbClienti As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbFornitori As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbLeads As NTSInformatica.NTSBarButtonItem
+  Public WithEvents tlbSalvaNuovo As NTSInformatica.NTSBarButtonItem
+  Public WithEvents edOg_skypeuser As NTSInformatica.NTSTextBoxStr
+  Public WithEvents lbOg_skypeuser As NTSInformatica.NTSLabel
+  Public WithEvents cmdOg_skypeuser As NTSInformatica.NTSButton
+End Class

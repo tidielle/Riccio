@@ -1,0 +1,8 @@
+C:\BIZ2015\BN__CIVA\obj\Debug\BN__CIVA.vbprojResolveAssemblyReference.cache
+C:\BIZ2015\BN__CIVA\obj\Debug\NTSInformatica.FRM__CIVA.resources
+C:\BIZ2015\BN__CIVA\obj\Debug\NTSInformatica.Resources.resources
+C:\BIZ2015\BN__CIVA\obj\Debug\BN__CIVA.vbproj.GenerateResource.Cache
+C:\BIZ2015\TEST\BN__CIVA.dll
+C:\BIZ2015\TEST\BN__CIVA.pdb
+C:\BIZ2015\BN__CIVA\obj\Debug\BN__CIVA.dll
+C:\BIZ2015\BN__CIVA\obj\Debug\BN__CIVA.pdb

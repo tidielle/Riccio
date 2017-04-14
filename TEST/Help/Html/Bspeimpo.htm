@@ -1,0 +1,805 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title> GA: Integra dati CU da import file ascii</title>
+<LINK rel=stylesheet type=text/css href="style_topic.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+loadImage1 = new Image();
+loadImage1.src = "../images/help_home_Button_01_Roll-over.gif";
+staticImage1 = new Image();
+staticImage1.src = "../images/help_home_Button_01_Roll-out.gif";
+
+loadImage2 = new Image();
+loadImage2.src = "../images/help_home_Button_02_Roll-over.gif";
+staticImage2 = new Image();
+staticImage2.src = "../images/help_home_Button_02_Roll-out.gif";
+
+loadImage3 = new Image();
+loadImage3.src = "../images/help_home_Button_03_Roll-over.gif";
+staticImage3 = new Image();
+staticImage3.src = "../images/help_home_Button_03_Roll-out.gif";
+
+loadImage4 = new Image();
+loadImage4.src = "../images/help_home_Button_04_Roll-over.gif";
+staticImage4 = new Image();
+staticImage4.src = "../images/help_home_Button_04_Roll-out.gif";
+
+// End -->
+</SCRIPT>
+
+</head>
+<body lang=it topMargin=3>
+<TABLE width=987 border=0><TR><TD vAlign=top align=right><p><code>Data ultimo aggiornamento: <A name=hINIeDATlAGGp></A>17/03/2016</FONT><A name=hFINeDATlAGGp></A></code></p></TD></TR></TABLE><TABLE cellSpacing=0 border=0><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_banner.gif"></A></TD></TR></TABLE><TABLE cellSpacing=0 cellPadding=0 border=0><TR><TD align=left><A onmouseover="image1.src=loadImage1.src;" onmouseout="image1.src=staticImage1.src;" href="cose.htm"><IMG border=0 name=image1 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_01_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image2.src=loadImage2.src;" onmouseout="image2.src=staticImage2.src;" href="pc.htm"><IMG border=0 name=image2 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_02_Roll-out.gif"></A></TD><TD align=center><A onmouseover="image3.src=loadImage3.src;" onmouseout="image3.src=staticImage3.src;" href="ambsargmod.htm"><IMG border=0 name=image3 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_03_Roll-out.gif"></A></TD><TD align=right><A href="gaguidaan.htm"><IMG border=0 name=image4 alt="Clicca per accedere all'argomento" src="../images/help_home_Button_04_Roll-over.gif"></A></TD></TR><TR><TD colSpan=4><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_Button_04_Roll-over-row.gif"></A></TD></TR><TR><TD bgColor=#009ee2 height=53 vAlign=middle width=987 colSpan=4 align=left><p><FONT class=title color=white size=6><b>Importa dati per Certificazione Unica</b></FONT></p></TD></TR><TR><TD vAlign=middle colSpan=4 align=left></TD></TR></TABLE><TABLE width=987 border=0>
+<TR>
+<TD>
+<p>La funzione è richiamabile all'interno della form di visualizzazione/modifica dati certificazione unica e serve per integrare i dati di Business relativa alla certificazione unica estratti dai pagamenti delle ritenute di Business. In particolare la funzione è utile per clienti che migrano da altri gestionali, e quindi non hanno uno storico da estrarre oppure hanno dati parziali da integrare. Con questa funzione è possibile quindi acquisire i dati mancanti da un tracciato record ascii (sotto riportato).</p>
+<p>
+<IMG src="../images/help_bspeimpo_01.jpg">
+</p>
+<p>Una volta realizzato il file e possibile quindi sfruttare questa funzione e selezionare il file in questione per essere acquisito.</p>
+<p>
+<IMG src="../images/help_bspeimpo_02.jpg">
+</p>
+<p>Nella finestra ci sono due icone in toolbar: la prima "Importa file" che importa il file e popola la griglia della certificazione unica con i dati presenti sul tracciato; la seconda "Controlla file" che esegue i controlli sul file (simula l'importazione) ma non aggiorna alcun dato della certificazione unica attualmente aperta in visualizzazione/modifica (la funzione di controllo serve principalmente alla creazione del file tracciato). NB: ovviamente la funzione di "Importa file" lancia anche quella di "Controlla file" e importa tutte le righe che non hanno errori, mentre scarta quelle con errori.</p>
+<p>
+<IMG src="../images/help_bspeimpo_03.jpg">
+</p>
+<p>Al termine della funzione sia di "Importa file" che di "Controlla file" vengono aperti due file di log, uno che contiene degli avvisi sui record trattati, ma che non bloccano l'importazione del record (BNPEM770_Avvisi_Import_.......log):</p>
+<p>
+<IMG src="../images/help_bspeimpo_04.jpg" width=987>
+</p>
+<p>e uno che contiene invece gli errori sui record trattati, e che causano quindi lo scarto del record (BNPEM770_Errori_Import_.......log):</p>
+<p>
+<IMG src="../images/help_bspeimpo_05.jpg" width=987>
+</p>
+<p>Dettaglio del tracciato ASCII a posizioni fisse da realizzare, richiesto per l'acquisizione dei dati tramite la funzione citata:</p>
+<p>
+<TABLE width=987 border=1>
+<TR>
+<TD>
+<p>
+<b>Nome campo</b>
+</p>
+</TD>
+<TD>
+<p>
+<b>Obblig.</b>
+</p>
+</TD>
+<TD>
+<p>
+<b>Tipo</b>
+</p>
+</TD>
+<TD>
+<p>
+<b>Lunghezza </b>
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Tipo Importazione</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>1</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Codice Fiscale</p>
+</TD>
+<TD>
+<p>Si</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>16</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Partita IVA</p>
+</TD>
+<TD>
+<p>Si</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>11</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Codice riferimento</p>
+</TD>
+<TD>
+<p>Si</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>50</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Cognome/Denom.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>50</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Nome</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>50</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Sesso</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>1</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Data di nascita</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Data</p>
+</TD>
+<TD>
+<p>10</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Città di nascita</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>50</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Prov. di nascita</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>2</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Categoria</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>2</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Eventi eccez.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. intero</p>
+</TD>
+<TD>
+<p>1</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Com. dom. fisc. al 01/01/anno precedente</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>50</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Prov. dom. fisc. al 01/01/anno precedente</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>2</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Cod. com. dom. fisc. al 01/01/anno precedente</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>5</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Com. dom. fisc. al 01/01/anno comunicato</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>50</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Prov. dom. fisc. al 01/01/anno comunicato</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>2</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Cod. com. dom. fisc. al 01/01/anno comunicato</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>5</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>CF legale rappr.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>16</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>CF estero</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>25</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Località residenza estera</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>100</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Indirizzo residenza estera</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>100</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Cod. stato estero</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. intero</p>
+</TD>
+<TD>
+<p>4</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Flag conferma</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>1</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Causale</p>
+</TD>
+<TD>
+<p>Si</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>2</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Anno</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. intero</p>
+</TD>
+<TD>
+<p>4</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Anticipazione</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Alfanumerico</p>
+</TD>
+<TD>
+<p>1</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Lordo corrisposto</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Non sogg. reg. conv.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Codice</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. intero</p>
+</TD>
+<TD>
+<p>1</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Altri non soggetti</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Imponibile</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Riten. a titolo di acconto</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Riten. a titolo di imposta</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Ritenute sospese</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Addiz. reg. titolo acconto</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Addiz. reg. titolo imposta</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Addiz. reg. sospesa</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Addiz. comun. titolo acconto</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Addiz. comun. titolo imposta</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Addiz. comun. sospesa</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Imponibile anni prec.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Ritenute anni prec.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Riten. previdenz. carico ditta</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Riten. prev. carico percip.</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Spese rimborsate</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>Ritenute rimborsate</p>
+</TD>
+<TD>
+<p>No</p>
+</TD>
+<TD>
+<p>Num. decimale</p>
+</TD>
+<TD>
+<p>20</p>
+</TD>
+</TR>
+</TABLE>
+</p>
+<p>Note sulla rappresentazione dei dati:</p>
+<ul>
+<li>Alfanumerico (nessun formato particolare)
+<li>Num. intero (la lunghezza comprende se necessario l'eventuale segno meno)
+<li>Num. decimale (la lunghezza comprende se necessario l'eventuale segno meno, utilizzare la virgola ',' come separatore decimale)
+<li>Data (sempre nel formato GG/MM/AAAA)</li>
+</ul>
+<p>NB: in tutti i campi è indifferente l'allineamento che può essere a piacere sia a sinistra che a destra.</p>
+<p>
+<b>
+<i>
+<u>Note particolari sulla compilazione di alcuni campi</u>
+</i>
+</b>
+</p>
+<p>
+<b>Tipo Importazione</b> - il campo può assumere 3 valori:</p>
+<p>" " (blank) il record in base alla al conto fornitore rintracciato tramite i 3 campi successivi (Codice Fiscale, Partita IVA, Codice riferimento) e alla causale, viene ricercato fra quelli già presenti in griglia e se trovato uno già esistete vengono aggiornate le informazioni di testata eventualmente indicate sul file (Nome, Cognome, Sesso, Categoria, ...) e poi vengono sommati gli importi indicati sul tracciato a quelli già presenti nella griglia delle righe (quella in basso), se non viene rintracciato in griglia un record con lo stesso conto e causale, allora viene inserito un record nuovo.</p>
+<p>"I" il record viene trattato direttamente come nuovo, quindi a differenza del passo precedente non viene ricercato nessuna riga con stesso conto/causale, ma viene direttamente inserito un nuovo record.</p>
+<p>"A" il valore serve per procedere all'inserimento di tante righe in aggiunta a quella specifica con causale, su questo tipo di record andrebbero indicati solo i campi: Codice Fiscale, Partita IVA, Codice riferimento, Causale, Anno, Anticipazione, Codice, Altri non soggetti, Imponibile anni precedenti e Ritenute anni precedenti. In pratica serve ad aggiungere le righe indicate nell'immagine sotto.</p>
+<p>
+<IMG src="../images/help_bspeimpo_06.jpg">
+</p>
+<p>
+<b>Codice Fiscale, Partita IVA, Codice riferimento</b> – sul tracciato sono indicati tutti e 3 come obbligatori, ma in realtà ne basta uno che porti all'identificazione del conto fornitore, la priorità viene ricercata a partire dal codice fiscale, per poi passare alla partita iva e per ultimo il codice riferimento. Il codice riferimento viene ricercato su un campo dell'anagrafica fornitore (di default il contatto) ma è modificabile da parte dell'operatore, per esempio si potrebbe scegliere la sigla di ricerca, il codice nostro presso loro, ...</p>
+<p>
+<b>Sesso</b>
+</p>
+<p>Lasciare a blank " " se non si desidera indicare un valore e far prendere a business quello dell'anagrafica, altrimenti:</p>
+<p>"S" per assegnare il valore persona giudirica</p>
+<p>"M" per assegnare maschio</p>
+<p>"F" per assegnare femmina</p>
+<p>
+<b>Categoria</b>
+</p>
+<p>Lasciare a blank " " se non la si vuole indicare, altrimenti indicare uno dei seguenti: "A"<b>, </b>"B"<b>, </b>"C"<b>, </b>"D"<b>, </b>"E"<b>, </b>"F"<b>, </b>"G"<b>, </b>"H"<b>, </b>"K"<b>, </b>"L"<b>, </b>"M"<b>, </b>"N"<b>, </b>"P"<b>, </b>"Q"<b>, </b>"R"<b>, </b>"S"<b>, </b>"T"<b>, </b>"T1"<b>, </b>"T2"<b>, </b>"T3"<b>, </b>"T4"<b>, </b>"U"<b>, </b>"V"<b>, </b>"W"<b>, </b>"Y"<b>, </b>"Z"<b>, </b>"Z2".</p>
+<p>
+<b>Eventi eccez</b>
+</p>
+<p>Lasciare a blank oppure "0" se non si vuole indicare altrimenti indicare uno dei seguenti: "1"<b>, </b>"3"<b>, </b>"8".</p>
+<p>
+<b>Cod. stato estero</b>
+</p>
+<p>Lasciare a blank se non si vuole indicare altrimenti indicare un numero fra 0 e 9999.</p>
+<p>
+<b>Flag conferma</b>
+</p>
+<p>Lasciare a blank " " oppure "N" se non si vuole indicare il flag, altrimenti specificare "S".</p>
+<p>
+<b>Causale</b>
+</p>
+<p>Il campo è obbligatorio e va indicato uno dei seguenti: "A"<b>, </b>"B"<b>, </b>"C"<b>, </b>"D"<b>, </b>"E"<b>, </b>"G"<b>, </b>"H"<b>, </b>"I"<b>, </b>"L"<b>, </b>"L1"<b>, </b>"M"<b>, </b>"M1"<b>, </b>"N"<b>, </b>"O"<b>, </b>"O1"<b>, </b>"P"<b>, </b>"Q"<b>, </b>"R"<b>, </b>"S"<b>, </b>"T"<b>, </b>"U"<b>, </b>"V"<b>, </b>"V1"<b>, </b>"W"<b>, </b>"X"<b>, </b>"Y"<b>, </b>"Z".</p>
+<p>
+<b>Anno</b>
+</p>
+<p>Lasciare a blank oppure "0" se non si vuole indicare altrimenti indicare un numero fra 1900 e 2099.</p>
+<p>
+<b>Anticipazione</b>
+</p>
+<p>Lasciare a blank " " oppure "N" se non si vuole indicare il flag, altrimenti specificare "S".</p>
+<p>
+<b>Codice</b>
+</p>
+<p>Lasciare a blank " " oppure "0" se non si vuole indicare altrimenti indicare uno dei seguenti: "1"<b>, </b>"2"<b>, </b>"3".</p>
+</TD></TR></TABLE><TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/software-retail-negozi/"><IMG border=0 src="../images/help_home_01_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/controllo-di-gestione/"><IMG border=0 src="../images/help_home_02_Controlla.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/crm/"><IMG border=0 src="../images/help_home_03_Fidelizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/analisi-dati-datawarehouse/"><IMG border=0 src="../images/help_home_04_DWH.gif"></A></TD><TD vAlign=center width=169 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/project-management/"><IMG border=0 src="../images/help_home_05_Gestisci.gif"></A></TD><TD vAlign=center width=146 align=right><IMG border=0 src="../images/help_home_NTS_logo_up.gif"></TD></TR><TR><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/logistica/"><IMG border=0 src="../images/help_home_06_Organizza.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/customer-service/"><IMG border=0 src="../images/help_home_07_Gestisci.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/produzione/"><IMG border=0 src="../images/help_home_08_Pianifica.gif"></A></TD><TD vAlign=center width=168 align=middle><A href="http://www.ntsinformatica.it/software-erp-medie-imprese/software-erp/archiviazione-documenti/"><IMG border=0 src="../images/help_home_09_Archivia.gif"></A></TD><TD vAlign=center width=169 align=right><IMG border=0 src="../images/help_home_NTS_logo_down1.gif"></TD><TD vAlign=center width=146 align=right><A href="http://www.ntsinformatica.it"><IMG border=0 alt="Clicca per accedere al sito di NTS Informatica" src="../images/help_home_NTS_logo_down2.gif"></A></TD></TR><TR><TD width=987 colSpan=6><IMG border=0 src="../images/help_home_Line.gif"></TD></TR></TABLE></body></html>

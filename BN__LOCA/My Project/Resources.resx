@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strHtmlPage" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no" /&gt;
+    &lt;style type="text/css"&gt;
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0; font-family:Tahoma,Arial; font-size: 12px; }
+    &lt;/style&gt;
+    &lt;script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"&gt; &lt;/script&gt;
+		&lt;script type="text/javascript"&gt;
+			var rendererOptions = {
+				draggable: true				//per consetire di poter cambiare il percorso sulla mappa a mano
+			};
+			var directionsPoint = new google.maps.DirectionsRenderer(rendererOptions);
+			var directionsRoute = new google.maps.DirectionsRenderer(rendererOptions);
+			var directionsService = new google.maps.DirectionsService();
+			var map;
+
+			function initialize() {
+				var myOptions = {
+					zoom: 6,
+					center: new google.maps.LatLng(44.002481, 12.543666),	//NTS Informatica
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+				directionsPoint.setMap(map);
+				directionsRoute.setMap(map);
+								
+				google.maps.event.addListener(directionsPoint, 'directions_changed', function() {
+					computeTotalDistance(directionsPoint.directions);
+				});
+				google.maps.event.addListener(directionsRoute, 'directions_changed', function() {
+					computeTotalDistance(directionsRoute.directions);
+				});
+
+				document.getElementById('point').style.visibility = 'hidden';
+				localizzaPunti();
+			}
+			
+			//-----------------------------------------------------
+			//PER calcolare la strada
+			//nella versione gratuita massimo 8 waypoint!!!!!!
+			function calcRoute() {
+			    
+				directionsRoute.setPanel(document.getElementById("directionsRoute"));
+				
+				var start = document.getElementById("start").value;
+				if (start.substring(0, 1) == '*') start = start.substring(1, start.length -1);
+
+				var end = document.getElementById("end").value;
+				if (end.substring(0, 1) == '*') end = end.substring(1, end.length -1);
+				
+				var waypts = [];
+				var checkboxArray = document.getElementById("waypoints");
+				var wayp;
+				//nella versione gratuita massimo 8 waypoint!!!!!!
+				for (var i = 0; i &lt; checkboxArray.length; i++) {
+					if (checkboxArray.options[i].selected == true) {
+						wayp = checkboxArray[i].value;
+						if (wayp.substring(0, 1) == '*') wayp = wayp.substring(1, wayp.length -1);
+						waypts.push({
+								location:wayp,
+								stopover:true});
+					}
+				}
+
+				var ckOttimizza = document.getElementById("ckOttimizza");
+				var request = {
+						origin: start, 
+						destination: end,
+						waypoints: waypts,
+						optimizeWaypoints: ckOttimizza.checked,
+						travelMode: google.maps.DirectionsTravelMode.DRIVING
+				};
+				
+				directionsService.route(request, function(response, status) {
+					if (status == google.maps.DirectionsStatus.OK) {
+						directionsPoint.setDirections(response);
+						directionsRoute.setDirections(response);
+					}
+					else {
+						alert("Errore in calcolo percorso. Errore: " + status);
+					}
+				});
+				document.getElementById('point').style.visibility = 'visible';
+			}
+			
+			function computeTotalDistance(result) {
+				var total = 0;
+				var myroute = result.routes[0];
+				
+				//Pannello informazioni del luogo di passaggio
+				var summaryPanel = document.getElementById("directionsPoint");
+						summaryPanel.innerHTML = "";
+				
+				for (i = 0; i &lt; myroute.legs.length; i++) {
+					total += myroute.legs[i].distance.value;
+					
+					var routeSegment = i + 1;
+					summaryPanel.innerHTML += "&lt;b&gt;Destinazione: " + routeSegment + "&lt;/b&gt;&lt;br /&gt;";
+					summaryPanel.innerHTML += myroute.legs[i].start_address + " to ";
+					summaryPanel.innerHTML += myroute.legs[i].end_address + "&lt;br /&gt;";
+					summaryPanel.innerHTML += myroute.legs[i].distance.text + "&lt;br /&gt;&lt;br /&gt;";
+				}
+				total = total / 1000.
+				document.getElementById("totalDistance").innerHTML = total + " km";
+			}  
+			
+			function VisRoute() {
+				var ckVisRoute = document.getElementById("ckVisRoute");
+				var directionsRoute = document.getElementById("directionsRoute");
+				if(ckVisRoute.checked) { 
+					document.getElementById('directionsRoute').style.visibility = 'visible';
+				} 
+				else { 
+					document.getElementById('directionsRoute').style.visibility = 'hidden';
+				} 
+			}
+			
+			//-----------------------------------------------------
+			//PER localizzazione
+			var geocoder;
+			function localizzaPunti() {		
+				geocoder = new google.maps.Geocoder;
+				var edStart = document.getElementById("start")
+				var edEnd = document.getElementById("end")
+				searchPlace(edStart.value, edStart.value);	
+				searchPlace(edEnd.value, edEnd.value);	
+				var checkboxArray = document.getElementById("waypoints");
+				for (var i = 0; i &lt; checkboxArray.length; i++) {
+					if (checkboxArray.options[i].selected == true) {
+						searchPlace(checkboxArray[i].value, checkboxArray[i].innerHTML);
+					}
+				}			
+			}
+			
+			function searchPlace(place, descr) {
+				if (geocoder) {
+					if (place.substring(0, 1) == '*') place = place.substring(1, place.length -1);
+					geocoder.geocode( {'address': place}, function(results,status) {
+							if (status == google.maps.GeocoderStatus.OK) {
+								//var latitude = results[0].geometry.location.latitude;
+								//var longitude = results[0].geometry.location.longitude;
+								var marker = new google.maps.Marker({
+									position: results[0].geometry.location,
+									animation: google.maps.Animation.DROP,
+									map: map,
+									title: descr
+								});
+							} else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+								//se chiedo troppi marcatori uno dietro l'altro, da errore di troppe query fatte consecutivamente 
+								setTimeout(function() {
+									searchPlace(place, descr);
+								}, 250);
+							} else {
+									alert("Indirizzo: " + place + " non trovato! Errore: " + status);
+							}
+					});
+				}
+				else {
+					alert("geocoder not initialized");
+				}
+			}	
+		
+		&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="initialize()"&gt;
+      &lt;div style="width:100%;height:100%;"&gt;
+		&lt;div id="map_canvas" style="float:right;width:69%;height:98%;margin-top:10px;margin-right:1px;border-color:grey;border-style:solid;border-width:1px;"&gt;&lt;/div&gt;
+		&lt;div id="control_panel" style="float:left;width:30%;text-align:left;"&gt;
+			&lt;div style="margin:10px;padding:5px;border-color:grey;border-style:solid;border-width:1px;background-color:#CCCCFF"&gt;
+			
+				&lt;b&gt;Partenza:&lt;/b&gt;
+					&lt;input type="text" id="start" size="28" value="***START***"/&gt;
+				&lt;br /&gt;
+				
+				&lt;b&gt;Arrivo:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/b&gt;
+					&lt;input type="text" id="end" size="28" value="***END***"/&gt;
+				&lt;br /&gt;
+				
+				&lt;b&gt;Waypoints (massimo 8 punti):&lt;/b&gt;	&lt;i&gt;(Ctrl-Click per multiselezione)&lt;/i&gt; &lt;br /&gt;
+					&lt;select multiple id="waypoints" STYLE="width: 260px"&gt;
+						***&lt;option selected value=""&gt;&lt;/input&gt;***
+					&lt;/select&gt;
+				&lt;br /&gt;
+				
+				&lt;div&gt;
+					&lt;div&gt;&lt;input type="checkbox" id="ckVisRoute" onclick="VisRoute();" checked &gt; Visualizza indicazioni stradali a fondo pagina&lt;/div&gt;
+					&lt;div&gt;&lt;input type="checkbox" id="ckOttimizza" checked &gt; Ottimizza percorso&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;input type="submit" onclick="calcRoute();" value="Calcola percorso"/&gt;
+			&lt;/div&gt;
+			
+			&lt;div id="point" style="margin:10px;Height:300px;overflow: auto;padding:5px;border-color:grey;border-style:solid;border-width:1px;background-color:#CCCCFF"&gt;
+				&lt;b&gt;Distanza totale:&lt;/b&gt;&amp;nbsp;&lt;span id="totalDistance"&gt;&lt;/span&gt;
+				&lt;br&gt;&lt;br&gt;
+				&lt;div id="directionsPoint" &gt;&lt;/div&gt;
+			&lt;/div&gt;	
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id="directionsRoute" style="margin:20px;"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+</root>

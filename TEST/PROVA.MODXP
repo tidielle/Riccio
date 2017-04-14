@@ -1,0 +1,984 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ORDERTBL">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ot_order" type="xs:short" minOccurs="0" />
+                <xs:element name="ot_nometab" type="xs:string" minOccurs="0" />
+                <xs:element name="ot_descr" type="xs:string" minOccurs="0" />
+                <xs:element name="ot_instid" type="xs:int" minOccurs="0" />
+                <xs:element name="ot_sw" type="xs:string" minOccurs="0" />
+                <xs:element name="ot_perditta" type="xs:string" minOccurs="0" />
+                <xs:element name="ot_istmp" type="xs:string" minOccurs="0" />
+                <xs:element name="ot_aggiorna" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TABELLE">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" type="xs:int" minOccurs="0" />
+                <xs:element name="nometab" type="xs:string" />
+                <xs:element name="descr" type="xs:string" minOccurs="0" />
+                <xs:element name="tmp" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="CAMPI">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nometab" type="xs:string" />
+                <xs:element name="nomecampo" type="xs:string" />
+                <xs:element name="posiz" type="xs:int" minOccurs="0" />
+                <xs:element name="tipo" type="xs:string" minOccurs="0" />
+                <xs:element name="identity" type="xs:string" minOccurs="0" />
+                <xs:element name="default" type="xs:string" minOccurs="0" />
+                <xs:element name="maxlen" type="xs:int" minOccurs="0" />
+                <xs:element name="nullo" type="xs:string" minOccurs="0" />
+                <xs:element name="validation" type="xs:string" minOccurs="0" />
+                <xs:element name="descr" type="xs:string" minOccurs="0" />
+                <xs:element name="validationName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="INDICI">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nometab" type="xs:string" minOccurs="0" />
+                <xs:element name="nomeindex" type="xs:string" minOccurs="0" />
+                <xs:element name="tipo" type="xs:string" minOccurs="0" />
+                <xs:element name="clustered" type="xs:string" minOccurs="0" />
+                <xs:element name="unique" type="xs:string" minOccurs="0" />
+                <xs:element name="indice" type="xs:string" minOccurs="0" />
+                <xs:element name="include" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="NOME_PERSONALIZZAZIONE">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="NOME" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//TABELLE" />
+        <xs:field xpath="nometab" />
+      </xs:unique>
+      <xs:unique name="CAMPI_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//CAMPI" />
+        <xs:field xpath="nometab" />
+        <xs:field xpath="nomecampo" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ORDERTBL>
+    <ot_order>1</ot_order>
+    <ot_nometab>tabsoec</ot_nometab>
+    <ot_descr>Status ordine e-commerce</ot_descr>
+    <ot_instid>0</ot_instid>
+    <ot_sw>Business</ot_sw>
+    <ot_perditta>S</ot_perditta>
+    <ot_istmp>N</ot_istmp>
+    <ot_aggiorna>N</ot_aggiorna>
+  </ORDERTBL>
+  <ORDERTBL>
+    <ot_order>2</ot_order>
+    <ot_nometab>tabhhlcam</ot_nometab>
+    <ot_descr>Listini Campionari</ot_descr>
+    <ot_instid>0</ot_instid>
+    <ot_sw>Business</ot_sw>
+    <ot_perditta>S</ot_perditta>
+    <ot_istmp>N</ot_istmp>
+    <ot_aggiorna>N</ot_aggiorna>
+  </ORDERTBL>
+  <TABELLE>
+    <id>5370</id>
+    <nometab>tabsoec</nometab>
+    <descr>Status ordine e-commerce</descr>
+    <tmp>N</tmp>
+  </TABELLE>
+  <TABELLE>
+    <id>5371</id>
+    <nometab>tabhhlcam</nometab>
+    <descr />
+    <tmp>N</tmp>
+  </TABELLE>
+  <CAMPI>
+    <nometab>barcode</nometab>
+    <nomecampo>bc_divisore</nomecampo>
+    <posiz>14</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((1))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>Divisore Barcode GS1</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_prezzol</nomecampo>
+    <posiz>47</posiz>
+    <tipo>money</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>prezzo lordo</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_scont1</nomecampo>
+    <posiz>48</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>1.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_scont2</nomecampo>
+    <posiz>49</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>2.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_scont3</nomecampo>
+    <posiz>50</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>3.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_scont4</nomecampo>
+    <posiz>51</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>4.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_scont5</nomecampo>
+    <posiz>52</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>5.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>compcax</nometab>
+    <nomecampo>cca_scont6</nomecampo>
+    <posiz>53</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>6.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>distbas</nometab>
+    <nomecampo>db_hhvaluso</nomecampo>
+    <posiz>7</posiz>
+    <tipo>money</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>8</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhconto</nomecampo>
+    <posiz>57</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcodartf</nomecampo>
+    <posiz>58</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>50</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcolore</nomecampo>
+    <posiz>59</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>50</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhfin</nomecampo>
+    <posiz>60</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>50</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhalt</nomecampo>
+    <posiz>61</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhlar</nomecampo>
+    <posiz>62</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhmtinv</nomecampo>
+    <posiz>63</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhmtuso</nomecampo>
+    <posiz>64</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcomp</nomecampo>
+    <posiz>65</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>50</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcostol</nomecampo>
+    <posiz>66</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcoston</nomecampo>
+    <posiz>67</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhprzlis</nomecampo>
+    <posiz>68</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhscomin</nomecampo>
+    <posiz>69</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhscomax</nomecampo>
+    <posiz>70</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhmolt</nomecampo>
+    <posiz>71</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhpag</nomecampo>
+    <posiz>72</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhdescr</nomecampo>
+    <posiz>73</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>40</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhtirella</nomecampo>
+    <posiz>74</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhva</nomecampo>
+    <posiz>75</posiz>
+    <tipo>char</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>1</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcocad</nomecampo>
+    <posiz>76</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhvaluso</nomecampo>
+    <posiz>77</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhmtbonus</nomecampo>
+    <posiz>78</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhvalbonus</nomecampo>
+    <posiz>79</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcconf</nomecampo>
+    <posiz>80</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movdis</nometab>
+    <nomecampo>md_hhcdors</nomecampo>
+    <posiz>81</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movord</nometab>
+    <nomecampo>mo_hhcodvuo</nomecampo>
+    <posiz>153</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>Codice vuoto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movord</nometab>
+    <nomecampo>mo_hhPRZvuo</nomecampo>
+    <posiz>154</posiz>
+    <tipo>money</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movord</nometab>
+    <nomecampo>mo_hhsc</nomecampo>
+    <posiz>155</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>1</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>movpic</nometab>
+    <nomecampo>mp_hhsc</nomecampo>
+    <posiz>38</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default>('N')</default>
+    <maxlen>1</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhprzvuo</nomecampo>
+    <posiz>7</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhprzvuo2</nomecampo>
+    <posiz>8</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhprzvuo3</nomecampo>
+    <posiz>9</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhprzvuo4</nomecampo>
+    <posiz>10</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhprzvuo5</nomecampo>
+    <posiz>11</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhcosvuo</nomecampo>
+    <posiz>12</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhcosvuo2</nomecampo>
+    <posiz>13</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhcosvuo3</nomecampo>
+    <posiz>14</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhcosvuo4</nomecampo>
+    <posiz>15</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabcvuo</nometab>
+    <nomecampo>tb_hhcosvuo5</nomecampo>
+    <posiz>16</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabhhlcam</nometab>
+    <nomecampo>codditt</nomecampo>
+    <posiz>2</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default>('*MODELLO*')</default>
+    <maxlen>12</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabhhlcam</nometab>
+    <nomecampo>tb_codice</nomecampo>
+    <posiz>3</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>codice</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabhhlcam</nometab>
+    <nomecampo>tb_descr</nomecampo>
+    <posiz>4</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>80</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>descrizione</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabhhlcam</nometab>
+    <nomecampo>tb_prezzo</nomecampo>
+    <posiz>5</posiz>
+    <tipo>money</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>prezzo</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabsoec</nometab>
+    <nomecampo>codditt</nomecampo>
+    <posiz>2</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default>('MODELLO')</default>
+    <maxlen>12</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr />
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabsoec</nometab>
+    <nomecampo>tb_codsoec</nomecampo>
+    <posiz>3</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>Codice status</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabsoec</nometab>
+    <nomecampo>tb_dessoec</nomecampo>
+    <posiz>4</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>50</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <descr>Descrizione status</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>tabsoec</nometab>
+    <nomecampo>tb_soecpredef</nomecampo>
+    <posiz>5</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default>('N')</default>
+    <maxlen>1</maxlen>
+    <nullo>False</nullo>
+    <validation>([tb_soecpredef]='N' OR [tb_soecpredef]='S')</validation>
+    <descr>Status predefinito (S/N)</descr>
+    <validationName>CK_tabsoec_tb_soecpredef</validationName>
+  </CAMPI>
+  <CAMPI>
+    <nometab>testord</nometab>
+    <nomecampo>td_codsoec</nomecampo>
+    <posiz>196</posiz>
+    <tipo>int</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>4</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>Codice status ordine E-COMMERCE</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>testord</nometab>
+    <nomecampo>td_idpagamento</nomecampo>
+    <posiz>197</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>100</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <descr>ID della transazione di pagamento</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>testord</nometab>
+    <nomecampo>td_idtracking</nomecampo>
+    <posiz>198</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default />
+    <maxlen>100</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <descr>ID di tracking della spedizione del corriere</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_prezzol</nomecampo>
+    <posiz>48</posiz>
+    <tipo>money</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>prezzo lordo</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_scont1</nomecampo>
+    <posiz>49</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>1.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_scont2</nomecampo>
+    <posiz>50</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>2.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_scont3</nomecampo>
+    <posiz>51</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>3.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_scont4</nomecampo>
+    <posiz>52</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>4.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_scont5</nomecampo>
+    <posiz>53</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>5.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTCOMPCAX</nometab>
+    <nomecampo>cca_scont6</nomecampo>
+    <posiz>54</posiz>
+    <tipo>float</tipo>
+    <identity>N</identity>
+    <default>((0))</default>
+    <maxlen>8</maxlen>
+    <nullo>False</nullo>
+    <validation />
+    <descr>6.o sconto</descr>
+    <validationName />
+  </CAMPI>
+  <CAMPI>
+    <nometab>TTMOPERNP</nometab>
+    <nomecampo>mn_hhsc</nomecampo>
+    <posiz>130</posiz>
+    <tipo>varchar</tipo>
+    <identity>N</identity>
+    <default>('N')</default>
+    <maxlen>1</maxlen>
+    <nullo>True</nullo>
+    <validation />
+    <validationName />
+  </CAMPI>
+  <INDICI>
+    <nometab>emails</nometab>
+    <nomeindex>emails_keyservercartella</nomeindex>
+    <tipo>I</tipo>
+    <clustered>0</clustered>
+    <unique>0</unique>
+    <indice>em_mailserver, em_cartella</indice>
+    <include />
+  </INDICI>
+  <INDICI>
+    <nometab>tabhhlcam</nometab>
+    <nomeindex>tabhhlcam_PrimaryKey</nomeindex>
+    <tipo>P</tipo>
+    <clustered>-1</clustered>
+    <unique>-1</unique>
+    <indice>codditt, tb_codice</indice>
+    <include />
+  </INDICI>
+  <INDICI>
+    <nometab>tabsoec</nometab>
+    <nomeindex>PK_tabsoec</nomeindex>
+    <tipo>P</tipo>
+    <clustered>-1</clustered>
+    <unique>-1</unique>
+    <indice>codditt, tb_codsoec</indice>
+    <include />
+  </INDICI>
+  <NOME_PERSONALIZZAZIONE>
+    <NOME>riccio</NOME>
+  </NOME_PERSONALIZZAZIONE>
+</NewDataSet>

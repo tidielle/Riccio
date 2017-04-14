@@ -1,0 +1,7 @@
+C:\Bus.Riccio\BIZ2015\BFDBDIBA\obj\Debug\BFDBDIBA.vbprojResolveAssemblyReference.cache
+C:\Bus.Riccio\BIZ2015\BFDBDIBA\obj\Debug\NTSInformatica.Resources.resources
+C:\Bus.Riccio\BIZ2015\BFDBDIBA\obj\Debug\BFDBDIBA.vbproj.GenerateResource.Cache
+C:\Bus.Riccio\BIZ2015\TEST\BFDBDIBA.dll
+C:\Bus.Riccio\BIZ2015\TEST\BFDBDIBA.pdb
+C:\Bus.Riccio\BIZ2015\BFDBDIBA\obj\Debug\BFDBDIBA.dll
+C:\Bus.Riccio\BIZ2015\BFDBDIBA\obj\Debug\BFDBDIBA.pdb

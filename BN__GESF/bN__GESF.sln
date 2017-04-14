@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bN__GESF", "bN__GESF.vbproj", "{68DB7699-6BCA-459C-90CB-31371E54F018}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName1 = bN__GESF.vbproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68DB7699-6BCA-459C-90CB-31371E54F018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68DB7699-6BCA-459C-90CB-31371E54F018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68DB7699-6BCA-459C-90CB-31371E54F018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68DB7699-6BCA-459C-90CB-31371E54F018}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

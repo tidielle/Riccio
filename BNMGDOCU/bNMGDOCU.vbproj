@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>NTSInformatica</RootNamespace>
+    <AssemblyName>BNMGDOCU</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>On</OptionStrict>
+    <ProjectGuid>{1FB88BF9-23DB-4F1F-9A7D-8078A8C9F566}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\TEST\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BELBMENU, Version=20.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BEMGDOCU, Version=13.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__FRWK, Version=1.0.2355.25612, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__BASN, Version=13.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__CZOO, Version=1.0.2363.27957, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BE__MENU, Version=1.0.2355.25645, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BNXXFILT, Version=20.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BN__CHIL, Version=1.0.2355.25148, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BN__STD, Version=1.0.2347.15118, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.Data.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.Utils.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.XtraBars.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.XtraEditors.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.2.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TEST\DevExpress.XtraGrid.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BNDBLOMA.designer.vb">
+      <DependentUpon>BNDBLOMA.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNDBLOMA.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNDBSECE.designer.vb">
+      <DependentUpon>BNDBSECE.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNDBSECE.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGANPR.Designer.vb">
+      <DependentUpon>BNMGANPR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGANPR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGCACL.Designer.VB">
+      <DependentUpon>BNMGCACL.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGCACL.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGGRSC.designer.vb">
+      <DependentUpon>BNMGGRSC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGGRSC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGHLA2.designer.vb">
+      <DependentUpon>BNMGHLA2.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGHLA2.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGHLLO.designer.vb">
+      <DependentUpon>BNMGHLLO.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGHLLO.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGORSC.designer.vb">
+      <DependentUpon>BNMGORSC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGORSC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGLIST.designer.vb">
+      <DependentUpon>BNMGLIST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGLIST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGSCTR.designer.vb">
+      <DependentUpon>BNMGSCTR.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGSCTR.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGSELI.Designer.VB">
+      <DependentUpon>BNMGSELI.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGSELI.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGTERM.designer.vb">
+      <DependentUpon>BNMGTERM.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGTERM.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGHLCL.designer.vb">
+      <DependentUpon>BNMGHLCL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGHLCL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGTERM_F.Designer.VB">
+      <DependentUpon>BNMGTERM_F.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGTERM_F.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGOMGP.Designer.vb">
+      <DependentUpon>BNMGOMGP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGOMGP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNVEFIDO.Designer.vb">
+      <DependentUpon>BNVEFIDO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNVEFIDO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNVEHLBC.Designer.vb">
+      <DependentUpon>BNVEHLBC.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNVEHLBC.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNVEADRG.Designer.VB">
+      <DependentUpon>BNVEADRG.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BNVEADRG.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGHLCV.designer.vb">
+      <DependentUpon>BNMGHLCV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGHLCV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BNMGRICA.Designer.vb">
+      <DependentUpon>BNMGRICA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BNMGRICA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNDBLOMA.resx">
+      <DependentUpon>BNDBLOMA.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNDBSECE.resx">
+      <DependentUpon>BNDBSECE.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGANPR.resx">
+      <DependentUpon>BNMGANPR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGGRSC.resx">
+      <DependentUpon>BNMGGRSC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGHLA2.resx">
+      <DependentUpon>BNMGHLA2.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGHLCV.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BNMGHLCV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGHLLO.resx">
+      <DependentUpon>BNMGHLLO.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGORSC.resx">
+      <DependentUpon>BNMGORSC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGLIST.resx">
+      <DependentUpon>BNMGLIST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGSCTR.resx">
+      <DependentUpon>BNMGSCTR.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGSELI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BNMGSELI.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGTERM.resx">
+      <DependentUpon>BNMGTERM.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGHLCL.resx">
+      <DependentUpon>BNMGHLCL.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGTERM_F.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BNMGTERM_F.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGOMGP.resx">
+      <DependentUpon>BNMGOMGP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNVEFIDO.resx">
+      <DependentUpon>BNVEFIDO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNVEHLBC.resx">
+      <DependentUpon>BNVEHLBC.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNVEADRG.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BNVEADRG.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BNMGRICA.resx">
+      <DependentUpon>BNMGRICA.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+  </PropertyGroup>
+</Project>

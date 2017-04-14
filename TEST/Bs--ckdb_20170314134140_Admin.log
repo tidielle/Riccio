@@ -1,0 +1,12 @@
+--------------------------------------------------------------------
+BE__CKDB Versione 21.0.0.49
+BD__CKDB Versione 21.0.0.15
+Controllo coerenza dati
+Operazione avviata il 14/03/2017 13:41:40
+--------------------------------------------------------------------
+--> Esecuzione controllo [00103]: Distinta base: presenza di fasi svolte da centri esterni diversi dal fornitore abituale dell'articolo
+--> Esecuzione controllo [00103] terminata con successo.
+--> --------------------------------------------------------------------
+--------------------------------------------------------------------
+Operazione terminata il 14/03/2017 13:41:40
+--------------------------------------------------------------------
